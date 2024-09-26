@@ -34,6 +34,7 @@ sunshine_name = x
 port = x
 log_path = x.log
 file_state = x.json
+headless_mode = enabled
 ```
 
 For example, to have 2 instances you can set:
