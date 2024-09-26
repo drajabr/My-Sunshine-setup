@@ -1,5 +1,15 @@
 # My-Sunshine-setup
-Config and scripts used in my multi monitor sunshine setup.
+Config and scripts used in my multi monitor Apollo "fork of Sunshine" setup.
+
+> [!NOTE]
+> This is guide is made using https://github.com/ClassicOldSong/Apollo repo.
+> Apollo is a fork that despite being backed by only one dev, it recently got more fixes/features implemented in a faster pace than mainstream sunshine, and probably the two won't be compatible in the near future.
+
+> [!CAUTION]
+> If you decided to use Apollo, please, don't ask for support on moonlight-stream discord server or open issues related to Apollo in sunshine mainstream repo.
+
+> [!TIP]
+> If you want support or have issues you're welcome to open discussion or create an issue in Apollo's repo, but again, don't mix between both.
 
 ### Preview
 ![image](https://github.com/user-attachments/assets/c7448d48-f867-4103-9baa-a1fa30e5bf48)
