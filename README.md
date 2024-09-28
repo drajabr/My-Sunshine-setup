@@ -79,6 +79,7 @@ For example, to have 2 instances you can set:
 ## Bonus
 ### Connect android devices via USB
 Using https://github.com/cotzhang/app.Cot-Hypernet2 to automatically enable "reverse" tethering for android devices via ADB, it actually runs proxy on laptop and use kinda VPN interface on Android to pass the connections over that proxy via ADB forward, it works better than WiFi on old/cheapo android tablets, and I need to keep usb connected for charging anyway.
+
 UPDATE: I currently use android tethering, I noticed slight better performance than the ADB method, so here it is:
 1. Enable USB tethering from android settings
 2. Check the IP your computer acquired via DHCP
