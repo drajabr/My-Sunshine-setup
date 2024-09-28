@@ -78,7 +78,14 @@ For example, to have 2 instances you can set:
 
 ## Bonus
 ### Connect android devices via USB
-Using https://github.com/cotzhang/app.Cot-Hypernet2 to automatically enable reverse tethering for android devices via ADB, it works better than WiFi on old/cheapo android tablets, and I need to keep usb connected for charging anyway.
+Using https://github.com/cotzhang/app.Cot-Hypernet2 to automatically enable "reverse" tethering for android devices via ADB, it actually runs proxy on laptop and use kinda VPN interface on Android to pass the connections over that proxy via ADB forward, it works better than WiFi on old/cheapo android tablets, and I need to keep usb connected for charging anyway.
+UPDATE: I currently use android tethering, I noticed slight better performance than the ADB method, so here it is:
+1. Enable USB tethering from android settings
+2. Check the IP your computer acquired via DHCP
+3. Set it to static IP in the same range
+4. Use that IP to connect from the android tablet to the PC
+   I noticed my 2 tablets gave diffrent IP range for the laptop one gave 192.168.42.x, and the other gave 192.168.98.x range, I have no clue if it will work if both gave same range "as the android device itself will usually have the .1 IP in the range, so having 2 devices with same IP in same subnet doesn't sound good, but further testing needed.
+   Advantages: No internet connection to Android devices, No need for ADB, More stable connection, and no need extra software.
 ### Auto launch and connect to hosts from android tablet clients
 This may not be easy to setup for first time Automate App users, but ther result deserve the setup pain
   1. Download and install "Automate" App
@@ -112,3 +119,6 @@ This may not be easy to setup for first time Automate App users, but ther result
       ```
      Doing that on touchscreen is annoying, so I used chatGPT to help me in this task and it didn't complain.
   6. Now, remaining the "HTTPS request" block, which is responsible to ping the url of sunshine WebUI to auto launch or close app, in my case it was `https://192.168.1.130:17988` edit according to each instance webUI url, hint: WebUI Port = sunshine port - 1.
+
+## Final Words
+Many thanks to [ClassicOldSong](https://github.com/ClassicOldSong) for the great work making this easily possible out of the box.
