@@ -26,7 +26,8 @@ Spacedesk and superDisplay are the only two good alternatives I found, but they'
 Download and install sunshine's fork Apollo from https://github.com/ClassicOldSong/Apollo/releases.
 2. Add conf files
 In Apollo's config folder `C:\Program Files\Apollo\config` , create as many `.conf` files as you want, in my setup I created `sunshine_1.conf`, `sunshine_2.conf`, and `sunshine_3.conf`.
-3. Edit conf files
+3. Add json state files: create as many empty `.json` files to be used as state file, like `sunshine_1.josn`, `sunshine_3.josn`, and `sunshine_3.josn`. You can copy the first `sunshinbe_state.json` so the 3 instances will use same username/pass combination.
+4. Edit conf files
 For each conf file, you want to basically add the following configuration to be unique for each instance:
 
 ```ini
