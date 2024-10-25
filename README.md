@@ -75,6 +75,13 @@ For example, to have 2 instances you can set:
 8. Create shortcut: `Select the script > Right click > Create shortcut`.
 9. Edit shortcut target to bypass excution policy: `Select the shortcut > Right click > Properties` then in target field add `powershell.exe -ExecutionPolicy Bypass -File ` before the existing script target, for example it will be something like this: `powershell.exe -ExecutionPolicy Bypass -File  "C:\Tools\Sunshine-tools\apollo_bulk_start.ps1"`.
 10. Optionally, copy the shortcut to startup folders so it automatically run at startup: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`.
+> [!Note]
+> You may need to set the shortcut to run as adminstrator.
+### Run shortut as Adminstrator
+1. Right-click on the shortcut and choose Properties.
+2. Go to the Shortcut tab, and click Advanced.
+3. In the Advanced Properties window, check the box that says Run as administrator.
+4. Click OK and apply the changes.
 
 ## Bonus
 ### Connect android devices via USB
