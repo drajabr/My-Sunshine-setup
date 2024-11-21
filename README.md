@@ -95,6 +95,7 @@ UPDATE: I currently use android tethering, I noticed slight better performance t
 4. Use that IP to connect from the android tablet to the PC
    I noticed my 2 tablets gave diffrent IP range for the laptop one gave 192.168.42.x, and the other gave 192.168.98.x range, I have no clue if it will work if both gave same range "as the android device itself will usually have the .1 IP in the range, so having 2 devices with same IP in same subnet doesn't sound good, but further testing needed.
    Advantages: No internet connection to Android devices, No need for ADB, More stable connection, and no need extra software.
+
 ### Auto launch and connect to hosts from android tablet clients
 This may not be easy to setup for first time Automate App users, but ther result deserve the setup pain
   1. Download and install "Automate" App
@@ -128,6 +129,18 @@ This may not be easy to setup for first time Automate App users, but ther result
       ```
      Doing that on touchscreen is annoying, so I used chatGPT to help me in this task and it didn't complain.
   6. Now, remaining the "HTTPS request" block, which is responsible to ping the url of sunshine WebUI to auto launch or close app, in my case it was `https://192.168.1.130:17988` edit according to each instance webUI url, hint: WebUI Port = sunshine port - 1.
+
+### Seperate Audio output device for each display
+To make use of the speaker in each of these devices, in such a way each display outputs audio of the thing beinng displayed on it. While audio multitasking may not always be practical, but most of the time I have background music playing even if I'm in a meeting 😆 even for watching multiple live streams.
+
+If you need Audio multitasking, and your brain can handle it "not easy", this section is for you. the idea is to create multiple virtual audio devices, and set each one as a sink for each instance, also, disable "Play audio on PC" on android clients using artemis or monlight and enable "Mute host PC speakers while streaming" on windows clients using moonlight-qt, this is important so each Apollo/sunshine instace doesn't playback its captured stream to the main playback device again, thus combining what we want to seperate :) .
+
+1. Prepare virtual audio devices: In the host I used VAC "virtual audio cable" (paid) to create 3 virtual audio devices, you can also use ab-cable or any other virtual audio device app you like.
+2. Rename each virtual device: from windows audio control panell, you can rename each device to your like, for me I set these 3 names "left" "bottom" "right" so I can put them in configuration using their name, also when switching apps I have conventional names for audio outputs.
+3. Configure each instance: In **Virtual Sink** option for each instance add the corrosponding virtual device name. this is the device apollo/sunshine will capture and send to the client AND not play it back to default audio output.
+4. Now the annoying part, each time apollo/sunshine gets connection it'll override the default audio output to the device set for it to capture, sadly we don't have built in setting to disable this behaviour, but I personally use app called "SoundSwitch" with default force profile set to speaker "my main output" so its always set from there. Anyway, when you configure your setup in a specific way, windows remeber which apps are assigned to which output.
+
+Now, to route audio output from windows apps, use windows control panel, and to route audio output from diffrent browser tabs, I found extension "AudioPick" as I'm using soundcloud, youtube, and others as PWA, and I can set each one to output specfic device by default and it remebers them too.
 
 ## Final Words
 Many thanks to [ClassicOldSong](https://github.com/ClassicOldSong) for the great work making this easily possible out of the box.
