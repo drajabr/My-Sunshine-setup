@@ -1,20 +1,12 @@
 # My-Sunshine-setup
 Config and scripts used in my multi monitor Apollo "fork of Sunshine" setup.
 
-> [!NOTE]
-> This is guide is made using https://github.com/ClassicOldSong/Apollo repo.
-> Apollo is a fork that despite being backed by only one dev, it recently got more fixes/features implemented in a faster pace than mainstream sunshine, and probably the two won't be compatible in the near future.
-
-> [!CAUTION]
-> If you decided to use Apollo, please, don't ask for support on moonlight-stream discord server or open issues related to Apollo in sunshine mainstream repo.
-
-> [!TIP]
-> If you want support or have issues you're welcome to open discussion or create an issue in Apollo's repo, but again, don't mix between both.
-
 ### Preview
 ![image](https://github.com/user-attachments/assets/c7448d48-f867-4103-9baa-a1fa30e5bf48)
 
 ### Motivation
+Many thanks to [ClassicOldSong](https://github.com/ClassicOldSong) for the great work making this easily possible out of the box.
+
 Want to keep many windows opened at same time, but Ultrawide monitors are way out of my budget, Portable 15" displays are still expensive even I can't connect more than 1 "unless they're super the expensive Thunderbolt daisychain thing", and I had one extra 10" tablet that I rarely find myself using it.
 I found it useful as external display, and quite like the idea of multiple small monitors instead of big one, its more travel friendly, easier to manage windows alignment, and with touch input as a bonus "which turned out to be really useful in many cases". 
 
@@ -24,42 +16,21 @@ Spacedesk and superDisplay are the only two good alternatives I found, but they'
 ## Setup
 1. Install Apollo
 Download and install sunshine's fork Apollo from https://github.com/ClassicOldSong/Apollo/releases.
-2. Add conf files
-In Apollo's config folder `C:\Program Files\Apollo\config` , create as many `.conf` files as you want, in my setup I created `sunshine_1.conf`, `sunshine_2.conf`, and `sunshine_3.conf`.
+2. Add '.conf files', you can use mine from repo as starting point, just make sure you create the '.json' files for each instance.
 3. Add json state files: create as many empty `.json` files to be used as state file, like `sunshine_1.josn`, `sunshine_3.josn`, and `sunshine_3.josn`. You can copy the first `sunshinbe_state.json` so the 3 instances will use same username/pass combination.
 4. Edit conf files
 For each conf file, you want to basically add the following configuration to be unique for each instance:
 
 ```ini
-sunshine_name = x
-port = x
-log_path = x.log
-file_state = x.json
+sunshine_name = instance_xx
+port = xx
+log_path = xx.log
+file_state = xx.json
 headless_mode = enabled
 ```
 
-For example, to have 2 instances you can set:
-
-1. `sunshine_1.conf` has:
-    ```ini
-    sunshine_name = sunshine_1
-    port = 1987
-    log_path = sunshine_1.log
-    file_state = sunshine_1.json
-    headless_mode = enabled
-    ```
-
-2. `sunshine_2.conf` has:
-    ```ini
-    sunshine_name = sunshine_2
-    port = 2987
-    log_path = sunshine_2.log
-    file_state = sunshine_2.json
-    headless_mode = enabled
-    ```
 4. Copy the launch script `apollo_bulk_start.ps1`, I like to keep all my script in one folder, for example I'll place it in `C:\Tools\sunshine-tools`.
-5. Download and extract PsExec tool from https://download.sysinternals.com/files/PSTools.zip, and place it wherever you like, for example I keep it in `C:\Tools\PSTools\PsExec.exe`.
-6. Edit the script and check the paths for sunshine:
+5. If modified, Edit the script and check the paths for sunshine:
    ```ini
    param (
     [string]$exePath = "C:\Program Files\Apollo\sunshine.exe", 
@@ -67,15 +38,14 @@ For example, to have 2 instances you can set:
     [string[]]$exeParams = @(".\config\sunshine_1.conf", ".\config\sunshine_2.conf")
    )
    ```
-   and the path for PsExec tool:
-   ```ini
-    # Path to PsExec
-    $psexecPath = "C:\Tools\PSTools\PsExec.exe"
-   ```
-7. Test run the script, ideally it should start the 2 instances for example and you will see icon in status area, also, open each instance webUI "from the icon you can open the webui for example" and pair your devices one to each instance "Note that you can't keep logged in in 2 instances at same time in same browser".
+6. Test run the script, ideally it should start the 2 instances for example and you will see icon in status area, also, open each instance webUI "from the icon you can open the webui for example" and pair your devices one to each instance "Note that you can't keep logged in in 2 instances at same time in same browser".
 8. Create shortcut: `Select the script > Right click > Create shortcut`.
-9. Edit shortcut target to bypass excution policy: `Select the shortcut > Right click > Properties` then in target field add `powershell.exe -ExecutionPolicy Bypass -File ` before the existing script target, for example it will be something like this: `powershell.exe -ExecutionPolicy Bypass -File  "C:\Tools\Sunshine-tools\apollo_bulk_start.ps1"`.
-10. Optionally, copy the shortcut to startup folders so it automatically run at startup: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`.
+9. Edit shortcut target to bypass excution policy: `Select the shortcut > Right click > Properties` then in target field add
+     ```ini
+    powershell.exe -ExecutionPolicy Bypass -File
+     ```
+     before the existing script target, for example it will be something like this: `powershell.exe -ExecutionPolicy Bypass -File  "C:\Tools\Sunshine-tools\apollo_bulk_start.ps1"`.
+
 > [!Note]
 > You may need to set the shortcut to run as adminstrator.
 ### Run shortut as Adminstrator
@@ -85,6 +55,12 @@ For example, to have 2 instances you can set:
 4. Click OK and apply the changes.
 
 ## Bonus
+### Auto run at startup
+While there is many ways to run the script at startup, I just copy the shortcut to startup folders so it automatically run at startup: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`.
+However, this doesn't run as adminstrator as it fails to read cert/key with normal user rights, so needed to set read permession for cert/key.
+
+Go to Apollo's config folder, i.e `C:\Program Files\Apollo\config` > right-click credentials folder > Security > Edit > Select Users group > Allow Read $ excute permession. 
+
 ### Connect android devices via USB
 Using https://github.com/cotzhang/app.Cot-Hypernet2 to automatically enable "reverse" tethering for android devices via ADB, it actually runs proxy on laptop and use kinda VPN interface on Android to pass the connections over that proxy via ADB forward, it works better than WiFi on old/cheapo android tablets, and I need to keep usb connected for charging anyway.
 
@@ -142,5 +118,13 @@ If you need Audio multitasking, and your brain can handle it "not easy", this se
 
 Now, to route audio output from windows apps, use windows control panel, and to route audio output from diffrent browser tabs, I found extension "AudioPick" as I'm using soundcloud, youtube, and others as PWA, and I can set each one to output specfic device by default and it remebers them too.
 
-## Final Words
-Many thanks to [ClassicOldSong](https://github.com/ClassicOldSong) for the great work making this easily possible out of the box.
+> [!NOTE]
+> This is guide is made using https://github.com/ClassicOldSong/Apollo repo.
+> Apollo is a fork that despite being backed by only one dev, it recently got more fixes/features implemented in a faster pace than mainstream sunshine, and probably the two won't be compatible in the near future.
+
+> [!CAUTION]
+> If you decided to use Apollo, please, don't ask for support on moonlight-stream discord server or open issues related to Apollo in sunshine mainstream repo.
+
+> [!TIP]
+> If you want support or have issues you're welcome to open discussion or create an issue in Apollo's repo, but again, don't mix between both.
+
