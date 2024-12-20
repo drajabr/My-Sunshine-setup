@@ -47,16 +47,11 @@ headless_mode = enabled
      before the existing script target, for example it will be something like this: `powershell.exe -ExecutionPolicy Bypass -File  "C:\Tools\Sunshine-tools\apollo_bulk_start.ps1"`.
 
 > [!Note]
-> You may need to set the shortcut to run as adminstrator.
-### Run shortut as Adminstrator
-1. Right-click on the shortcut and choose Properties.
-2. Go to the Shortcut tab, and click Advanced.
-3. In the Advanced Properties window, check the box that says Run as administrator.
-4. Click OK and apply the changes.
+> If you don't want to change Apollo installation path, or add read permissions for cert/key to normal user, you will need to set the shortcut to run as adminstrator.
 
 ## Bonus
 ### Auto run at startup
-While there is many ways to run the script at startup, I just copy the shortcut to startup folders so it automatically run at startup: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`.
+While there is many ways to run the script at startup, I just copy the shortcut to startup `shell:startup` folder so it automatically run at startup: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`.
 However, this doesn't run as adminstrator as it fails to read cert/key with normal user rights, so needed to set read permession for cert/key.
 
 Go to Apollo's config folder, i.e `C:\Program Files\Apollo\config` > right-click credentials folder > Security > Edit > Select Users group > Allow Read $ excute permession. 
