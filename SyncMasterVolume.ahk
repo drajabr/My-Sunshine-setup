@@ -1,6 +1,8 @@
 #NoEnv
 #Persistent  ; Keeps the script running
-#Include VA.ahk			;I could find it at https://github.com/komingshyu/MyScript/blob/8b65542851b62acb334cf299997fd1b53c76d982/Lib/VA.ahk#L990
+SetWorkingDir %A_ScriptDir%
+
+#Include %A_ScriptDir%/VA.ahk			;I could find it at https://github.com/komingshyu/MyScript/blob/8b65542851b62acb334cf299997fd1b53c76d982/Lib/VA.ahk#L990
 
 targetApp := "sunshine.exe"
 global PIDs
