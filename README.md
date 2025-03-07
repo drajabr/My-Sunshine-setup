@@ -27,7 +27,8 @@ Download and install v1, and v2 from https://www.autohotkey.com/
 
 3. Clone the repo to local folder, last update ditched powershell script in favour of AutoHotKey script doing everything.
 
-Now, inside config directory `C:\Program Files\Apollo\config`
+Now, inside config directory `C:\Program Files\Apollo\config`.
+
 4. Add '.conf files', you can use mine from repo as starting point, just make sure you create the '.json' files for each instance.
 5. Add json state files: create as many empty `.json` files to be used as state file, like `sunshine_1.josn`, `sunshine_3.josn`, and `sunshine_3.josn`.
 
