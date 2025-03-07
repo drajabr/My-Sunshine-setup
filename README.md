@@ -1,61 +1,49 @@
 # My-Sunshine-setup
-Config and scripts used in my multi monitor Apollo "fork of Sunshine" setup.
+Config and AutoHotKey script used in my multi monitor Apollo "fork of Sunshine" setup.
 
-### Preview
-![image](https://github.com/user-attachments/assets/c7448d48-f867-4103-9baa-a1fa30e5bf48)
+## What it is
+Mainly the AutoHotKey script has 3 features:
+1. Launch as many apollo instances as configured "has conf file inside apollo folder, and entry inside the script"
+2. If client disconnect, kill the instance so windows deattach the display, and restart it.
+3. Sync master volume level (and mute status) from windows to all apollo instances currently running.
 
 ### Motivation
 Many thanks to [ClassicOldSong](https://github.com/ClassicOldSong) for the great work making this easily possible out of the box.
 
-Want to keep many windows opened at same time, but Ultrawide monitors are way out of my budget, Portable 15" displays are still expensive even I can't connect more than 1 "unless they're super the expensive Thunderbolt daisychain thing", and I had one extra 10" tablet that I rarely find myself using it.
-I found it useful as external display, and quite like the idea of multiple small monitors instead of big one, its more travel friendly, easier to manage windows alignment, and with touch input as a bonus "which turned out to be really useful in many cases". 
+Achieve multi-monitor streaming solution usable for office usage, using the most performant setup.
+
+### Preview
+![image](https://github.com/user-attachments/assets/c7448d48-f867-4103-9baa-a1fa30e5bf48)
 
 ### Alternatives
-Spacedesk and superDisplay are the only two good alternatives I found, but they're lagging behind sunshine in terms of performance and are not opensource. 
+Spacedesk and superDisplay are possible alternatives and maybe more suitable for your needs "and less headache to setup" 
 
 ## Setup
 1. Install Apollo
 Download and install sunshine's fork Apollo from https://github.com/ClassicOldSong/Apollo/releases.
-2. Add '.conf files', you can use mine from repo as starting point, just make sure you create the '.json' files for each instance.
-3. Add json state files: create as many empty `.json` files to be used as state file, like `sunshine_1.josn`, `sunshine_3.josn`, and `sunshine_3.josn`.
-4. Edit conf files
-For each conf file, you want to basically add the following configuration to be unique for each instance:
 
-```ini
-sunshine_name = instance_xx
-port = xx
-log_path = xx.log
-file_state = xx.json
-headless_mode = enabled
-```
+2. install AutoHotKey 
+Download and install v1, and v2 from https://www.autohotkey.com/
 
-4. Copy the launch script `apollo_bulk_start.ps1`, I like to keep all my script in one folder, for example I'll place it in `C:\Tools\sunshine-tools`.
-5. If modified, Edit the script and check the paths for sunshine:
-   ```ini
-   param (
-    [string]$exePath = "C:\Program Files\Apollo\sunshine.exe", 
-    [string]$workingDirectory = "C:\Program Files\Apollo\",
-    [string[]]$exeParams = @(".\config\sunshine_1.conf", ".\config\sunshine_2.conf")
-   )
-   ```
-6. Test run the script, ideally it should start the 2 instances for example and you will see icon in status area, also, open each instance webUI "from the icon you can open the webui for example" and pair your devices one to each instance "Note that you can't keep logged in in 2 instances at same time in same browser".
-8. Create shortcut: `Select the script > Right click > Create shortcut`.
-9. Edit shortcut target to bypass excution policy: `Select the shortcut > Right click > Properties` then in target field add
-     ```ini
-    powershell.exe -ExecutionPolicy Bypass -File
-     ```
-     before the existing script target, for example it will be something like this: `powershell.exe -ExecutionPolicy Bypass -File  "C:\Tools\Sunshine-tools\apollo_bulk_start.ps1"`.
+3. Clone the repo to local folder, last update ditched powershell script in favour of AutoHotKey script doing everything.
 
-> [!Note]
-> If you don't want to change Apollo installation path, or add read permissions for cert/key to normal user, you will need to set the shortcut to run as adminstrator.
+Now, inside config directory `C:\Program Files\Apollo\config`
+4. Add '.conf files', you can use mine from repo as starting point, just make sure you create the '.json' files for each instance.
+5. Add json state files: create as many empty `.json` files to be used as state file, like `sunshine_1.josn`, `sunshine_3.josn`, and `sunshine_3.josn`.
 
-## Bonus
-### Auto run at startup
-While there is many ways to run the script at startup, I just copy the shortcut to startup `shell:startup` folder so it automatically run at startup: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`.
-However, this doesn't run as adminstrator as it fails to read cert/key with normal user rights, so needed to set read permession for cert/key.
+6. Check inside the AHK script `ApolloBulkAutomation.ahk` for filenames and paths
+7. Run script as adminstrator, check log file inside script folder for errors..
+8. If everything is fine, add the script as schduled task on startup
 
-Go to Apollo's config folder, i.e `C:\Program Files\Apollo\config` > right-click credentials folder > Security > Edit > Select Users group > Allow Read $ excute permession. 
+> [!Tip] To create a task to auto run the script at login
+> 1. Open task schduler: `Win+R` > `taskschd.msc` > `create new basic task`.
+> 2. Name: Whatever > Trigger: When I log on > Action: Start a program.
+> 3. Program: Browse for `ApolloBulkAutomation.ahk`
+> 4. Check open-dialog or just Open the task and check: `Run with highest privilege`
+> 5. Exit any other instance of AHK script and check run the task: `Select task` > `Right-Mouse Button click` > `Run`
 
+
+##Bonus
 ### Connect android devices via USB
 Using https://github.com/cotzhang/app.Cot-Hypernet2 to automatically enable "reverse" tethering for android devices via ADB, it actually runs proxy on laptop and use kinda VPN interface on Android to pass the connections over that proxy via ADB forward, it works better than WiFi on old/cheapo android tablets, and I need to keep usb connected for charging anyway.
 
@@ -103,7 +91,7 @@ This may not be easy to setup for first time Automate App users, but ther result
       "AppName": "Desktop"
       } 
       ```
-     Doing that on touchscreen is annoying, so I used chatGPT to help me in this task and it didn't complain.
+     Doing that on touchscreen maybe annoying, so I created a simple webpage to extract the extras part we need: https://appstart-extrasparameters.pages.dev/
   6. Now, remaining the "HTTPS request" block, which is responsible to ping the url of sunshine WebUI to auto launch or close app, in my case it was `https://192.168.1.130:17988` edit according to each instance webUI url, hint: WebUI Port = sunshine port - 1.
 
 ### Seperate Audio output device for each display
@@ -114,7 +102,11 @@ If you need Audio multitasking, and your brain can handle it "not easy", this se
 1. Prepare virtual audio devices: In the host I used VAC "virtual audio cable" (paid) to create 3 virtual audio devices, you can also use ab-cable or any other virtual audio device app you like.
 2. Rename each virtual device: from windows audio control panell, you can rename each device to your like, for me I set these 3 names "left" "bottom" "right" so I can put them in configuration using their name, also when switching apps I have conventional names for audio outputs.
 3. Configure each instance: In **Virtual Sink** option for each instance add the corrosponding virtual device name. this is the device apollo/sunshine will capture and send to the client AND not play it back to default audio output.
-4. Now the annoying part, each time apollo/sunshine gets connection it'll override the default audio output to the device set for it to capture, sadly we don't have built in setting to disable this behaviour, but I personally use app called "SoundSwitch" with default force profile set to speaker "my main output" so its always set from there. Anyway, when you configure your setup in a specific way, windows remeber which apps are assigned to which output.
+
+
+> [!NOTE]
+> Now, I no longer use multi audio device setup, and the AHK script has part to sync audio level for all instances with tha master volume level, that may interfere with your needs if multi audio output is critical for you
+
 
 Now, to route audio output from windows apps, use windows control panel, and to route audio output from diffrent browser tabs, I found extension "AudioPick" as I'm using soundcloud, youtube, and others as PWA, and I can set each one to output specfic device by default and it remebers them too.
 

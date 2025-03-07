@@ -1,0 +1,16 @@
+20250307171951 - First run of the script
+20250307171952 - Attempting to terminate existing process with PID: 3752
+20250307171952 - HELPER SCRIPT: Sending SIGINT to PID: 3752
+20250307171952 - HELPER SCRIPT: Sending SIGINT to PID: 3752
+20250307171952 - Attempting to terminate existing process with PID: 19068
+20250307171952 - HELPER SCRIPT: Sending SIGINT to PID: 19068
+20250307171953 - HELPER SCRIPT: Sending SIGINT to PID: 19068
+20250307171953 - Attempting to terminate existing process with PID: 10060
+20250307171953 - HELPER SCRIPT: Sending SIGINT to PID: 10060
+20250307171954 - HELPER SCRIPT: Sending SIGINT to PID: 10060
+20250307171954 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250307171954 - Started process with PID: 16164 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250307171954 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250307171954 - Started process with PID: 2044 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250307171954 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250307171954 - Started process with PID: 23148 for param: C:\Program Files\Apollo\config\sunshine_3.conf
