@@ -27,7 +27,8 @@ Download and install v1, and v2 from https://www.autohotkey.com/
 
 3. Clone the repo to local folder, last update ditched powershell script in favour of AutoHotKey script doing everything.
 
-Now, inside config directory `C:\Program Files\Apollo\config`
+Now, inside config directory `C:\Program Files\Apollo\config`.
+
 4. Add '.conf files', you can use mine from repo as starting point, just make sure you create the '.json' files for each instance.
 5. Add json state files: create as many empty `.json` files to be used as state file, like `sunshine_1.josn`, `sunshine_3.josn`, and `sunshine_3.josn`.
 
@@ -35,7 +36,8 @@ Now, inside config directory `C:\Program Files\Apollo\config`
 7. Run script as adminstrator, check log file inside script folder for errors..
 8. If everything is fine, add the script as schduled task on startup
 
-> [!Tip] To create a task to auto run the script at login
+> [!TIP]
+> To create a task to auto run the script at login
 > 1. Open task schduler: `Win+R` > `taskschd.msc` > `create new basic task`.
 > 2. Name: Whatever > Trigger: When I log on > Action: Start a program.
 > 3. Program: Browse for `ApolloBulkAutomation.ahk`
@@ -43,11 +45,11 @@ Now, inside config directory `C:\Program Files\Apollo\config`
 > 5. Exit any other instance of AHK script and check run the task: `Select task` > `Right-Mouse Button click` > `Run`
 
 
-##Bonus
+## Bonus
 ### Connect android devices via USB
 Using https://github.com/cotzhang/app.Cot-Hypernet2 to automatically enable "reverse" tethering for android devices via ADB, it actually runs proxy on laptop and use kinda VPN interface on Android to pass the connections over that proxy via ADB forward, it works better than WiFi on old/cheapo android tablets, and I need to keep usb connected for charging anyway.
 
-> [!Note]
+> [!NOTE]
 > You can replace gnirehtet.apk with the https://github.com/Linus789/gnirehtetx as it has some quality of life enhancments, mainly for me its auto exit on tablet, which made it easier to use the big tablet as normal when I'm not working "just disconnect and it'll automaticall stop the gnirehtet vpn, so you don't have to ;)
 
 Anopther option is to use native hardware tethering as a workaround to have a network between PC and Android, I noticed slight better performance than the ADB method, so here it is:
@@ -128,3 +130,8 @@ Using windows volume mixer, I figured out we can control Apollo app volume level
 > [!TIP]
 > If you want support or have issues you're welcome to open discussion or create an issue in Apollo's repo, but again, don't mix between both.
 
+
+
+
+> [!CAUTION]
+> I'm not a programmer, most of the actual script was written with help from copilot and deepseek.
