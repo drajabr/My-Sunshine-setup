@@ -154,20 +154,28 @@ SyncVolume() {
     if (!pids || pids.MaxIndex() = 0)
         return
 
+    static lastVolume := -1
+    static lastMute := -1
+
     masterVolume := VA_GetMasterVolume()
-    LogMessage(2, "Master volume: " . masterVolume)
-
     isMuted := VA_GetMasterMute()
-    LogMessage(2, "Master mute status: " . isMuted)
 
-    for index, PID in pids {
-        VA_SetAppVolume(PID, masterVolume)
-        LogMessage(2, "Set volume for PID: " . PID . " to " . masterVolume)
-        if (isMuted)
-            VA_SetAppMute(PID, 1)
-        else
-            VA_SetAppMute(PID, 0)
-        LogMessage(1, "Set mute status for PID: " . PID . " to " . isMuted)
+    if (masterVolume != lastVolume || isMuted != lastMute) {
+        LogMessage(2, "Master volume changed to: " . masterVolume)
+        LogMessage(2, "Master mute status changed to: " . isMuted)
+
+        for index, PID in pids {
+            VA_SetAppVolume(PID, masterVolume)
+            LogMessage(2, "Set volume for PID: " . PID . " to " . masterVolume)
+            if (isMuted)
+                VA_SetAppMute(PID, 1)
+            else
+                VA_SetAppMute(PID, 0)
+            LogMessage(1, "Set mute status for PID: " . PID . " to " . isMuted)
+        }
+
+        lastVolume := masterVolume
+        lastMute := isMuted
     }
     LogMessage(2, "SyncVolume() completed")
 }
@@ -182,5 +190,5 @@ if (autoExitOnDisconnect) {
 }
 
 if (autoSyncVolume) {
-    SetTimer, SyncVolume, 1000
+    SetTimer, SyncVolume, 100
 }
