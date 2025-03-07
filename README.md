@@ -128,3 +128,8 @@ Using windows volume mixer, I figured out we can control Apollo app volume level
 > [!TIP]
 > If you want support or have issues you're welcome to open discussion or create an issue in Apollo's repo, but again, don't mix between both.
 
+
+
+
+> [!CAUTION]
+> I'm not a programmer, most of the actual script was written with help from copilot and deepseek.
