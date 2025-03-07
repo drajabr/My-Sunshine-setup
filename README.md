@@ -47,10 +47,8 @@ Now, inside config directory `C:\Program Files\Apollo\config`
 ### Connect android devices via USB
 Using https://github.com/cotzhang/app.Cot-Hypernet2 to automatically enable "reverse" tethering for android devices via ADB, it actually runs proxy on laptop and use kinda VPN interface on Android to pass the connections over that proxy via ADB forward, it works better than WiFi on old/cheapo android tablets, and I need to keep usb connected for charging anyway.
 
-
 > [!Note]
 > You can replace gnirehtet.apk with the https://github.com/Linus789/gnirehtetx as it has some quality of life enhancments, mainly for me its auto exit on tablet, which made it easier to use the big tablet as normal when I'm not working "just disconnect and it'll automaticall stop the gnirehtet vpn, so you don't have to ;)
-
 
 Anopther option is to use native hardware tethering as a workaround to have a network between PC and Android, I noticed slight better performance than the ADB method, so here it is:
 1. Enable USB tethering from android settings
@@ -95,6 +93,9 @@ This may not be easy to setup for first time Automate App users, but ther result
   6. Now, remaining the "HTTPS request" block, which is responsible to ping the url of sunshine WebUI to auto launch or close app, in my case it was `https://192.168.1.130:17988` edit according to each instance webUI url, hint: WebUI Port = sunshine port - 1.
 
 ### Seperate Audio output device for each display
+UPDATE: I'm not using this setup anymore, Its a PITA and not worth it. I now use FxSound to manually switch audio output, and still keep 1 dummy virtual audio device "not configured in apollo" but if I select it the host won't output any actual sound, but apollo can still capture it. So its my option when I want to mute the host while keeping clients audio "this is my daily usage now", also, AutoHotkey to keep the audio levels synced.
+
+
 To make use of the speaker in each of these devices, in such a way each display outputs audio of the thing beinng displayed on it. While audio multitasking may not always be practical, but most of the time I have background music playing even if I'm in a meeting 😆 even for watching multiple live streams.
 
 If you need Audio multitasking, and your brain can handle it "not easy", this section is for you. the idea is to create multiple virtual audio devices, and set each one as a sink for each instance, also, disable "Play audio on PC" on android clients using artemis or monlight and enable "Mute host PC speakers while streaming" on windows clients using moonlight-qt, this is important so each Apollo/sunshine instace doesn't playback its captured stream to the main playback device again, thus combining what we want to seperate :) .
@@ -109,6 +110,13 @@ If you need Audio multitasking, and your brain can handle it "not easy", this se
 
 
 Now, to route audio output from windows apps, use windows control panel, and to route audio output from diffrent browser tabs, I found extension "AudioPick" as I'm using soundcloud, youtube, and others as PWA, and I can set each one to output specfic device by default and it remebers them too.
+
+### Control volume level from inside the host
+The issue is Apollo captures digital audio (raw), and the only way to control volume level is from the client, which is not suitable for my daily usage.
+
+Using windows volume mixer, I figured out we can control Apollo app volume level from there, and it actually worked! (no one knows how). anyway, in the repo the AHK V1 script (also called from the powershell script) that mainly keep volume level and mute status in sync between the master level and apollo app level inside the windows mixer.
+
+
 
 > [!NOTE]
 > This is guide is made using https://github.com/ClassicOldSong/Apollo repo.
