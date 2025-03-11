@@ -180,7 +180,7 @@ LogMessage(2, "Script started")
 BulkStartApollo()
 
 if (autoExitOnDisconnect) {
-    SetTimer, WatchLogFiles, 1000
+    SetTimer, WatchLogFiles, 100
 }
 
 if (autoSyncVolume) {
