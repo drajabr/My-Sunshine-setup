@@ -122,19 +122,19 @@ WatchLogFiles() {
     if (killedIndexes.MaxIndex() > 0) {
         LogMessage(1, "Processes terminated, restarting again")
         for index, killedIndex in killedIndexes {
-            logFile := confDirectory . "\" . logFiles[killedIndex]
-            FileDelete, %logFile%
-            if !FileExist(logFile) {
-                LogMessage(1, "Successfully deleted log file: " . logFile)
-                FileAppend,, %logFile%
-                if FileExist(logFile) {
-                    LogMessage(1, "Successfully recreated log file: " . logFile)
-                } else {
-                    LogMessage(0, "Failed to recreate log file: " . logFile)
-                }
-            } else {
-                LogMessage(0, "Failed to delete log file: " . logFile)
-            }
+            ; logFile := confDirectory . "\" . logFiles[killedIndex]
+            ; FileDelete, %logFile%
+            ; if !FileExist(logFile) {
+            ;     LogMessage(1, "Successfully deleted log file: " . logFile)
+            ;     FileAppend,, %logFile%
+            ;     if FileExist(logFile) {
+            ;         LogMessage(1, "Successfully recreated log file: " . logFile)
+            ;     } else {
+            ;         LogMessage(0, "Failed to recreate log file: " . logFile)
+            ;     }
+            ; } else {
+            ;     LogMessage(0, "Failed to delete log file: " . logFile)
+            ; }
             param := confDirectory . "\" . confFiles[killedIndex]
             LogMessage(1, "Restarting process with param: " . param)
             Run, "%exePath%" "%param%", %exeDirectory%, Hide, newPid
