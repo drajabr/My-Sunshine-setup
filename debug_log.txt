@@ -1,0 +1,21 @@
+20250311110955 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_1.log for PID: 14832
+20250311110955 - HELPER SCRIPT: Sending SIGINT to PID: 14832
+20250311110955 - Processes terminated, restarting again
+20250311110955 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250311110955 - Restarted process with PID: 17080 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250311110956 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_1.log for PID: 17080
+20250311110956 - HELPER SCRIPT: Sending SIGINT to PID: 17080
+20250311110956 - Processes terminated, restarting again
+20250311110956 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250311110956 - Restarted process with PID: 5156 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250311111036 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_1.log for PID: 5156
+20250311111036 - HELPER SCRIPT: Sending SIGINT to PID: 5156
+20250311111036 - Terminate exit with error for PID: 5156
+20250311111036 - Processes terminated, restarting again
+20250311111036 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250311111036 - Restarted process with PID: 19316 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250311111037 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_1.log for PID: 19316
+20250311111037 - HELPER SCRIPT: Sending SIGINT to PID: 19316
+20250311111037 - Processes terminated, restarting again
+20250311111037 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250311111037 - Restarted process with PID: 16796 for param: C:\Program Files\Apollo\config\sunshine_1.conf
