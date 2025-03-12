@@ -47,7 +47,7 @@ Now, inside config directory `C:\Program Files\Apollo\config`.
 
 ## Bonus
 ### Connect android devices via USB
-Using https://github.com/cotzhang/app.Cot-Hypernet2 to automatically enable "reverse" tethering for android devices via ADB, it actually runs proxy on laptop and use kinda VPN interface on Android to pass the connections over that proxy via ADB forward, it works better than WiFi on old/cheapo android tablets, and I need to keep usb connected for charging anyway.
+Using https://github.com/cotzhang/app.Cot-Hypernet2 to automatically enable "reverse" tethering for android devices via ADB, it actually runs proxy on laptop and use kinda VPN interface on Android to pass the connections over that proxy via ADB reverse, it works better than WiFi on old/cheapo android tablets, and I need to keep usb connected for charging anyway.
 
 > [!NOTE]
 > You can replace gnirehtet.apk with the https://github.com/Linus789/gnirehtetx as it has some quality of life enhancments, mainly for me its auto exit on tablet, which made it easier to use the big tablet as normal when I'm not working "just disconnect and it'll automaticall stop the gnirehtet vpn, so you don't have to ;)
