@@ -38,11 +38,11 @@ Now, inside config directory `C:\Program Files\Apollo\config`.
 
 > [!TIP]
 > To create a task to auto run the script at login
-> 1. Open task schduler: `Win+R` > `taskschd.msc` > `create new basic task`.
-> 2. Name: Whatever > Trigger: When I log on > Action: Start a program.
-> 3. Program: Browse for `ApolloBulkAutomation.ahk`
-> 4. Check open-dialog or just Open the task and check: `Run with highest privilege`
-> 5. Exit any other instance of AHK script and check run the task: `Select task` > `Right-Mouse Button click` > `Run`
+> 1. Open task schduler: `Win+R` > `taskschd.msc` > `Create Task`.
+> 2. Name: `Apollo-bulk-start` (for example) > Enable `Run with highest privileges` in the bottom of `General` Tab
+> 3. Triggers: `New` > `At log on`
+> 4. Actions: `New` > `Start a program` > Select `ApolloBulkAutomation.ahk`.
+> 5. Test run the task: `Select task` > `Right-Mouse Button click` > `Run`
 
 
 ## Bonus
