@@ -37,13 +37,18 @@ Now, inside config directory `C:\Program Files\Apollo\config`.
 8. If everything is fine, add the script as schduled task on startup
 
 > [!TIP]
-> To create a task to auto run the script at login
+> You can setup the script to run automaticall on-login:
 > 1. Open task schduler: `Win+R` > `taskschd.msc` > `Create Task`.
 > 2. Name: `Apollo-bulk-start` (for example) > Enable `Run with highest privileges` in the bottom of `General` Tab
 > 3. Triggers: `New` > `At log on`
 > 4. Actions: `New` > `Start a program` > Select `ApolloBulkAutomation.ahk`.
 > 5. Test run the task: `Select task` > `Right-Mouse Button click` > `Run`
 
+> [!WARNING]
+> **You need to disable the default apollo service for this to work properly.**
+> 
+> Inside Apollo installation path, there's a `scripts` folder i.e `C:\Program Files\Apollo\scripts`
+> Run `uninstall-service.bat` as adminstrator so apollo default service won't run at startup.
 
 ## Bonus
 ### Connect android devices via USB
