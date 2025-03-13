@@ -37,17 +37,22 @@ Now, inside config directory `C:\Program Files\Apollo\config`.
 8. If everything is fine, add the script as schduled task on startup
 
 > [!TIP]
-> To create a task to auto run the script at login
-> 1. Open task schduler: `Win+R` > `taskschd.msc` > `create new basic task`.
-> 2. Name: Whatever > Trigger: When I log on > Action: Start a program.
-> 3. Program: Browse for `ApolloBulkAutomation.ahk`
-> 4. Check open-dialog or just Open the task and check: `Run with highest privilege`
-> 5. Exit any other instance of AHK script and check run the task: `Select task` > `Right-Mouse Button click` > `Run`
+> You can setup the script to run automaticall on-login:
+> 1. Open task schduler: `Win+R` > `taskschd.msc` > `Create Task`.
+> 2. Name: `Apollo-bulk-start` (for example) > Enable `Run with highest privileges` in the bottom of `General` Tab
+> 3. Triggers: `New` > `At log on`
+> 4. Actions: `New` > `Start a program` > Select `ApolloBulkAutomation.ahk`.
+> 5. Test run the task: `Select task` > `Right-Mouse Button click` > `Run`
 
+> [!WARNING]
+> **You need to disable the default apollo service for this to work properly.**
+> 
+> Inside Apollo installation path, there's a `scripts` folder i.e `C:\Program Files\Apollo\scripts`
+> Run `uninstall-service.bat` as adminstrator so apollo default service won't run at startup.
 
 ## Bonus
 ### Connect android devices via USB
-Using https://github.com/cotzhang/app.Cot-Hypernet2 to automatically enable "reverse" tethering for android devices via ADB, it actually runs proxy on laptop and use kinda VPN interface on Android to pass the connections over that proxy via ADB forward, it works better than WiFi on old/cheapo android tablets, and I need to keep usb connected for charging anyway.
+Using https://github.com/cotzhang/app.Cot-Hypernet2 to automatically enable "reverse" tethering for android devices via ADB, it actually runs proxy on laptop and use kinda VPN interface on Android to pass the connections over that proxy via ADB reverse, it works better than WiFi on old/cheapo android tablets, and I need to keep usb connected for charging anyway.
 
 > [!NOTE]
 > You can replace gnirehtet.apk with the https://github.com/Linus789/gnirehtetx as it has some quality of life enhancments, mainly for me its auto exit on tablet, which made it easier to use the big tablet as normal when I'm not working "just disconnect and it'll automaticall stop the gnirehtet vpn, so you don't have to ;)
