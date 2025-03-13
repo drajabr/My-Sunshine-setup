@@ -142,7 +142,7 @@ WatchLogFiles() {
 }
 
 SyncVolume() {
-    global pids
+    global pids, logFiles, confDirectory, debugLevel
     LogMessage(2, "Starting SyncVolume()")
 
     if (!pids || pids.MaxIndex() = 0)
@@ -150,13 +150,36 @@ SyncVolume() {
 
     static lastVolume := -1
     static lastMute := -1
+    static lastReadPositions := {}
 
     masterVolume := VA_GetMasterVolume()
     isMuted := VA_GetMasterMute()
 
-    if (masterVolume != lastVolume || isMuted != lastMute) {
-        LogMessage(2, "Master volume changed to: " . masterVolume)
-        LogMessage(2, "Master mute status changed to: " . isMuted)
+    clientConnected := false
+
+    Loop, % logFiles.MaxIndex() {
+        logFile := confDirectory . "\" . logFiles[A_Index]
+        if (!lastReadPositions.HasKey(logFile)) {
+            lastReadPositions[logFile] := 0
+        }
+        FileGetSize, fileSize, %logFile%
+        if (fileSize > lastReadPositions[logFile]) {
+            FileRead, logContent, %logFile%
+            logContent := SubStr(logContent, lastReadPositions[logFile] + 1)
+            lastReadPositions[logFile] := fileSize
+            LogMessage(2, "Checking log file: " . logFile)
+            if InStr(logContent, "CLIENT CONNECTED") {
+                LogMessage(1, "Found 'CLIENT CONNECTED' in log file: " . logFile . " Syncing volume level")
+                clientConnected := true
+            }
+        }
+    }
+    if (clientConnected) {
+        Sleep, 500
+    }
+
+    if (clientConnected || masterVolume != lastVolume || isMuted != lastMute) {
+        LogMessage(2, "Syncing volume settings")
 
         for index, PID in pids {
             VA_SetAppVolume(PID, masterVolume)
@@ -171,6 +194,7 @@ SyncVolume() {
         lastVolume := masterVolume
         lastMute := isMuted
     }
+
     LogMessage(2, "SyncVolume() completed")
 }
 
