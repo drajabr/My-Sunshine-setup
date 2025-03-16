@@ -1,0 +1,20 @@
+exeDirectory=C:\Program Files\Apollo
+confDirectory=C:\Program Files\Apollo\config
+platformToolsDirectory=C:\Tools\platform-tools
+
+confFiles=sunshine_1.conf,sunshine_2.conf,sunshine_3.conf
+
+logFiles=sunshine_1.log,sunshine_2.log,sunshine_3.log
+
+
+autoExitOnDisconnect=true
+autoSyncVolume=true
+
+autoCaptureAndroidMic=true
+androidMicDeviceID=PE3SIL21060300042
+micOutputDevice=VAC Main (Virtual Audio Cable)
+
+autoStartAndroidCamera=true
+androidCamDeviceID=4200c2c9e4ef8449
+
+debugLevel=1
