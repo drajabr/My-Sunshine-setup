@@ -12,7 +12,6 @@ autoSyncVolume=true
 
 autoCaptureAndroidMic=true
 androidMicDeviceID=PE3SIL21060300042
-micOutputDevice=VAC Main (Virtual Audio Cable)
 
 autoStartAndroidCamera=true
 androidCamDeviceID=4200c2c9e4ef8449
