@@ -1137,3 +1137,427 @@
 20250313102302 - Set mute status for PID: 24252 to 0
 20250313102302 - Set mute status for PID: 9424 to 0
 20250313102302 - Set mute status for PID: 18480 to 0
+20250313105330 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 9424
+20250313105330 - HELPER SCRIPT: Sending SIGINT to PID: 9424
+20250313105331 - Processes terminated, restarting again
+20250313105331 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250313105331 - Restarted process with PID: 7140 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250313201728 - Set mute status for PID: 24252 to 0
+20250313201728 - Set mute status for PID: 7140 to 0
+20250313201728 - Set mute status for PID: 18480 to 0
+20250313201729 - Set mute status for PID: 24252 to 0
+20250313201729 - Set mute status for PID: 7140 to 0
+20250313201729 - Set mute status for PID: 18480 to 0
+20250313201729 - Set mute status for PID: 24252 to 0
+20250313201729 - Set mute status for PID: 7140 to 0
+20250313201729 - Set mute status for PID: 18480 to 0
+20250313201729 - Set mute status for PID: 24252 to 0
+20250313201729 - Set mute status for PID: 7140 to 0
+20250313201729 - Set mute status for PID: 18480 to 0
+20250313201729 - Set mute status for PID: 24252 to 0
+20250313201729 - Set mute status for PID: 7140 to 0
+20250313201729 - Set mute status for PID: 18480 to 0
+20250313201729 - Set mute status for PID: 24252 to 0
+20250313201729 - Set mute status for PID: 7140 to 0
+20250313201729 - Set mute status for PID: 18480 to 0
+20250313201729 - Set mute status for PID: 24252 to 0
+20250313201729 - Set mute status for PID: 7140 to 0
+20250313201729 - Set mute status for PID: 18480 to 0
+20250313201730 - Set mute status for PID: 24252 to 0
+20250313201730 - Set mute status for PID: 7140 to 0
+20250313201730 - Set mute status for PID: 18480 to 0
+20250313201730 - Set mute status for PID: 24252 to 0
+20250313201730 - Set mute status for PID: 7140 to 0
+20250313201730 - Set mute status for PID: 18480 to 0
+20250313201730 - Set mute status for PID: 24252 to 0
+20250313201730 - Set mute status for PID: 7140 to 0
+20250313201730 - Set mute status for PID: 18480 to 0
+20250313201730 - Set mute status for PID: 24252 to 0
+20250313201731 - Set mute status for PID: 7140 to 0
+20250313201731 - Set mute status for PID: 18480 to 0
+20250313201731 - Set mute status for PID: 24252 to 0
+20250313201731 - Set mute status for PID: 7140 to 0
+20250313201731 - Set mute status for PID: 18480 to 0
+20250313201731 - Set mute status for PID: 24252 to 0
+20250313201731 - Set mute status for PID: 7140 to 0
+20250313201731 - Set mute status for PID: 18480 to 0
+20250313201731 - Set mute status for PID: 24252 to 0
+20250313201731 - Set mute status for PID: 7140 to 0
+20250313201731 - Set mute status for PID: 18480 to 0
+20250313201731 - Set mute status for PID: 24252 to 0
+20250313201731 - Set mute status for PID: 7140 to 0
+20250313201731 - Set mute status for PID: 18480 to 0
+20250313201731 - Set mute status for PID: 24252 to 0
+20250313201731 - Set mute status for PID: 7140 to 0
+20250313201731 - Set mute status for PID: 18480 to 0
+20250313201732 - Set mute status for PID: 24252 to 0
+20250313201732 - Set mute status for PID: 7140 to 0
+20250313201732 - Set mute status for PID: 18480 to 0
+20250313201732 - Set mute status for PID: 24252 to 0
+20250313201732 - Set mute status for PID: 7140 to 0
+20250313201732 - Set mute status for PID: 18480 to 0
+20250313201732 - Set mute status for PID: 24252 to 0
+20250313201732 - Set mute status for PID: 7140 to 0
+20250313201732 - Set mute status for PID: 18480 to 0
+20250313201732 - Set mute status for PID: 24252 to 0
+20250313201732 - Set mute status for PID: 7140 to 0
+20250313201732 - Set mute status for PID: 18480 to 0
+20250313201733 - Set mute status for PID: 24252 to 0
+20250313201733 - Set mute status for PID: 7140 to 0
+20250313201733 - Set mute status for PID: 18480 to 0
+20250313201733 - Set mute status for PID: 24252 to 0
+20250313201733 - Set mute status for PID: 7140 to 0
+20250313201733 - Set mute status for PID: 18480 to 0
+20250313221804 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_3.log for PID: 18480
+20250313221804 - HELPER SCRIPT: Sending SIGINT to PID: 18480
+20250313221805 - Processes terminated, restarting again
+20250313221805 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250313221805 - Restarted process with PID: 11468 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250314101902 - First run of the script
+20250314101902 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250314101902 - Started process with PID: 1500 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250314101902 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250314101902 - Started process with PID: 1360 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250314101902 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250314101902 - Started process with PID: 1988 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250314101902 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250314101902 - Set mute status for PID: 1500 to 0
+20250314101902 - Set mute status for PID: 1360 to 0
+20250314101902 - Set mute status for PID: 1988 to 0
+20250314202224 - Set mute status for PID: 1500 to 0
+20250314202224 - Set mute status for PID: 1360 to 0
+20250314202224 - Set mute status for PID: 1988 to 0
+20250314202224 - Set mute status for PID: 1500 to 0
+20250314202224 - Set mute status for PID: 1360 to 0
+20250314202224 - Set mute status for PID: 1988 to 0
+20250314202230 - Set mute status for PID: 1500 to 0
+20250314202230 - Set mute status for PID: 1360 to 0
+20250314202230 - Set mute status for PID: 1988 to 0
+20250314202231 - Set mute status for PID: 1500 to 0
+20250314202231 - Set mute status for PID: 1360 to 0
+20250314202231 - Set mute status for PID: 1988 to 0
+20250314202231 - Set mute status for PID: 1500 to 0
+20250314202231 - Set mute status for PID: 1360 to 0
+20250314202231 - Set mute status for PID: 1988 to 0
+20250314202231 - Set mute status for PID: 1500 to 0
+20250314202231 - Set mute status for PID: 1360 to 0
+20250314202231 - Set mute status for PID: 1988 to 0
+20250314205225 - Set mute status for PID: 1500 to 0
+20250314205225 - Set mute status for PID: 1360 to 0
+20250314205226 - Set mute status for PID: 1988 to 0
+20250314205226 - Set mute status for PID: 1500 to 0
+20250314205226 - Set mute status for PID: 1360 to 0
+20250314205227 - Set mute status for PID: 1988 to 0
+20250314205253 - Set mute status for PID: 1500 to 0
+20250314205253 - Set mute status for PID: 1360 to 0
+20250314205254 - Set mute status for PID: 1988 to 0
+20250314205254 - Set mute status for PID: 1500 to 0
+20250314205254 - Set mute status for PID: 1360 to 0
+20250314205255 - Set mute status for PID: 1988 to 0
+20250314210917 - Set mute status for PID: 1500 to 0
+20250314210917 - Set mute status for PID: 1360 to 0
+20250314210917 - Set mute status for PID: 1988 to 0
+20250314210918 - Set mute status for PID: 1500 to 0
+20250314210918 - Set mute status for PID: 1360 to 0
+20250314210919 - Set mute status for PID: 1988 to 0
+20250314211331 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_1.log Syncing volume level
+20250314211332 - Set mute status for PID: 1500 to 0
+20250314211332 - Set mute status for PID: 1360 to 0
+20250314211332 - Set mute status for PID: 1988 to 0
+20250314211342 - Set mute status for PID: 1500 to 0
+20250314211342 - Set mute status for PID: 1360 to 0
+20250314211342 - Set mute status for PID: 1988 to 0
+20250314211343 - Set mute status for PID: 1500 to 0
+20250314211343 - Set mute status for PID: 1360 to 0
+20250314211343 - Set mute status for PID: 1988 to 0
+20250315114619 - First run of the script
+20250315114619 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250315114619 - Started process with PID: 10204 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250315114619 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250315114619 - Started process with PID: 10216 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250315114619 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250315114619 - Started process with PID: 10232 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250315114619 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_1.log Syncing volume level
+20250315114619 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250315114619 - Set mute status for PID: 10204 to 0
+20250315114619 - Set mute status for PID: 10216 to 0
+20250315114619 - Set mute status for PID: 10232 to 0
+20250315143117 - Set mute status for PID: 10204 to 0
+20250315143117 - Set mute status for PID: 10216 to 0
+20250315143117 - Set mute status for PID: 10232 to 0
+20250315143118 - Set mute status for PID: 10204 to 0
+20250315143118 - Set mute status for PID: 10216 to 0
+20250315143118 - Set mute status for PID: 10232 to 0
+20250315143118 - Set mute status for PID: 10204 to 0
+20250315143118 - Set mute status for PID: 10216 to 0
+20250315143119 - Set mute status for PID: 10232 to 0
+20250315143119 - Set mute status for PID: 10204 to 0
+20250315143119 - Set mute status for PID: 10216 to 0
+20250315143119 - Set mute status for PID: 10232 to 0
+20250315143333 - Set mute status for PID: 10204 to 0
+20250315143333 - Set mute status for PID: 10216 to 0
+20250315143333 - Set mute status for PID: 10232 to 0
+20250315143334 - Set mute status for PID: 10204 to 0
+20250315143334 - Set mute status for PID: 10216 to 0
+20250315143334 - Set mute status for PID: 10232 to 0
+20250315143352 - Set mute status for PID: 10204 to 0
+20250315143352 - Set mute status for PID: 10216 to 0
+20250315143352 - Set mute status for PID: 10232 to 0
+20250315143353 - Set mute status for PID: 10204 to 0
+20250315143353 - Set mute status for PID: 10216 to 0
+20250315143353 - Set mute status for PID: 10232 to 0
+20250315143358 - Set mute status for PID: 10204 to 0
+20250315143358 - Set mute status for PID: 10216 to 0
+20250315143358 - Set mute status for PID: 10232 to 0
+20250315143359 - Set mute status for PID: 10204 to 0
+20250315143359 - Set mute status for PID: 10216 to 0
+20250315143359 - Set mute status for PID: 10232 to 0
+20250315143359 - Set mute status for PID: 10204 to 0
+20250315143359 - Set mute status for PID: 10216 to 0
+20250315143359 - Set mute status for PID: 10232 to 0
+20250315143359 - Set mute status for PID: 10204 to 0
+20250315143359 - Set mute status for PID: 10216 to 0
+20250315143359 - Set mute status for PID: 10232 to 0
+20250315143423 - Set mute status for PID: 10204 to 0
+20250315143423 - Set mute status for PID: 10216 to 0
+20250315143423 - Set mute status for PID: 10232 to 0
+20250315143423 - Set mute status for PID: 10204 to 0
+20250315143423 - Set mute status for PID: 10216 to 0
+20250315143423 - Set mute status for PID: 10232 to 0
+20250315143424 - Set mute status for PID: 10204 to 0
+20250315143424 - Set mute status for PID: 10216 to 0
+20250315143424 - Set mute status for PID: 10232 to 0
+20250315143425 - Set mute status for PID: 10204 to 0
+20250315143425 - Set mute status for PID: 10216 to 0
+20250315143425 - Set mute status for PID: 10232 to 0
+20250315143639 - Set mute status for PID: 10204 to 0
+20250315143639 - Set mute status for PID: 10216 to 0
+20250315143639 - Set mute status for PID: 10232 to 0
+20250315143642 - Set mute status for PID: 10204 to 0
+20250315143642 - Set mute status for PID: 10216 to 0
+20250315143642 - Set mute status for PID: 10232 to 0
+20250315152120 - Set mute status for PID: 10204 to 0
+20250315152120 - Set mute status for PID: 10216 to 0
+20250315152120 - Set mute status for PID: 10232 to 0
+20250315152145 - Set mute status for PID: 10204 to 0
+20250315152145 - Set mute status for PID: 10216 to 0
+20250315152145 - Set mute status for PID: 10232 to 0
+20250315152149 - Set mute status for PID: 10204 to 0
+20250315152149 - Set mute status for PID: 10216 to 0
+20250315152149 - Set mute status for PID: 10232 to 0
+20250315152149 - Set mute status for PID: 10204 to 0
+20250315152149 - Set mute status for PID: 10216 to 0
+20250315152149 - Set mute status for PID: 10232 to 0
+20250315152149 - Set mute status for PID: 10204 to 0
+20250315152149 - Set mute status for PID: 10216 to 0
+20250315152149 - Set mute status for PID: 10232 to 0
+20250315152149 - Set mute status for PID: 10204 to 0
+20250315152149 - Set mute status for PID: 10216 to 0
+20250315152149 - Set mute status for PID: 10232 to 0
+20250315152149 - Set mute status for PID: 10204 to 0
+20250315152149 - Set mute status for PID: 10216 to 0
+20250315152149 - Set mute status for PID: 10232 to 0
+20250315152149 - Set mute status for PID: 10204 to 0
+20250315152149 - Set mute status for PID: 10216 to 0
+20250315152149 - Set mute status for PID: 10232 to 0
+20250315152150 - Set mute status for PID: 10204 to 0
+20250315152150 - Set mute status for PID: 10216 to 0
+20250315152150 - Set mute status for PID: 10232 to 0
+20250315152150 - Set mute status for PID: 10204 to 0
+20250315152150 - Set mute status for PID: 10216 to 0
+20250315152150 - Set mute status for PID: 10232 to 0
+20250315152207 - Set mute status for PID: 10204 to 0
+20250315152207 - Set mute status for PID: 10216 to 0
+20250315152207 - Set mute status for PID: 10232 to 0
+20250315152207 - Set mute status for PID: 10204 to 0
+20250315152207 - Set mute status for PID: 10216 to 0
+20250315152207 - Set mute status for PID: 10232 to 0
+20250315152208 - Set mute status for PID: 10204 to 0
+20250315152208 - Set mute status for PID: 10216 to 0
+20250315152208 - Set mute status for PID: 10232 to 0
+20250315152209 - Set mute status for PID: 10204 to 0
+20250315152209 - Set mute status for PID: 10216 to 0
+20250315152209 - Set mute status for PID: 10232 to 0
+20250315152209 - Set mute status for PID: 10204 to 0
+20250315152209 - Set mute status for PID: 10216 to 0
+20250315152209 - Set mute status for PID: 10232 to 0
+20250315152209 - Set mute status for PID: 10204 to 0
+20250315152209 - Set mute status for PID: 10216 to 0
+20250315152209 - Set mute status for PID: 10232 to 0
+20250315152209 - Set mute status for PID: 10204 to 0
+20250315152209 - Set mute status for PID: 10216 to 0
+20250315152209 - Set mute status for PID: 10232 to 0
+20250315152210 - Set mute status for PID: 10204 to 0
+20250315152210 - Set mute status for PID: 10216 to 0
+20250315152210 - Set mute status for PID: 10232 to 0
+20250315152210 - Set mute status for PID: 10204 to 0
+20250315152210 - Set mute status for PID: 10216 to 0
+20250315152210 - Set mute status for PID: 10232 to 0
+20250315152210 - Set mute status for PID: 10204 to 0
+20250315152210 - Set mute status for PID: 10216 to 0
+20250315152210 - Set mute status for PID: 10232 to 0
+20250315152226 - Set mute status for PID: 10204 to 0
+20250315152226 - Set mute status for PID: 10216 to 0
+20250315152226 - Set mute status for PID: 10232 to 0
+20250315152249 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 10216
+20250315152250 - HELPER SCRIPT: Sending SIGINT to PID: 10216
+20250315152251 - Processes terminated, restarting again
+20250315152251 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250315152252 - Restarted process with PID: 11024 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250315152317 - Set mute status for PID: 10204 to 0
+20250315152317 - Set mute status for PID: 11024 to 0
+20250315152317 - Set mute status for PID: 10232 to 0
+20250315152318 - Set mute status for PID: 10204 to 0
+20250315152318 - Set mute status for PID: 11024 to 0
+20250315152318 - Set mute status for PID: 10232 to 0
+20250315152318 - Set mute status for PID: 10204 to 0
+20250315152318 - Set mute status for PID: 11024 to 0
+20250315152318 - Set mute status for PID: 10232 to 0
+20250315152318 - Set mute status for PID: 10204 to 0
+20250315152318 - Set mute status for PID: 11024 to 0
+20250315152318 - Set mute status for PID: 10232 to 0
+20250315152318 - Set mute status for PID: 10204 to 0
+20250315152318 - Set mute status for PID: 11024 to 0
+20250315152318 - Set mute status for PID: 10232 to 0
+20250315152318 - Set mute status for PID: 10204 to 0
+20250315152319 - Set mute status for PID: 11024 to 0
+20250315152319 - Set mute status for PID: 10232 to 0
+20250315152319 - Set mute status for PID: 10204 to 0
+20250315152319 - Set mute status for PID: 11024 to 0
+20250315152319 - Set mute status for PID: 10232 to 0
+20250315152319 - Set mute status for PID: 10204 to 0
+20250315152319 - Set mute status for PID: 11024 to 0
+20250315152319 - Set mute status for PID: 10232 to 0
+20250315152319 - Set mute status for PID: 10204 to 0
+20250315152319 - Set mute status for PID: 11024 to 0
+20250315152319 - Set mute status for PID: 10232 to 0
+20250315153339 - Set mute status for PID: 10204 to 0
+20250315153339 - Set mute status for PID: 11024 to 0
+20250315153339 - Set mute status for PID: 10232 to 0
+20250315153339 - Set mute status for PID: 10204 to 0
+20250315153339 - Set mute status for PID: 11024 to 0
+20250315153339 - Set mute status for PID: 10232 to 0
+20250315153339 - Set mute status for PID: 10204 to 0
+20250315153339 - Set mute status for PID: 11024 to 0
+20250315153339 - Set mute status for PID: 10232 to 0
+20250315153340 - Set mute status for PID: 10204 to 0
+20250315153340 - Set mute status for PID: 11024 to 0
+20250315153340 - Set mute status for PID: 10232 to 0
+20250315153340 - Set mute status for PID: 10204 to 0
+20250315153340 - Set mute status for PID: 11024 to 0
+20250315153340 - Set mute status for PID: 10232 to 0
+20250315153340 - Set mute status for PID: 10204 to 0
+20250315153340 - Set mute status for PID: 11024 to 0
+20250315153340 - Set mute status for PID: 10232 to 0
+20250315153340 - Set mute status for PID: 10204 to 0
+20250315153340 - Set mute status for PID: 11024 to 0
+20250315153340 - Set mute status for PID: 10232 to 0
+20250315153340 - Set mute status for PID: 10204 to 0
+20250315153340 - Set mute status for PID: 11024 to 0
+20250315153340 - Set mute status for PID: 10232 to 0
+20250315153341 - Set mute status for PID: 10204 to 0
+20250315153341 - Set mute status for PID: 11024 to 0
+20250315153341 - Set mute status for PID: 10232 to 0
+20250315153341 - Set mute status for PID: 10204 to 0
+20250315153341 - Set mute status for PID: 11024 to 0
+20250315153341 - Set mute status for PID: 10232 to 0
+20250315184558 - Set mute status for PID: 10204 to 0
+20250315184558 - Set mute status for PID: 11024 to 0
+20250315184558 - Set mute status for PID: 10232 to 0
+20250315184558 - Set mute status for PID: 10204 to 0
+20250315184558 - Set mute status for PID: 11024 to 0
+20250315184558 - Set mute status for PID: 10232 to 0
+20250315184558 - Set mute status for PID: 10204 to 0
+20250315184558 - Set mute status for PID: 11024 to 0
+20250315184558 - Set mute status for PID: 10232 to 0
+20250315184558 - Set mute status for PID: 10204 to 0
+20250315184558 - Set mute status for PID: 11024 to 0
+20250315184558 - Set mute status for PID: 10232 to 0
+20250315184558 - Set mute status for PID: 10204 to 0
+20250315184558 - Set mute status for PID: 11024 to 0
+20250315184558 - Set mute status for PID: 10232 to 0
+20250316072253 - First run of the script
+20250316072253 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250316072253 - Started process with PID: 23564 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250316072253 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250316072253 - Started process with PID: 11628 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250316072253 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250316072253 - Started process with PID: 22800 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250316072253 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_1.log Syncing volume level
+20250316072254 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250316072254 - Set mute status for PID: 23564 to 0
+20250316072254 - Set mute status for PID: 11628 to 0
+20250316072254 - Set mute status for PID: 22800 to 0
+20250316072321 - Set mute status for PID: 23564 to 0
+20250316072321 - Set mute status for PID: 11628 to 0
+20250316072321 - Set mute status for PID: 22800 to 0
+20250316072322 - Set mute status for PID: 23564 to 0
+20250316072322 - Set mute status for PID: 11628 to 0
+20250316072322 - Set mute status for PID: 22800 to 0
+20250316072322 - Set mute status for PID: 23564 to 0
+20250316072322 - Set mute status for PID: 11628 to 0
+20250316072322 - Set mute status for PID: 22800 to 0
+20250316072329 - First run of the script
+20250316072330 - Attempting to terminate existing process with PID: 23564
+20250316072330 - HELPER SCRIPT: Sending SIGINT to PID: 23564
+20250316072330 - HELPER SCRIPT: Sending SIGINT to PID: 23564
+20250316072330 - Attempting to terminate existing process with PID: 11628
+20250316072330 - HELPER SCRIPT: Sending SIGINT to PID: 11628
+20250316072330 - HELPER SCRIPT: Sending SIGINT to PID: 11628
+20250316072330 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250316072330 - Started process with PID: 20180 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250316072330 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250316072330 - Started process with PID: 8392 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250316072330 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250316072330 - Started process with PID: 1480 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250316072331 - Set mute status for PID: 20180 to 0
+20250316072331 - Set mute status for PID: 8392 to 0
+20250316072331 - Set mute status for PID: 1480 to 0
+20250316072337 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250316072338 - Set mute status for PID: 20180 to 0
+20250316072338 - Set mute status for PID: 8392 to 0
+20250316072338 - Set mute status for PID: 1480 to 0
+20250316072338 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250316072338 - Set mute status for PID: 20180 to 0
+20250316072338 - Set mute status for PID: 8392 to 0
+20250316072338 - Set mute status for PID: 1480 to 0
+20250316080446 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 8392
+20250316080447 - HELPER SCRIPT: Sending SIGINT to PID: 8392
+20250316080448 - Processes terminated, restarting again
+20250316080448 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250316080448 - Restarted process with PID: 672 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250316094640 - Set mute status for PID: 20180 to 0
+20250316094640 - Set mute status for PID: 672 to 0
+20250316094640 - Set mute status for PID: 1480 to 0
+20250316094640 - Set mute status for PID: 20180 to 0
+20250316094640 - Set mute status for PID: 672 to 0
+20250316094640 - Set mute status for PID: 1480 to 0
+20250316112423 - Set mute status for PID: 20180 to 0
+20250316112423 - Set mute status for PID: 672 to 0
+20250316112423 - Set mute status for PID: 1480 to 0
+20250316112423 - Set mute status for PID: 20180 to 0
+20250316112423 - Set mute status for PID: 672 to 0
+20250316112423 - Set mute status for PID: 1480 to 0
+20250316113629 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250316113629 - Set mute status for PID: 20180 to 0
+20250316113629 - Set mute status for PID: 672 to 0
+20250316113629 - Set mute status for PID: 1480 to 0
+20250316113636 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 672
+20250316113636 - HELPER SCRIPT: Sending SIGINT to PID: 672
+20250316113637 - Processes terminated, restarting again
+20250316113637 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250316113637 - Restarted process with PID: 4168 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250316120700 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250316120701 - Set mute status for PID: 20180 to 0
+20250316120701 - Set mute status for PID: 4168 to 0
+20250316120701 - Set mute status for PID: 1480 to 0
+20250316120712 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 4168
+20250316120713 - HELPER SCRIPT: Sending SIGINT to PID: 4168
+20250316120714 - Processes terminated, restarting again
+20250316120714 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250316120714 - Restarted process with PID: 872 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250316121206 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 872
+20250316121206 - HELPER SCRIPT: Sending SIGINT to PID: 872
+20250316121207 - Processes terminated, restarting again
+20250316121207 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250316121207 - Restarted process with PID: 13356 for param: C:\Program Files\Apollo\config\sunshine_2.conf
