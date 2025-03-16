@@ -7,7 +7,7 @@ SetBatchLines, -1
 
 #Include %A_ScriptDir%/VA.ahk
 
-configFile := A_ScriptDir . "\config.txt"
+configFile := A_ScriptDir . "\vars.cfg"
 config := {}
 
 Loop, Read, %configFile%
