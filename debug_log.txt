@@ -38,3 +38,17 @@
 20250317141119 - Restarted process with PID: 5812 for param: C:\Program Files\Apollo\config\sunshine_2.conf
 20250317141138 - Found 'Opus initialized' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
 20250317141139 - Sync mute state: Unmuted for PIDs: 2380, 5812, 23436
+20250317141216 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 5812
+20250317141216 - HELPER SCRIPT: Sending SIGINT to PID: 5812
+20250317141217 - Processes terminated, restarting again
+20250317141217 - Cleared logfile: C:\Program Files\Apollo\config\sunshine_2.log before restarting
+20250317141217 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317141217 - Restarted process with PID: 5532 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317141233 - Found 'Opus initialized' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317141235 - Sync mute state: Unmuted for PIDs: 2380, 5532, 23436
+20250317141237 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 5532
+20250317141237 - HELPER SCRIPT: Sending SIGINT to PID: 5532
+20250317141237 - Processes terminated, restarting again
+20250317141237 - Cleared logfile: C:\Program Files\Apollo\config\sunshine_2.log before restarting
+20250317141237 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317141237 - Restarted process with PID: 23280 for param: C:\Program Files\Apollo\config\sunshine_2.conf
