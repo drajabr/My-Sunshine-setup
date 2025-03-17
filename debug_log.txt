@@ -1,763 +1,577 @@
-20250317002915 - Script started at 20250317002915
-20250317002915 - First run of the script
-20250317002915 - Attempting to terminate existing process with PID: 6120
-20250317002915 - HELPER SCRIPT: Sending SIGINT to PID: 6120
-20250317002916 - HELPER SCRIPT: Sending SIGINT to PID: 6120
-20250317002916 - Attempting to terminate existing process with PID: 14824
-20250317002916 - HELPER SCRIPT: Sending SIGINT to PID: 14824
-20250317002916 - HELPER SCRIPT: Sending SIGINT to PID: 14824
-20250317002916 - Attempting to terminate existing process with PID: 24856
-20250317002917 - HELPER SCRIPT: Sending SIGINT to PID: 24856
-20250317002917 - HELPER SCRIPT: Sending SIGINT to PID: 24856
-20250317002917 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317002917 - Started process with PID: 26428 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317002917 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317002917 - Started process with PID: 4928 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317002917 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317002917 - Started process with PID: 25988 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317002917 - Device PE3SIL21060300042 is now connected
-20250317002918 - Set mute status for PID: 26428 to 0
-20250317002918 - Set mute status for PID: 4928 to 0
-20250317002918 - Set mute status for PID: 25988 to 0
-20250317104223 - Script started at 20250317104223
-20250317104223 - First run of the script
-20250317104223 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317104223 - Started process with PID: 9932 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317104223 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317104223 - Started process with PID: 9952 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317104223 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317104223 - Started process with PID: 9984 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317104228 - Device PE3SIL21060300042 is now disconnected
-20250317104229 - Device PE3SIL21060300042 is now connected
-20250317104229 - Set mute status for PID: 9932 to 0
-20250317104229 - Set mute status for PID: 9952 to 0
-20250317104229 - Set mute status for PID: 9984 to 0
-20250317104258 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
-20250317104259 - Set mute status for PID: 9932 to 0
-20250317104259 - Set mute status for PID: 9952 to 0
-20250317104259 - Set mute status for PID: 9984 to 0
-20250317104413 - Script started at 20250317104413
-20250317104413 - First run of the script
-20250317104413 - Attempting to terminate existing process with PID: 9932
-20250317104413 - HELPER SCRIPT: Sending SIGINT to PID: 9932
-20250317104413 - HELPER SCRIPT: Sending SIGINT to PID: 9932
-20250317104413 - HELPER SCRIPT: Sending SIGINT to PID: 9932
-20250317104413 - Attempting to terminate existing process with PID: 9952
-20250317104413 - HELPER SCRIPT: Sending SIGINT to PID: 9952
-20250317104414 - HELPER SCRIPT: Sending SIGINT to PID: 9952
-20250317104414 - HELPER SCRIPT: Sending SIGINT to PID: 9952
-20250317104414 - HELPER SCRIPT: Sending SIGINT to PID: 9952
-20250317104414 - HELPER SCRIPT: Sending SIGINT to PID: 9952
-20250317104415 - Attempting to terminate existing process with PID: 9984
-20250317104415 - HELPER SCRIPT: Sending SIGINT to PID: 9984
-20250317104415 - HELPER SCRIPT: Sending SIGINT to PID: 9984
-20250317104415 - HELPER SCRIPT: Sending SIGINT to PID: 9984
-20250317104417 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317104417 - Started process with PID: 4756 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317104417 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317104417 - Started process with PID: 21248 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317104417 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317104417 - Started process with PID: 11516 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317104417 - Device PE3SIL21060300042 is now connected
-20250317104418 - Set mute status for PID: 4756 to 0
-20250317104418 - Set mute status for PID: 21248 to 0
-20250317104418 - Set mute status for PID: 11516 to 0
-20250317104421 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
-20250317104421 - Set mute status for PID: 4756 to 0
-20250317104421 - Set mute status for PID: 21248 to 0
-20250317104421 - Set mute status for PID: 11516 to 0
-20250317104729 - Script started at 20250317104729
-20250317104730 - First run of the script
-20250317104730 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317104730 - Started process with PID: 17972 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317104730 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317104730 - Started process with PID: 17508 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317104730 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317104730 - Started process with PID: 22256 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317104736 - Device PE3SIL21060300042 is now disconnected
-20250317104736 - Set mute status for PID: 17972 to 0
-20250317104736 - Device PE3SIL21060300042 is now connected
-20250317104736 - Set mute status for PID: 17508 to 0
-20250317104736 - Set mute status for PID: 22256 to 0
-20250317104754 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
-20250317104755 - Set mute status for PID: 17972 to 0
-20250317104755 - Set mute status for PID: 17508 to 0
-20250317104755 - Set mute status for PID: 22256 to 0
-20250317104859 - Script started at 20250317104859
-20250317104859 - First run of the script
-20250317104859 - Attempting to terminate existing process with PID: 17972
-20250317104859 - HELPER SCRIPT: Sending SIGINT to PID: 17972
-20250317104859 - HELPER SCRIPT: Sending SIGINT to PID: 17972
-20250317104900 - Attempting to terminate existing process with PID: 17508
-20250317104900 - HELPER SCRIPT: Sending SIGINT to PID: 17508
-20250317104900 - HELPER SCRIPT: Sending SIGINT to PID: 17508
-20250317104900 - HELPER SCRIPT: Sending SIGINT to PID: 17508
-20250317104900 - HELPER SCRIPT: Sending SIGINT to PID: 17508
-20250317104901 - HELPER SCRIPT: Sending SIGINT to PID: 17508
-20250317104901 - HELPER SCRIPT: Sending SIGINT to PID: 17508
-20250317104901 - Attempting to terminate existing process with PID: 22256
-20250317104901 - HELPER SCRIPT: Sending SIGINT to PID: 22256
-20250317104902 - HELPER SCRIPT: Sending SIGINT to PID: 22256
-20250317104902 - HELPER SCRIPT: Sending SIGINT to PID: 22256
-20250317104903 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317104903 - Started process with PID: 2948 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317104903 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317104903 - Started process with PID: 2480 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317104903 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317104903 - Started process with PID: 17684 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317104903 - Device PE3SIL21060300042 is now connected
-20250317104904 - Set mute status for PID: 2948 to 0
-20250317104904 - Set mute status for PID: 2480 to 0
-20250317104904 - Set mute status for PID: 17684 to 0
-20250317104906 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
-20250317104907 - Set mute status for PID: 2948 to 0
-20250317104907 - Set mute status for PID: 2480 to 0
-20250317104907 - Set mute status for PID: 17684 to 0
-20250317105320 - Script started at 20250317105320
-20250317105320 - First run of the script
-20250317105320 - Attempting to terminate existing process with PID: 2948
-20250317105320 - HELPER SCRIPT: Sending SIGINT to PID: 2948
-20250317105321 - HELPER SCRIPT: Sending SIGINT to PID: 2948
-20250317105321 - Attempting to terminate existing process with PID: 2480
-20250317105321 - HELPER SCRIPT: Sending SIGINT to PID: 2480
-20250317105321 - HELPER SCRIPT: Sending SIGINT to PID: 2480
-20250317105321 - HELPER SCRIPT: Sending SIGINT to PID: 2480
-20250317105322 - HELPER SCRIPT: Sending SIGINT to PID: 2480
-20250317105322 - HELPER SCRIPT: Sending SIGINT to PID: 2480
-20250317105322 - HELPER SCRIPT: Sending SIGINT to PID: 2480
-20250317105322 - HELPER SCRIPT: Sending SIGINT to PID: 2480
-20250317105322 - Attempting to terminate existing process with PID: 17684
-20250317105323 - HELPER SCRIPT: Sending SIGINT to PID: 17684
-20250317105323 - HELPER SCRIPT: Sending SIGINT to PID: 17684
-20250317105323 - HELPER SCRIPT: Sending SIGINT to PID: 17684
-20250317105324 - HELPER SCRIPT: Sending SIGINT to PID: 17684
-20250317105325 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317105325 - Started process with PID: 15144 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317105325 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317105325 - Started process with PID: 23476 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317105325 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317105325 - Started process with PID: 23256 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317105325 - Device PE3SIL21060300042 is now connected
-20250317105325 - Set mute status for PID: 15144 to 0
-20250317105325 - Set mute status for PID: 23476 to 0
-20250317105325 - Set mute status for PID: 23256 to 0
-20250317105325 - Device connected but no scrcpy process found, starting scrcpy
-20250317105328 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
-20250317105329 - Set mute status for PID: 15144 to 0
-20250317105329 - Set mute status for PID: 23476 to 0
-20250317105329 - Set mute status for PID: 23256 to 0
-20250317105359 - Script started at 20250317105359
-20250317105359 - First run of the script
-20250317105400 - Attempting to terminate existing process with PID: 15144
-20250317105400 - HELPER SCRIPT: Sending SIGINT to PID: 15144
-20250317105400 - HELPER SCRIPT: Sending SIGINT to PID: 15144
-20250317105400 - Attempting to terminate existing process with PID: 23476
-20250317105400 - HELPER SCRIPT: Sending SIGINT to PID: 23476
-20250317105400 - HELPER SCRIPT: Sending SIGINT to PID: 23476
-20250317105401 - HELPER SCRIPT: Sending SIGINT to PID: 23476
-20250317105401 - HELPER SCRIPT: Sending SIGINT to PID: 23476
-20250317105401 - HELPER SCRIPT: Sending SIGINT to PID: 23476
-20250317105401 - Attempting to terminate existing process with PID: 23256
-20250317105402 - HELPER SCRIPT: Sending SIGINT to PID: 23256
-20250317105402 - HELPER SCRIPT: Sending SIGINT to PID: 23256
-20250317105402 - HELPER SCRIPT: Sending SIGINT to PID: 23256
-20250317105404 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317105404 - Started process with PID: 16360 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317105404 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317105404 - Started process with PID: 22800 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317105404 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317105404 - Started process with PID: 19680 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317105404 - Device PE3SIL21060300042 is now connected
-20250317105404 - Set mute status for PID: 16360 to 0
-20250317105404 - Set mute status for PID: 22800 to 0
-20250317105404 - Set mute status for PID: 19680 to 0
-20250317105512 - Script started at 20250317105512
-20250317105512 - First run of the script
-20250317105512 - Attempting to terminate existing process with PID: 16360
-20250317105512 - HELPER SCRIPT: Sending SIGINT to PID: 16360
-20250317105512 - HELPER SCRIPT: Sending SIGINT to PID: 16360
-20250317105512 - Attempting to terminate existing process with PID: 22800
-20250317105512 - HELPER SCRIPT: Sending SIGINT to PID: 22800
-20250317105513 - HELPER SCRIPT: Sending SIGINT to PID: 22800
-20250317105513 - HELPER SCRIPT: Sending SIGINT to PID: 22800
-20250317105513 - Attempting to terminate existing process with PID: 19680
-20250317105513 - HELPER SCRIPT: Sending SIGINT to PID: 19680
-20250317105513 - HELPER SCRIPT: Sending SIGINT to PID: 19680
-20250317105514 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317105514 - Started process with PID: 8648 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317105514 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317105514 - Started process with PID: 2948 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317105514 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317105514 - Started process with PID: 17872 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317105515 - Device PE3SIL21060300042 is now connected
-20250317105515 - Set mute status for PID: 8648 to 0
-20250317105515 - Device PE3SIL21060300042 is now connected
-20250317105515 - Set mute status for PID: 2948 to 0
-20250317105515 - Set mute status for PID: 17872 to 0
-20250317105515 - Device PE3SIL21060300042 is now connected
-20250317105515 - Device PE3SIL21060300042 is now connected
-20250317105515 - Device PE3SIL21060300042 is now connected
-20250317105515 - Device PE3SIL21060300042 is now connected
-20250317105515 - Device PE3SIL21060300042 is now connected
-20250317105515 - Device PE3SIL21060300042 is now connected
-20250317105518 - Device PE3SIL21060300042 is now connected
-20250317105518 - Device PE3SIL21060300042 is now connected
-20250317105518 - Device PE3SIL21060300042 is now connected
-20250317105518 - Device PE3SIL21060300042 is now connected
-20250317105518 - Device PE3SIL21060300042 is now connected
-20250317105518 - Device PE3SIL21060300042 is now connected
-20250317105518 - Device PE3SIL21060300042 is now connected
-20250317105518 - Device PE3SIL21060300042 is now connected
-20250317105518 - Device PE3SIL21060300042 is now connected
-20250317105519 - Device PE3SIL21060300042 is now connected
-20250317105519 - Device PE3SIL21060300042 is now connected
-20250317105523 - Device PE3SIL21060300042 is now connected
-20250317105523 - Device PE3SIL21060300042 is now connected
-20250317105523 - Device PE3SIL21060300042 is now connected
-20250317105523 - Device PE3SIL21060300042 is now connected
-20250317105523 - Device PE3SIL21060300042 is now connected
-20250317105523 - Device PE3SIL21060300042 is now connected
-20250317105523 - Device PE3SIL21060300042 is now connected
-20250317105523 - Device PE3SIL21060300042 is now connected
-20250317105524 - Device PE3SIL21060300042 is now connected
-20250317105526 - Device PE3SIL21060300042 is now connected
-20250317105526 - Device PE3SIL21060300042 is now connected
-20250317105526 - Device PE3SIL21060300042 is now connected
-20250317105526 - Device PE3SIL21060300042 is now connected
-20250317105526 - Device PE3SIL21060300042 is now connected
-20250317105526 - Device PE3SIL21060300042 is now connected
-20250317105526 - Device PE3SIL21060300042 is now connected
-20250317105526 - Device PE3SIL21060300042 is now connected
-20250317105526 - Device PE3SIL21060300042 is now connected
-20250317105527 - Device PE3SIL21060300042 is now connected
-20250317105529 - Device PE3SIL21060300042 is now connected
-20250317105529 - Device PE3SIL21060300042 is now connected
-20250317105529 - Device PE3SIL21060300042 is now connected
-20250317105529 - Device PE3SIL21060300042 is now connected
-20250317105529 - Device PE3SIL21060300042 is now connected
-20250317105529 - Device PE3SIL21060300042 is now connected
-20250317105529 - Device PE3SIL21060300042 is now connected
-20250317105529 - Device PE3SIL21060300042 is now connected
-20250317105529 - Device PE3SIL21060300042 is now connected
-20250317105530 - Device PE3SIL21060300042 is now connected
-20250317105532 - Device PE3SIL21060300042 is now connected
-20250317105532 - Device PE3SIL21060300042 is now connected
-20250317105532 - Device PE3SIL21060300042 is now connected
-20250317105532 - Device PE3SIL21060300042 is now connected
-20250317105532 - Device PE3SIL21060300042 is now connected
-20250317105532 - Device PE3SIL21060300042 is now connected
-20250317105532 - Device PE3SIL21060300042 is now connected
-20250317105532 - Device PE3SIL21060300042 is now connected
-20250317105532 - Device PE3SIL21060300042 is now connected
-20250317105535 - Device PE3SIL21060300042 is now connected
-20250317105535 - Device PE3SIL21060300042 is now connected
-20250317105535 - Device PE3SIL21060300042 is now connected
-20250317105535 - Device PE3SIL21060300042 is now connected
-20250317105535 - Device PE3SIL21060300042 is now connected
-20250317105535 - Device PE3SIL21060300042 is now connected
-20250317105535 - Device PE3SIL21060300042 is now connected
-20250317105535 - Device PE3SIL21060300042 is now connected
-20250317105535 - Device PE3SIL21060300042 is now connected
-20250317105536 - Device PE3SIL21060300042 is now connected
-20250317105536 - Device PE3SIL21060300042 is now connected
-20250317105536 - Device PE3SIL21060300042 is now connected
-20250317105536 - Device PE3SIL21060300042 is now connected
-20250317105536 - Device PE3SIL21060300042 is now connected
-20250317105536 - Device PE3SIL21060300042 is now connected
-20250317105536 - Device PE3SIL21060300042 is now connected
-20250317105536 - Device PE3SIL21060300042 is now connected
-20250317105536 - Device PE3SIL21060300042 is now connected
-20250317105536 - Device PE3SIL21060300042 is now connected
-20250317105537 - Device PE3SIL21060300042 is now connected
-20250317105537 - Device PE3SIL21060300042 is now connected
-20250317105537 - Device PE3SIL21060300042 is now connected
-20250317105537 - Device PE3SIL21060300042 is now connected
-20250317105537 - Device PE3SIL21060300042 is now connected
-20250317105537 - Device PE3SIL21060300042 is now connected
-20250317105537 - Device PE3SIL21060300042 is now connected
-20250317105537 - Device PE3SIL21060300042 is now connected
-20250317105537 - Device PE3SIL21060300042 is now connected
-20250317105538 - Device PE3SIL21060300042 is now connected
-20250317105538 - Device PE3SIL21060300042 is now connected
-20250317105538 - Device PE3SIL21060300042 is now connected
-20250317105538 - Device PE3SIL21060300042 is now connected
-20250317105538 - Device PE3SIL21060300042 is now connected
-20250317105538 - Device PE3SIL21060300042 is now connected
-20250317105538 - Device PE3SIL21060300042 is now connected
-20250317105538 - Device PE3SIL21060300042 is now connected
-20250317105538 - Device PE3SIL21060300042 is now connected
-20250317105539 - Device PE3SIL21060300042 is now connected
-20250317105539 - Device PE3SIL21060300042 is now connected
-20250317105539 - Device PE3SIL21060300042 is now connected
-20250317105539 - Device PE3SIL21060300042 is now connected
-20250317105539 - Device PE3SIL21060300042 is now connected
-20250317105539 - Device PE3SIL21060300042 is now connected
-20250317105539 - Device PE3SIL21060300042 is now connected
-20250317105539 - Device PE3SIL21060300042 is now connected
-20250317105539 - Device PE3SIL21060300042 is now connected
-20250317105540 - Device PE3SIL21060300042 is now connected
-20250317105540 - Device PE3SIL21060300042 is now connected
-20250317105540 - Device PE3SIL21060300042 is now connected
-20250317105540 - Device PE3SIL21060300042 is now connected
-20250317105540 - Device PE3SIL21060300042 is now connected
-20250317105540 - Device PE3SIL21060300042 is now connected
-20250317105540 - Device PE3SIL21060300042 is now connected
-20250317105540 - Device PE3SIL21060300042 is now connected
-20250317105540 - Device PE3SIL21060300042 is now connected
-20250317105541 - Device PE3SIL21060300042 is now connected
-20250317105541 - Device PE3SIL21060300042 is now connected
-20250317105541 - Device PE3SIL21060300042 is now connected
-20250317105541 - Device PE3SIL21060300042 is now connected
-20250317105541 - Device PE3SIL21060300042 is now connected
-20250317105541 - Device PE3SIL21060300042 is now connected
-20250317105541 - Device PE3SIL21060300042 is now connected
-20250317105541 - Device PE3SIL21060300042 is now connected
-20250317105541 - Device PE3SIL21060300042 is now connected
-20250317105542 - Device PE3SIL21060300042 is now connected
-20250317105542 - Device PE3SIL21060300042 is now connected
-20250317105542 - Device PE3SIL21060300042 is now connected
-20250317105542 - Device PE3SIL21060300042 is now connected
-20250317105542 - Device PE3SIL21060300042 is now connected
-20250317105542 - Device PE3SIL21060300042 is now connected
-20250317105542 - Device PE3SIL21060300042 is now connected
-20250317105542 - Device PE3SIL21060300042 is now connected
-20250317105542 - Device PE3SIL21060300042 is now connected
-20250317105543 - Device PE3SIL21060300042 is now connected
-20250317105543 - Device PE3SIL21060300042 is now connected
-20250317105543 - Device PE3SIL21060300042 is now connected
-20250317105543 - Device PE3SIL21060300042 is now connected
-20250317105543 - Device PE3SIL21060300042 is now connected
-20250317105543 - Device PE3SIL21060300042 is now connected
-20250317105543 - Device PE3SIL21060300042 is now connected
-20250317105543 - Device PE3SIL21060300042 is now connected
-20250317105543 - Device PE3SIL21060300042 is now connected
-20250317105544 - Device PE3SIL21060300042 is now connected
-20250317105544 - Device PE3SIL21060300042 is now connected
-20250317105544 - Device PE3SIL21060300042 is now connected
-20250317105544 - Device PE3SIL21060300042 is now connected
-20250317105544 - Device PE3SIL21060300042 is now connected
-20250317105544 - Device PE3SIL21060300042 is now connected
-20250317105544 - Device PE3SIL21060300042 is now connected
-20250317105544 - Device PE3SIL21060300042 is now connected
-20250317105544 - Device PE3SIL21060300042 is now connected
-20250317105544 - Device PE3SIL21060300042 is now connected
-20250317105545 - Device PE3SIL21060300042 is now connected
-20250317105545 - Device PE3SIL21060300042 is now connected
-20250317105545 - Device PE3SIL21060300042 is now connected
-20250317105545 - Device PE3SIL21060300042 is now connected
-20250317105545 - Device PE3SIL21060300042 is now connected
-20250317105545 - Device PE3SIL21060300042 is now connected
-20250317105545 - Device PE3SIL21060300042 is now connected
-20250317105545 - Device PE3SIL21060300042 is now connected
-20250317105545 - Device PE3SIL21060300042 is now connected
-20250317105546 - Device PE3SIL21060300042 is now connected
-20250317105546 - Device PE3SIL21060300042 is now connected
-20250317105546 - Device PE3SIL21060300042 is now connected
-20250317105546 - Device PE3SIL21060300042 is now connected
-20250317105546 - Device PE3SIL21060300042 is now connected
-20250317105546 - Device PE3SIL21060300042 is now connected
-20250317105546 - Device PE3SIL21060300042 is now connected
-20250317105546 - Device PE3SIL21060300042 is now connected
-20250317105546 - Device PE3SIL21060300042 is now connected
-20250317105547 - Device PE3SIL21060300042 is now connected
-20250317105547 - Device PE3SIL21060300042 is now connected
-20250317105547 - Device PE3SIL21060300042 is now connected
-20250317105547 - Device PE3SIL21060300042 is now connected
-20250317105547 - Device PE3SIL21060300042 is now connected
-20250317105547 - Device PE3SIL21060300042 is now connected
-20250317105547 - Device PE3SIL21060300042 is now connected
-20250317105547 - Device PE3SIL21060300042 is now connected
-20250317105547 - Device PE3SIL21060300042 is now connected
-20250317105548 - Device PE3SIL21060300042 is now connected
-20250317105548 - Device PE3SIL21060300042 is now connected
-20250317105548 - Device PE3SIL21060300042 is now connected
-20250317105548 - Device PE3SIL21060300042 is now connected
-20250317105548 - Device PE3SIL21060300042 is now connected
-20250317105548 - Device PE3SIL21060300042 is now connected
-20250317105548 - Device PE3SIL21060300042 is now connected
-20250317105548 - Device PE3SIL21060300042 is now connected
-20250317105548 - Device PE3SIL21060300042 is now connected
-20250317105549 - Device PE3SIL21060300042 is now connected
-20250317105549 - Device PE3SIL21060300042 is now connected
-20250317105549 - Device PE3SIL21060300042 is now connected
-20250317105549 - Device PE3SIL21060300042 is now connected
-20250317105549 - Device PE3SIL21060300042 is now connected
-20250317105549 - Device PE3SIL21060300042 is now connected
-20250317105549 - Device PE3SIL21060300042 is now connected
-20250317105549 - Device PE3SIL21060300042 is now connected
-20250317105549 - Device PE3SIL21060300042 is now connected
-20250317105550 - Device PE3SIL21060300042 is now connected
-20250317105550 - Device PE3SIL21060300042 is now connected
-20250317105550 - Device PE3SIL21060300042 is now connected
-20250317105550 - Device PE3SIL21060300042 is now connected
-20250317105550 - Device PE3SIL21060300042 is now connected
-20250317105550 - Device PE3SIL21060300042 is now connected
-20250317105550 - Device PE3SIL21060300042 is now connected
-20250317105550 - Device PE3SIL21060300042 is now connected
-20250317105550 - Device PE3SIL21060300042 is now connected
-20250317105551 - Device PE3SIL21060300042 is now connected
-20250317105551 - Device PE3SIL21060300042 is now connected
-20250317105551 - Device PE3SIL21060300042 is now connected
-20250317105551 - Device PE3SIL21060300042 is now connected
-20250317105551 - Device PE3SIL21060300042 is now connected
-20250317105551 - Device PE3SIL21060300042 is now connected
-20250317105551 - Device PE3SIL21060300042 is now connected
-20250317105551 - Device PE3SIL21060300042 is now connected
-20250317105551 - Device PE3SIL21060300042 is now connected
-20250317105552 - Device PE3SIL21060300042 is now connected
-20250317105552 - Device PE3SIL21060300042 is now connected
-20250317105552 - Device PE3SIL21060300042 is now connected
-20250317105552 - Device PE3SIL21060300042 is now connected
-20250317105552 - Device PE3SIL21060300042 is now connected
-20250317105552 - Device PE3SIL21060300042 is now connected
-20250317105552 - Device PE3SIL21060300042 is now connected
-20250317105552 - Device PE3SIL21060300042 is now connected
-20250317105552 - Device PE3SIL21060300042 is now connected
-20250317105552 - Device PE3SIL21060300042 is now connected
-20250317105553 - Device PE3SIL21060300042 is now connected
-20250317105553 - Device PE3SIL21060300042 is now connected
-20250317105553 - Device PE3SIL21060300042 is now connected
-20250317105553 - Device PE3SIL21060300042 is now connected
-20250317105553 - Device PE3SIL21060300042 is now connected
-20250317105553 - Device PE3SIL21060300042 is now connected
-20250317105553 - Device PE3SIL21060300042 is now connected
-20250317105553 - Device PE3SIL21060300042 is now connected
-20250317105553 - Device PE3SIL21060300042 is now connected
-20250317105554 - Device PE3SIL21060300042 is now connected
-20250317105554 - Device PE3SIL21060300042 is now connected
-20250317105554 - Device PE3SIL21060300042 is now connected
-20250317105554 - Device PE3SIL21060300042 is now connected
-20250317105554 - Device PE3SIL21060300042 is now connected
-20250317105554 - Device PE3SIL21060300042 is now connected
-20250317105554 - Device PE3SIL21060300042 is now connected
-20250317105554 - Device PE3SIL21060300042 is now connected
-20250317105554 - Device PE3SIL21060300042 is now connected
-20250317105555 - Device PE3SIL21060300042 is now connected
-20250317105555 - Device PE3SIL21060300042 is now connected
-20250317105555 - Device PE3SIL21060300042 is now connected
-20250317105555 - Device PE3SIL21060300042 is now connected
-20250317105555 - Device PE3SIL21060300042 is now connected
-20250317105555 - Device PE3SIL21060300042 is now connected
-20250317105555 - Device PE3SIL21060300042 is now connected
-20250317105555 - Device PE3SIL21060300042 is now connected
-20250317105555 - Device PE3SIL21060300042 is now connected
-20250317105556 - Device PE3SIL21060300042 is now connected
-20250317105556 - Device PE3SIL21060300042 is now connected
-20250317105556 - Device PE3SIL21060300042 is now connected
-20250317105556 - Device PE3SIL21060300042 is now connected
-20250317105556 - Device PE3SIL21060300042 is now connected
-20250317105556 - Device PE3SIL21060300042 is now connected
-20250317105556 - Device PE3SIL21060300042 is now connected
-20250317105556 - Device PE3SIL21060300042 is now connected
-20250317105556 - Device PE3SIL21060300042 is now connected
-20250317105557 - Device PE3SIL21060300042 is now connected
-20250317105557 - Device PE3SIL21060300042 is now connected
-20250317105557 - Device PE3SIL21060300042 is now connected
-20250317105557 - Device PE3SIL21060300042 is now connected
-20250317105557 - Device PE3SIL21060300042 is now connected
-20250317105557 - Device PE3SIL21060300042 is now connected
-20250317105557 - Device PE3SIL21060300042 is now connected
-20250317105557 - Device PE3SIL21060300042 is now connected
-20250317105557 - Device PE3SIL21060300042 is now connected
-20250317105558 - Device PE3SIL21060300042 is now connected
-20250317105558 - Device PE3SIL21060300042 is now connected
-20250317105558 - Device PE3SIL21060300042 is now connected
-20250317105558 - Device PE3SIL21060300042 is now connected
-20250317105558 - Device PE3SIL21060300042 is now connected
-20250317105558 - Device PE3SIL21060300042 is now connected
-20250317105558 - Device PE3SIL21060300042 is now connected
-20250317105558 - Device PE3SIL21060300042 is now connected
-20250317105558 - Device PE3SIL21060300042 is now connected
-20250317105559 - Device PE3SIL21060300042 is now connected
-20250317105559 - Device PE3SIL21060300042 is now connected
-20250317105559 - Device PE3SIL21060300042 is now connected
-20250317105559 - Device PE3SIL21060300042 is now connected
-20250317105559 - Device PE3SIL21060300042 is now connected
-20250317105559 - Device PE3SIL21060300042 is now connected
-20250317105559 - Device PE3SIL21060300042 is now connected
-20250317105559 - Device PE3SIL21060300042 is now connected
-20250317105559 - Device PE3SIL21060300042 is now connected
-20250317105559 - Device PE3SIL21060300042 is now connected
-20250317105600 - Device PE3SIL21060300042 is now connected
-20250317105600 - Device PE3SIL21060300042 is now connected
-20250317105600 - Device PE3SIL21060300042 is now connected
-20250317105600 - Device PE3SIL21060300042 is now connected
-20250317105600 - Device PE3SIL21060300042 is now connected
-20250317105600 - Device PE3SIL21060300042 is now connected
-20250317105600 - Device PE3SIL21060300042 is now connected
-20250317105600 - Device PE3SIL21060300042 is now connected
-20250317105600 - Device PE3SIL21060300042 is now connected
-20250317105601 - Device PE3SIL21060300042 is now connected
-20250317105601 - Device PE3SIL21060300042 is now connected
-20250317105601 - Device PE3SIL21060300042 is now connected
-20250317105601 - Device PE3SIL21060300042 is now connected
-20250317105601 - Device PE3SIL21060300042 is now connected
-20250317105601 - Device PE3SIL21060300042 is now connected
-20250317105601 - Device PE3SIL21060300042 is now connected
-20250317105601 - Device PE3SIL21060300042 is now connected
-20250317105601 - Device PE3SIL21060300042 is now connected
-20250317105602 - Device PE3SIL21060300042 is now connected
-20250317105602 - Device PE3SIL21060300042 is now connected
-20250317105602 - Device PE3SIL21060300042 is now connected
-20250317105602 - Device PE3SIL21060300042 is now connected
-20250317105602 - Device PE3SIL21060300042 is now connected
-20250317105602 - Device PE3SIL21060300042 is now connected
-20250317105602 - Device PE3SIL21060300042 is now connected
-20250317105602 - Device PE3SIL21060300042 is now connected
-20250317105602 - Device PE3SIL21060300042 is now connected
-20250317105603 - Device PE3SIL21060300042 is now connected
-20250317105603 - Device PE3SIL21060300042 is now connected
-20250317105603 - Device PE3SIL21060300042 is now connected
-20250317105603 - Device PE3SIL21060300042 is now connected
-20250317105603 - Device PE3SIL21060300042 is now connected
-20250317105603 - Device PE3SIL21060300042 is now connected
-20250317105603 - Device PE3SIL21060300042 is now connected
-20250317105603 - Device PE3SIL21060300042 is now connected
-20250317105603 - Device PE3SIL21060300042 is now connected
-20250317105604 - Device PE3SIL21060300042 is now connected
-20250317105604 - Device PE3SIL21060300042 is now connected
-20250317105604 - Device PE3SIL21060300042 is now connected
-20250317105604 - Device PE3SIL21060300042 is now connected
-20250317105604 - Device PE3SIL21060300042 is now connected
-20250317105604 - Device PE3SIL21060300042 is now connected
-20250317105604 - Device PE3SIL21060300042 is now connected
-20250317105604 - Device PE3SIL21060300042 is now connected
-20250317105604 - Device PE3SIL21060300042 is now connected
-20250317105605 - Device PE3SIL21060300042 is now connected
-20250317105605 - Device PE3SIL21060300042 is now connected
-20250317105605 - Device PE3SIL21060300042 is now connected
-20250317105605 - Device PE3SIL21060300042 is now connected
-20250317105605 - Device PE3SIL21060300042 is now connected
-20250317105605 - Device PE3SIL21060300042 is now connected
-20250317105605 - Device PE3SIL21060300042 is now connected
-20250317105605 - Device PE3SIL21060300042 is now connected
-20250317105605 - Device PE3SIL21060300042 is now connected
-20250317105606 - Device PE3SIL21060300042 is now connected
-20250317105606 - Device PE3SIL21060300042 is now connected
-20250317105606 - Device PE3SIL21060300042 is now connected
-20250317105606 - Device PE3SIL21060300042 is now connected
-20250317105606 - Device PE3SIL21060300042 is now connected
-20250317105606 - Device PE3SIL21060300042 is now connected
-20250317105606 - Device PE3SIL21060300042 is now connected
-20250317105606 - Device PE3SIL21060300042 is now connected
-20250317105606 - Device PE3SIL21060300042 is now connected
-20250317105607 - Device PE3SIL21060300042 is now connected
-20250317105607 - Device PE3SIL21060300042 is now connected
-20250317105607 - Device PE3SIL21060300042 is now connected
-20250317105607 - Device PE3SIL21060300042 is now connected
-20250317105607 - Device PE3SIL21060300042 is now connected
-20250317105607 - Device PE3SIL21060300042 is now connected
-20250317105607 - Device PE3SIL21060300042 is now connected
-20250317105607 - Device PE3SIL21060300042 is now connected
-20250317105607 - Device PE3SIL21060300042 is now connected
-20250317105608 - Device PE3SIL21060300042 is now connected
-20250317105608 - Device PE3SIL21060300042 is now connected
-20250317105608 - Device PE3SIL21060300042 is now connected
-20250317105608 - Device PE3SIL21060300042 is now connected
-20250317105608 - Device PE3SIL21060300042 is now connected
-20250317105608 - Device PE3SIL21060300042 is now connected
-20250317105608 - Device PE3SIL21060300042 is now connected
-20250317105608 - Device PE3SIL21060300042 is now connected
-20250317105608 - Device PE3SIL21060300042 is now connected
-20250317105609 - Device PE3SIL21060300042 is now connected
-20250317105609 - Device PE3SIL21060300042 is now connected
-20250317105609 - Device PE3SIL21060300042 is now connected
-20250317105609 - Device PE3SIL21060300042 is now connected
-20250317105609 - Device PE3SIL21060300042 is now connected
-20250317105609 - Device PE3SIL21060300042 is now connected
-20250317105609 - Device PE3SIL21060300042 is now connected
-20250317105609 - Device PE3SIL21060300042 is now connected
-20250317105609 - Device PE3SIL21060300042 is now connected
-20250317105609 - Device PE3SIL21060300042 is now connected
-20250317105610 - Device PE3SIL21060300042 is now connected
-20250317105610 - Device PE3SIL21060300042 is now connected
-20250317105610 - Device PE3SIL21060300042 is now connected
-20250317105610 - Device PE3SIL21060300042 is now connected
-20250317105610 - Device PE3SIL21060300042 is now connected
-20250317105610 - Device PE3SIL21060300042 is now connected
-20250317105610 - Device PE3SIL21060300042 is now connected
-20250317105610 - Device PE3SIL21060300042 is now connected
-20250317105610 - Device PE3SIL21060300042 is now connected
-20250317105611 - Device PE3SIL21060300042 is now connected
-20250317105611 - Device PE3SIL21060300042 is now connected
-20250317105611 - Device PE3SIL21060300042 is now connected
-20250317105611 - Device PE3SIL21060300042 is now connected
-20250317105611 - Device PE3SIL21060300042 is now connected
-20250317105611 - Device PE3SIL21060300042 is now connected
-20250317105611 - Device PE3SIL21060300042 is now connected
-20250317105611 - Device PE3SIL21060300042 is now connected
-20250317105611 - Device PE3SIL21060300042 is now connected
-20250317105612 - Device PE3SIL21060300042 is now connected
-20250317105612 - Device PE3SIL21060300042 is now connected
-20250317105612 - Device PE3SIL21060300042 is now connected
-20250317105612 - Device PE3SIL21060300042 is now connected
-20250317105612 - Device PE3SIL21060300042 is now connected
-20250317105612 - Device PE3SIL21060300042 is now connected
-20250317105612 - Device PE3SIL21060300042 is now connected
-20250317105613 - Device PE3SIL21060300042 is now connected
-20250317105613 - Device PE3SIL21060300042 is now connected
-20250317105613 - Device PE3SIL21060300042 is now connected
-20250317105613 - Device PE3SIL21060300042 is now connected
-20250317105613 - Device PE3SIL21060300042 is now connected
-20250317105613 - Device PE3SIL21060300042 is now connected
-20250317105613 - Device PE3SIL21060300042 is now connected
-20250317105615 - Device PE3SIL21060300042 is now connected
-20250317105615 - Device PE3SIL21060300042 is now connected
-20250317105615 - Device PE3SIL21060300042 is now connected
-20250317105616 - Device PE3SIL21060300042 is now connected
-20250317105616 - Device PE3SIL21060300042 is now connected
-20250317105616 - Device PE3SIL21060300042 is now connected
-20250317105616 - Device PE3SIL21060300042 is now connected
-20250317105616 - Device PE3SIL21060300042 is now connected
-20250317105616 - Device PE3SIL21060300042 is now connected
-20250317105618 - Device PE3SIL21060300042 is now connected
-20250317105618 - Device PE3SIL21060300042 is now connected
-20250317105618 - Device PE3SIL21060300042 is now connected
-20250317105618 - Device PE3SIL21060300042 is now connected
-20250317105619 - Device PE3SIL21060300042 is now connected
-20250317105619 - Device PE3SIL21060300042 is now connected
-20250317105619 - Device PE3SIL21060300042 is now connected
-20250317105619 - Device PE3SIL21060300042 is now connected
-20250317105619 - Device PE3SIL21060300042 is now connected
-20250317105619 - Device PE3SIL21060300042 is now connected
-20250317105623 - Device PE3SIL21060300042 is now connected
-20250317105623 - Device PE3SIL21060300042 is now connected
-20250317105623 - Device PE3SIL21060300042 is now connected
-20250317105623 - Device PE3SIL21060300042 is now connected
-20250317105624 - Device PE3SIL21060300042 is now connected
-20250317105624 - Device PE3SIL21060300042 is now connected
-20250317105624 - Device PE3SIL21060300042 is now connected
-20250317105624 - Device PE3SIL21060300042 is now connected
-20250317105624 - Device PE3SIL21060300042 is now connected
-20250317105624 - Device PE3SIL21060300042 is now connected
-20250317105626 - Device PE3SIL21060300042 is now connected
-20250317105626 - Device PE3SIL21060300042 is now connected
-20250317105626 - Device PE3SIL21060300042 is now connected
-20250317105626 - Device PE3SIL21060300042 is now connected
-20250317105627 - Device PE3SIL21060300042 is now connected
-20250317105627 - Device PE3SIL21060300042 is now connected
-20250317105627 - Device PE3SIL21060300042 is now connected
-20250317105627 - Device PE3SIL21060300042 is now connected
-20250317105627 - Device PE3SIL21060300042 is now connected
-20250317105627 - Device PE3SIL21060300042 is now connected
-20250317105631 - Device PE3SIL21060300042 is now connected
-20250317105631 - Device PE3SIL21060300042 is now connected
-20250317105631 - Device PE3SIL21060300042 is now connected
-20250317105631 - Device PE3SIL21060300042 is now connected
-20250317105632 - Device PE3SIL21060300042 is now connected
-20250317105632 - Device PE3SIL21060300042 is now connected
-20250317105632 - Device PE3SIL21060300042 is now connected
-20250317105632 - Device PE3SIL21060300042 is now connected
-20250317105632 - Device PE3SIL21060300042 is now connected
-20250317105632 - Device PE3SIL21060300042 is now connected
-20250317105634 - Device PE3SIL21060300042 is now connected
-20250317105634 - Device PE3SIL21060300042 is now connected
-20250317105634 - Device PE3SIL21060300042 is now connected
-20250317105634 - Device PE3SIL21060300042 is now connected
-20250317105634 - Device PE3SIL21060300042 is now connected
-20250317105635 - Device PE3SIL21060300042 is now connected
-20250317105635 - Device PE3SIL21060300042 is now connected
-20250317105635 - Device PE3SIL21060300042 is now connected
-20250317105635 - Device PE3SIL21060300042 is now connected
-20250317105635 - Device PE3SIL21060300042 is now connected
-20250317105637 - Device PE3SIL21060300042 is now connected
-20250317105637 - Device PE3SIL21060300042 is now connected
-20250317105637 - Device PE3SIL21060300042 is now connected
-20250317105637 - Device PE3SIL21060300042 is now connected
-20250317105637 - Device PE3SIL21060300042 is now connected
-20250317105638 - Device PE3SIL21060300042 is now connected
-20250317105638 - Device PE3SIL21060300042 is now connected
-20250317105638 - Device PE3SIL21060300042 is now connected
-20250317105638 - Device PE3SIL21060300042 is now connected
-20250317105638 - Device PE3SIL21060300042 is now connected
-20250317105642 - Device PE3SIL21060300042 is now connected
-20250317105642 - Device PE3SIL21060300042 is now connected
-20250317105642 - Device PE3SIL21060300042 is now connected
-20250317105642 - Device PE3SIL21060300042 is now connected
-20250317105642 - Device PE3SIL21060300042 is now connected
-20250317105643 - Device PE3SIL21060300042 is now connected
-20250317105643 - Device PE3SIL21060300042 is now connected
-20250317105643 - Device PE3SIL21060300042 is now connected
-20250317105643 - Device PE3SIL21060300042 is now connected
-20250317105643 - Device PE3SIL21060300042 is now connected
-20250317105647 - Device PE3SIL21060300042 is now connected
-20250317105647 - Device PE3SIL21060300042 is now connected
-20250317105647 - Device PE3SIL21060300042 is now connected
-20250317105647 - Device PE3SIL21060300042 is now connected
-20250317105647 - Device PE3SIL21060300042 is now connected
-20250317105647 - Device PE3SIL21060300042 is now connected
-20250317105648 - Device PE3SIL21060300042 is now connected
-20250317105648 - Device PE3SIL21060300042 is now connected
-20250317105648 - Device PE3SIL21060300042 is now connected
-20250317105648 - Device PE3SIL21060300042 is now connected
-20250317105650 - Device PE3SIL21060300042 is now connected
-20250317105650 - Device PE3SIL21060300042 is now connected
-20250317105650 - Device PE3SIL21060300042 is now connected
-20250317105650 - Device PE3SIL21060300042 is now connected
-20250317105650 - Device PE3SIL21060300042 is now connected
-20250317105650 - Device PE3SIL21060300042 is now connected
-20250317105651 - Device PE3SIL21060300042 is now connected
-20250317105651 - Device PE3SIL21060300042 is now connected
-20250317105651 - Device PE3SIL21060300042 is now connected
-20250317105653 - Device PE3SIL21060300042 is now connected
-20250317105653 - Device PE3SIL21060300042 is now connected
-20250317105653 - Device PE3SIL21060300042 is now connected
-20250317105653 - Device PE3SIL21060300042 is now connected
-20250317105653 - Device PE3SIL21060300042 is now connected
-20250317105653 - Device PE3SIL21060300042 is now connected
-20250317105653 - Device PE3SIL21060300042 is now connected
-20250317105654 - Device PE3SIL21060300042 is now connected
-20250317105654 - Device PE3SIL21060300042 is now connected
-20250317105656 - Device PE3SIL21060300042 is now connected
-20250317105656 - Device PE3SIL21060300042 is now connected
-20250317105656 - Device PE3SIL21060300042 is now connected
-20250317105656 - Device PE3SIL21060300042 is now connected
-20250317105656 - Device PE3SIL21060300042 is now connected
-20250317105656 - Device PE3SIL21060300042 is now connected
-20250317105656 - Device PE3SIL21060300042 is now connected
-20250317105656 - Device PE3SIL21060300042 is now connected
-20250317105657 - Device PE3SIL21060300042 is now connected
-20250317105657 - Device PE3SIL21060300042 is now connected
-20250317105701 - Device PE3SIL21060300042 is now connected
-20250317105701 - Device PE3SIL21060300042 is now connected
-20250317105701 - Device PE3SIL21060300042 is now connected
-20250317105701 - Device PE3SIL21060300042 is now connected
-20250317105701 - Device PE3SIL21060300042 is now connected
-20250317105701 - Device PE3SIL21060300042 is now connected
-20250317105701 - Device PE3SIL21060300042 is now connected
-20250317105701 - Device PE3SIL21060300042 is now connected
-20250317105702 - Device PE3SIL21060300042 is now connected
-20250317105702 - Device PE3SIL21060300042 is now connected
-20250317105706 - Device PE3SIL21060300042 is now connected
-20250317105706 - Device PE3SIL21060300042 is now connected
-20250317105706 - Device PE3SIL21060300042 is now connected
-20250317105706 - Device PE3SIL21060300042 is now connected
-20250317105706 - Device PE3SIL21060300042 is now connected
-20250317105706 - Device PE3SIL21060300042 is now connected
-20250317105706 - Device PE3SIL21060300042 is now connected
-20250317105706 - Device PE3SIL21060300042 is now connected
-20250317105707 - Device PE3SIL21060300042 is now connected
-20250317105707 - Device PE3SIL21060300042 is now connected
-20250317105709 - Script started at 20250317105709
-20250317105709 - First run of the script
-20250317105709 - Attempting to terminate existing process with PID: 8648
-20250317105709 - HELPER SCRIPT: Sending SIGINT to PID: 8648
-20250317105709 - HELPER SCRIPT: Sending SIGINT to PID: 8648
-20250317105709 - Attempting to terminate existing process with PID: 2948
-20250317105710 - HELPER SCRIPT: Sending SIGINT to PID: 2948
-20250317105710 - HELPER SCRIPT: Sending SIGINT to PID: 2948
-20250317105710 - HELPER SCRIPT: Sending SIGINT to PID: 2948
-20250317105710 - Attempting to terminate existing process with PID: 17872
-20250317105710 - HELPER SCRIPT: Sending SIGINT to PID: 17872
-20250317105711 - HELPER SCRIPT: Sending SIGINT to PID: 17872
-20250317105711 - HELPER SCRIPT: Sending SIGINT to PID: 17872
-20250317105712 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317105712 - Started process with PID: 11748 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317105712 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317105712 - Started process with PID: 11876 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317105712 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317105712 - Started process with PID: 14496 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317105712 - Device PE3SIL21060300042 is now connected
-20250317105712 - Set mute status for PID: 11748 to 0
-20250317105712 - Set mute status for PID: 11876 to 0
-20250317105712 - Set mute status for PID: 14496 to 0
+20250317115954 - Script started at 20250317115954
+20250317115954 - First run of the script
+20250317115954 - Attempting to terminate existing process with PID: 11760
+20250317115954 - HELPER SCRIPT: Sending SIGINT to PID: 11760
+20250317115954 - HELPER SCRIPT: Sending SIGINT to PID: 11760
+20250317115954 - Attempting to terminate existing process with PID: 1920
+20250317115955 - HELPER SCRIPT: Sending SIGINT to PID: 1920
+20250317115955 - HELPER SCRIPT: Sending SIGINT to PID: 1920
+20250317115955 - Attempting to terminate existing process with PID: 16192
+20250317115955 - HELPER SCRIPT: Sending SIGINT to PID: 16192
+20250317115955 - HELPER SCRIPT: Sending SIGINT to PID: 16192
+20250317115956 - HELPER SCRIPT: Sending SIGINT to PID: 16192
+20250317115957 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317115957 - Started process with PID: 12644 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317115957 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317115957 - Started process with PID: 12556 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317115957 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317115957 - Started process with PID: 12008 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317115957 - Device PE3SIL21060300042 is now connected
+20250317115957 - No existing scrcpy processes found
+20250317115958 - Starting scrcpy with PID: 14988 for device: PE3SIL21060300042
+20250317115958 - Set mute status for PID: 12644 to 0
+20250317115958 - Set mute status for PID: 12556 to 0
+20250317115958 - Set mute status for PID: 12008 to 0
+20250317120027 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317120027 - Set mute status for PID: 12644 to 0
+20250317120027 - Set mute status for PID: 12556 to 0
+20250317120028 - Set mute status for PID: 12008 to 0
+20250317120028 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317120028 - Set mute status for PID: 12644 to 0
+20250317120028 - Set mute status for PID: 12556 to 0
+20250317120028 - Set mute status for PID: 12008 to 0
+20250317120035 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 12556
+20250317120035 - HELPER SCRIPT: Sending SIGINT to PID: 12556
+20250317120036 - Processes terminated, restarting again
+20250317120036 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317120036 - Restarted process with PID: 11508 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317120058 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317120059 - Set mute status for PID: 12644 to 0
+20250317120059 - Set mute status for PID: 11508 to 0
+20250317120059 - Set mute status for PID: 12008 to 0
+20250317120059 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317120059 - Set mute status for PID: 12644 to 0
+20250317120059 - Set mute status for PID: 11508 to 0
+20250317120059 - Set mute status for PID: 12008 to 0
+20250317120104 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 11508
+20250317120104 - HELPER SCRIPT: Sending SIGINT to PID: 11508
+20250317120105 - Processes terminated, restarting again
+20250317120105 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317120106 - Restarted process with PID: 17180 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317120246 - Script started at 20250317120246
+20250317120246 - First run of the script
+20250317120246 - Attempting to terminate existing process with PID: 12644
+20250317120246 - HELPER SCRIPT: Sending SIGINT to PID: 12644
+20250317120247 - HELPER SCRIPT: Sending SIGINT to PID: 12644
+20250317120247 - Attempting to terminate existing process with PID: 12008
+20250317120247 - HELPER SCRIPT: Sending SIGINT to PID: 12008
+20250317120247 - HELPER SCRIPT: Sending SIGINT to PID: 12008
+20250317120248 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317120248 - Started process with PID: 20500 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317120248 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317120248 - Started process with PID: 2516 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317120248 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317120248 - Started process with PID: 21780 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317120249 - Device PE3SIL21060300042 is now connected
+20250317120249 - No existing scrcpy processes found
+20250317120249 - Starting scrcpy with PID: 8044 for device: PE3SIL21060300042
+20250317120249 - Set mute status for PID: 20500 to 0
+20250317120249 - Set mute status for PID: 2516 to 0
+20250317120249 - Set mute status for PID: 21780 to 0
+20250317120252 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317120252 - Set mute status for PID: 20500 to 0
+20250317120253 - Set mute status for PID: 2516 to 0
+20250317120253 - Set mute status for PID: 21780 to 0
+20250317120257 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 2516
+20250317120257 - HELPER SCRIPT: Sending SIGINT to PID: 2516
+20250317120258 - Processes terminated, restarting again
+20250317120258 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317120258 - Running command: C:\Program Files\Apollo\sunshine.exe C:\Program Files\Apollo\config\sunshine_2.conf
+20250317120258 - Restarted process with PID: 13764 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317120920 - Script started at 20250317120920
+20250317120920 - First run of the script
+20250317120920 - Attempting to terminate existing process with PID: 20500
+20250317120920 - HELPER SCRIPT: Sending SIGINT to PID: 20500
+20250317120920 - HELPER SCRIPT: Sending SIGINT to PID: 20500
+20250317120920 - Attempting to terminate existing process with PID: 21780
+20250317120921 - HELPER SCRIPT: Sending SIGINT to PID: 21780
+20250317120921 - HELPER SCRIPT: Sending SIGINT to PID: 21780
+20250317120921 - Attempting to terminate existing process with PID: 13764
+20250317120921 - HELPER SCRIPT: Sending SIGINT to PID: 13764
+20250317120921 - HELPER SCRIPT: Sending SIGINT to PID: 13764
+20250317120922 - HELPER SCRIPT: Sending SIGINT to PID: 13764
+20250317120925 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317120925 - Started process with PID: 11824 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317120925 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317120925 - Started process with PID: 20740 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317120925 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317120925 - Started process with PID: 9248 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317120925 - Device PE3SIL21060300042 is now connected
+20250317120925 - Killing all existing scrcpy processes for the first time
+20250317120925 - Attempting to terminate existing scrcpy process with PID: 9340
+20250317120926 - Successfully terminated scrcpy process with PID: 9340
+20250317120926 - Attempting to terminate existing scrcpy process with PID: 9340
+20250317120926 - Successfully terminated scrcpy process with PID: 9340
+20250317120926 - Starting scrcpy with PID: 23132 for device: PE3SIL21060300042
+20250317120926 - Updated PIDs for mute:  | Mute: 0
+20250317120927 - Updated PIDs for volume:  | Volume: 18.000
+20250317120928 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317120929 - Updated PIDs for mute:  | Mute: 0
+20250317120929 - Updated PIDs for volume:  | Volume: 18.000
+20250317120929 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317120929 - Updated PIDs for mute:  | Mute: 0
+20250317120929 - Updated PIDs for volume:  | Volume: 18.000
+20250317121333 - Script started at 20250317121333
+20250317121333 - First run of the script
+20250317121334 - Attempting to terminate existing process with PID: 11824
+20250317121334 - HELPER SCRIPT: Sending SIGINT to PID: 11824
+20250317121334 - HELPER SCRIPT: Sending SIGINT to PID: 11824
+20250317121334 - Attempting to terminate existing process with PID: 20740
+20250317121334 - HELPER SCRIPT: Sending SIGINT to PID: 20740
+20250317121335 - HELPER SCRIPT: Sending SIGINT to PID: 20740
+20250317121335 - HELPER SCRIPT: Sending SIGINT to PID: 20740
+20250317121335 - HELPER SCRIPT: Sending SIGINT to PID: 20740
+20250317121335 - HELPER SCRIPT: Sending SIGINT to PID: 20740
+20250317121335 - Attempting to terminate existing process with PID: 9248
+20250317121336 - HELPER SCRIPT: Sending SIGINT to PID: 9248
+20250317121336 - HELPER SCRIPT: Sending SIGINT to PID: 9248
+20250317121337 - HELPER SCRIPT: Sending SIGINT to PID: 9248
+20250317121340 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317121340 - Started process with PID: 22816 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317121340 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317121340 - Started process with PID: 17456 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317121340 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317121340 - Started process with PID: 22548 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317121340 - Device PE3SIL21060300042 is now connected
+20250317121340 - Killing all existing scrcpy processes for the first time
+20250317121340 - Attempting to terminate existing scrcpy process with PID: 6528
+20250317121340 - Successfully terminated scrcpy process with PID: 6528
+20250317121340 - Attempting to terminate existing scrcpy process with PID: 6528
+20250317121341 - Successfully terminated scrcpy process with PID: 6528
+20250317121341 - Starting scrcpy with PID: 5392 for device: PE3SIL21060300042
+20250317121341 - Sync mute state: Unmuted for PIDs: 22816, 17456, 22548
+20250317121341 - Sync Volume: 18.000 for PIDs: 22816, 17456, 22548
+20250317121344 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317121345 - Sync mute state: Unmuted for PIDs: 22816, 17456, 22548
+20250317121345 - Sync Volume: 18.000 for PIDs: 22816, 17456, 22548
+20250317121405 - Sync mute state: Muted for PIDs: 22816, 17456, 22548
+20250317121407 - Sync mute state: Unmuted for PIDs: 22816, 17456, 22548
+20250317121408 - Sync mute state: Muted for PIDs: 22816, 17456, 22548
+20250317121408 - Sync mute state: Unmuted for PIDs: 22816, 17456, 22548
+20250317121408 - Sync mute state: Muted for PIDs: 22816, 17456, 22548
+20250317121409 - Sync mute state: Unmuted for PIDs: 22816, 17456, 22548
+20250317121409 - Sync mute state: Muted for PIDs: 22816, 17456, 22548
+20250317121409 - Sync mute state: Unmuted for PIDs: 22816, 17456, 22548
+20250317121412 - Sync Volume: 20.000 for PIDs: 22816, 17456, 22548
+20250317121413 - Sync Volume: 22.000 for PIDs: 22816, 17456, 22548
+20250317121413 - Sync Volume: 24.000 for PIDs: 22816, 17456, 22548
+20250317121413 - Sync Volume: 26.000 for PIDs: 22816, 17456, 22548
+20250317121414 - Sync Volume: 28.000 for PIDs: 22816, 17456, 22548
+20250317121414 - Sync Volume: 30.000 for PIDs: 22816, 17456, 22548
+20250317121414 - Sync Volume: 32.000 for PIDs: 22816, 17456, 22548
+20250317121414 - Sync Volume: 34.000 for PIDs: 22816, 17456, 22548
+20250317121414 - Sync Volume: 36.000 for PIDs: 22816, 17456, 22548
+20250317121415 - Sync Volume: 38.000 for PIDs: 22816, 17456, 22548
+20250317121416 - Sync Volume: 40.000 for PIDs: 22816, 17456, 22548
+20250317121416 - Sync Volume: 42.000 for PIDs: 22816, 17456, 22548
+20250317121417 - Sync Volume: 44.000 for PIDs: 22816, 17456, 22548
+20250317121715 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 17456
+20250317121715 - HELPER SCRIPT: Sending SIGINT to PID: 17456
+20250317121718 - Processes terminated, restarting again
+20250317121718 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317121718 - Running command: C:\Program Files\Apollo\sunshine.exe C:\Program Files\Apollo\config\sunshine_2.conf
+20250317121718 - Restarted process with PID: 15816 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317121731 - Device PE3SIL21060300042 is now disconnected
+20250317121736 - Device PE3SIL21060300042 is now connected
+20250317121736 - Starting scrcpy with PID: 14160 for device: PE3SIL21060300042
+20250317121901 - Script started at 20250317121901
+20250317121901 - First run of the script
+20250317121901 - Attempting to terminate existing process with PID: 22816
+20250317121902 - HELPER SCRIPT: Sending SIGINT to PID: 22816
+20250317121902 - HELPER SCRIPT: Sending SIGINT to PID: 22816
+20250317121902 - Attempting to terminate existing process with PID: 22548
+20250317121902 - HELPER SCRIPT: Sending SIGINT to PID: 22548
+20250317121902 - HELPER SCRIPT: Sending SIGINT to PID: 22548
+20250317121903 - Attempting to terminate existing process with PID: 15816
+20250317121903 - HELPER SCRIPT: Sending SIGINT to PID: 15816
+20250317121903 - HELPER SCRIPT: Sending SIGINT to PID: 15816
+20250317121903 - HELPER SCRIPT: Sending SIGINT to PID: 15816
+20250317121906 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317121906 - Started process with PID: 2836 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317121906 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317121906 - Started process with PID: 22240 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317121906 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317121906 - Started process with PID: 17904 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317121907 - Device PE3SIL21060300042 is now connected
+20250317121907 - Killing all existing scrcpy processes for the first time
+20250317121907 - Attempting to terminate existing scrcpy process with PID: 11236
+20250317121907 - Successfully terminated scrcpy process with PID: 11236
+20250317121907 - Attempting to terminate existing scrcpy process with PID: 11236
+20250317121907 - Successfully terminated scrcpy process with PID: 11236
+20250317121908 - Starting scrcpy with PID: 9852 for device: PE3SIL21060300042
+20250317121908 - Sync mute state: Unmuted for PIDs: 2836, 22240, 17904
+20250317121908 - Sync Volume: 44.000 for PIDs: 2836, 22240, 17904
+20250317121918 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317121918 - Sync mute state: Unmuted for PIDs: 2836, 22240, 17904
+20250317121918 - Sync Volume: 44.000 for PIDs: 2836, 22240, 17904
+20250317121921 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 22240
+20250317121921 - HELPER SCRIPT: Sending SIGINT to PID: 22240
+20250317121924 - Processes terminated, restarting again
+20250317121924 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317121924 - Running command: C:\Program Files\Apollo\sunshine.exe C:\Program Files\Apollo\config\sunshine_2.conf
+20250317121924 - Restarted process with PID: 22792 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317121959 - Device PE3SIL21060300042 is now disconnected
+20250317122003 - Device PE3SIL21060300042 is now connected
+20250317122004 - Starting scrcpy with PID: 10448 for device: PE3SIL21060300042
+20250317122239 - Script started at 20250317122239
+20250317122239 - First run of the script
+20250317122240 - Attempting to terminate existing process with PID: 2836
+20250317122240 - HELPER SCRIPT: Sending SIGINT to PID: 2836
+20250317122240 - HELPER SCRIPT: Sending SIGINT to PID: 2836
+20250317122240 - Attempting to terminate existing process with PID: 17904
+20250317122240 - HELPER SCRIPT: Sending SIGINT to PID: 17904
+20250317122241 - HELPER SCRIPT: Sending SIGINT to PID: 17904
+20250317122241 - Attempting to terminate existing process with PID: 22792
+20250317122241 - HELPER SCRIPT: Sending SIGINT to PID: 22792
+20250317122241 - HELPER SCRIPT: Sending SIGINT to PID: 22792
+20250317122244 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317122244 - Started process with PID: 3032 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317122244 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122244 - Started process with PID: 10916 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122244 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317122244 - Started process with PID: 19792 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317122245 - Device PE3SIL21060300042 is now connected
+20250317122245 - Killing all existing scrcpy processes for the first time
+20250317122245 - Attempting to terminate existing scrcpy process with PID: 21412
+20250317122245 - Successfully terminated scrcpy process with PID: 21412
+20250317122245 - Attempting to terminate existing scrcpy process with PID: 21412
+20250317122245 - Successfully terminated scrcpy process with PID: 21412
+20250317122246 - Starting scrcpy with PID: 12540 for device: PE3SIL21060300042
+20250317122246 - Sync mute state: Unmuted for PIDs: 3032, 10916, 19792
+20250317122246 - Sync Volume: 44.000 for PIDs: 3032, 10916, 19792
+20250317122248 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317122249 - Sync mute state: Unmuted for PIDs: 3032, 10916, 19792
+20250317122249 - Sync Volume: 44.000 for PIDs: 3032, 10916, 19792
+20250317122257 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 10916
+20250317122257 - HELPER SCRIPT: Sending SIGINT to PID: 10916
+20250317122300 - Processes terminated, restarting again
+20250317122300 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122300 - Running command: C:\Program Files\Apollo\sunshine.exe C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122300 - Restarted process with PID: 8032 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122449 - Script started at 20250317122449
+20250317122449 - First run of the script
+20250317122449 - Attempting to terminate existing process with PID: 3032
+20250317122449 - HELPER SCRIPT: Sending SIGINT to PID: 3032
+20250317122449 - HELPER SCRIPT: Sending SIGINT to PID: 3032
+20250317122449 - Attempting to terminate existing process with PID: 19792
+20250317122449 - HELPER SCRIPT: Sending SIGINT to PID: 19792
+20250317122450 - HELPER SCRIPT: Sending SIGINT to PID: 19792
+20250317122450 - Attempting to terminate existing process with PID: 8032
+20250317122450 - HELPER SCRIPT: Sending SIGINT to PID: 8032
+20250317122450 - HELPER SCRIPT: Sending SIGINT to PID: 8032
+20250317122450 - HELPER SCRIPT: Sending SIGINT to PID: 8032
+20250317122454 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317122454 - Started process with PID: 5680 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317122454 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122454 - Started process with PID: 3436 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122454 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317122454 - Started process with PID: 7804 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317122454 - Device PE3SIL21060300042 is now connected
+20250317122454 - Killing all existing scrcpy processes for the first time
+20250317122454 - Attempting to terminate existing scrcpy process with PID: 13864
+20250317122454 - Successfully terminated scrcpy process with PID: 13864
+20250317122454 - Attempting to terminate existing scrcpy process with PID: 13864
+20250317122455 - Successfully terminated scrcpy process with PID: 13864
+20250317122455 - Starting scrcpy with PID: 13276 for device: PE3SIL21060300042
+20250317122455 - Sync mute state: Unmuted for PIDs: , , 
+20250317122455 - Sync Volume: 44.000 for PIDs: , , 
+20250317122459 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317122500 - Sync mute state: Unmuted for PIDs: , , 
+20250317122500 - Sync Volume: 44.000 for PIDs: , , 
+20250317122501 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 3436
+20250317122501 - HELPER SCRIPT: Sending SIGINT to PID: 3436
+20250317122504 - Processes terminated, restarting again
+20250317122504 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122504 - Running command: C:\Program Files\Apollo\sunshine.exe C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122504 - Restarted process with PID: 13800 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122723 - Script started at 20250317122723
+20250317122723 - First run of the script
+20250317122724 - Attempting to terminate existing process with PID: 5680
+20250317122724 - HELPER SCRIPT: Sending SIGINT to PID: 5680
+20250317122724 - HELPER SCRIPT: Sending SIGINT to PID: 5680
+20250317122724 - Attempting to terminate existing process with PID: 7804
+20250317122724 - HELPER SCRIPT: Sending SIGINT to PID: 7804
+20250317122725 - HELPER SCRIPT: Sending SIGINT to PID: 7804
+20250317122725 - Attempting to terminate existing process with PID: 13800
+20250317122725 - HELPER SCRIPT: Sending SIGINT to PID: 13800
+20250317122725 - HELPER SCRIPT: Sending SIGINT to PID: 13800
+20250317122728 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317122728 - Started process with PID: 2816 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317122728 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122728 - Started process with PID: 12876 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122728 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317122728 - Started process with PID: 5780 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317122729 - Device PE3SIL21060300042 is now connected
+20250317122729 - Killing all existing scrcpy processes for the first time
+20250317122729 - Attempting to terminate existing scrcpy process with PID: 8720
+20250317122729 - Successfully terminated scrcpy process with PID: 8720
+20250317122729 - Attempting to terminate existing scrcpy process with PID: 8720
+20250317122729 - Successfully terminated scrcpy process with PID: 8720
+20250317122730 - Starting scrcpy with PID: 5460 for device: PE3SIL21060300042
+20250317122730 - Sync mute state: Unmuted for PIDs: , , 
+20250317122730 - Sync Volume: 44.000 for PIDs: , , 
+20250317122734 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317122735 - Sync mute state: Unmuted for PIDs: , , 
+20250317122735 - Sync Volume: 44.000 for PIDs: , , 
+20250317122743 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 12876
+20250317122743 - HELPER SCRIPT: Sending SIGINT to PID: 12876
+20250317122746 - Processes terminated, restarting again
+20250317122746 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122746 - Running command: "C:\Program Files\Apollo\sunshine.exe" "C:\Program Files\Apollo\config\sunshine_2.conf"
+20250317122746 - Restarted process with PID: 5672 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122852 - Script started at 20250317122852
+20250317122852 - First run of the script
+20250317122852 - Attempting to terminate existing process with PID: 2816
+20250317122853 - HELPER SCRIPT: Sending SIGINT to PID: 2816
+20250317122853 - HELPER SCRIPT: Sending SIGINT to PID: 2816
+20250317122853 - Attempting to terminate existing process with PID: 5780
+20250317122853 - HELPER SCRIPT: Sending SIGINT to PID: 5780
+20250317122853 - HELPER SCRIPT: Sending SIGINT to PID: 5780
+20250317122853 - Attempting to terminate existing process with PID: 5672
+20250317122854 - HELPER SCRIPT: Sending SIGINT to PID: 5672
+20250317122854 - HELPER SCRIPT: Sending SIGINT to PID: 5672
+20250317122854 - HELPER SCRIPT: Sending SIGINT to PID: 5672
+20250317122855 - HELPER SCRIPT: Sending SIGINT to PID: 5672
+20250317122855 - HELPER SCRIPT: Sending SIGINT to PID: 5672
+20250317122858 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317122858 - Started process with PID: 5784 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317122858 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122858 - Started process with PID: 12696 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122858 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317122858 - Started process with PID: 12604 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317122858 - Device PE3SIL21060300042 is now connected
+20250317122858 - Killing all existing scrcpy processes for the first time
+20250317122858 - Attempting to terminate existing scrcpy process with PID: 16720
+20250317122859 - Successfully terminated scrcpy process with PID: 16720
+20250317122859 - Attempting to terminate existing scrcpy process with PID: 16720
+20250317122859 - Successfully terminated scrcpy process with PID: 16720
+20250317122900 - Starting scrcpy with PID: 10228 for device: PE3SIL21060300042
+20250317122900 - Sync mute state: Unmuted for PIDs: 5784, 12696, 12604
+20250317122900 - Sync Volume: 44.000 for PIDs: 5784, 12696, 12604
+20250317122904 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317122905 - Sync mute state: Unmuted for PIDs: 5784, 12696, 12604
+20250317122905 - Sync Volume: 44.000 for PIDs: 5784, 12696, 12604
+20250317122906 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 12696
+20250317122906 - HELPER SCRIPT: Sending SIGINT to PID: 12696
+20250317122909 - Processes terminated, restarting again
+20250317122909 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122909 - Running command: C:\Program Files\Apollo\sunshine.exe C:\Program Files\Apollo\config\sunshine_2.conf
+20250317122909 - Restarted process with PID: 2880 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317123013 - Script started at 20250317123013
+20250317123013 - First run of the script
+20250317123013 - Attempting to terminate existing process with PID: 5784
+20250317123013 - HELPER SCRIPT: Sending SIGINT to PID: 5784
+20250317123014 - HELPER SCRIPT: Sending SIGINT to PID: 5784
+20250317123014 - Attempting to terminate existing process with PID: 12604
+20250317123014 - HELPER SCRIPT: Sending SIGINT to PID: 12604
+20250317123014 - HELPER SCRIPT: Sending SIGINT to PID: 12604
+20250317123014 - Attempting to terminate existing process with PID: 2880
+20250317123015 - HELPER SCRIPT: Sending SIGINT to PID: 2880
+20250317123015 - HELPER SCRIPT: Sending SIGINT to PID: 2880
+20250317123017 - Script started at 20250317123017
+20250317123017 - First run of the script
+20250317123017 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317123017 - Started process with PID: 13252 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317123017 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317123018 - Started process with PID: 13196 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317123018 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317123018 - Started process with PID: 4904 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317123018 - Device PE3SIL21060300042 is now connected
+20250317123018 - Killing all existing scrcpy processes for the first time
+20250317123018 - Attempting to terminate existing scrcpy process with PID: 10824
+20250317123018 - Successfully terminated scrcpy process with PID: 10824
+20250317123018 - Attempting to terminate existing scrcpy process with PID: 10824
+20250317123019 - Successfully terminated scrcpy process with PID: 10824
+20250317123019 - Starting scrcpy with PID: 4400 for device: PE3SIL21060300042
+20250317123019 - Sync mute state: Unmuted for PIDs: 13252, 13196, 4904
+20250317123019 - Sync Volume: 44.000 for PIDs: 13252, 13196, 4904
+20250317123023 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317123024 - Sync mute state: Unmuted for PIDs: 13252, 13196, 4904
+20250317123024 - Sync Volume: 44.000 for PIDs: 13252, 13196, 4904
+20250317123025 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 13196
+20250317123025 - HELPER SCRIPT: Sending SIGINT to PID: 13196
+20250317123028 - Processes terminated, restarting again
+20250317123028 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317123028 - Restarted process with PID: 8036 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317123149 - Script started at 20250317123149
+20250317123149 - First run of the script
+20250317123149 - Attempting to terminate existing process with PID: 13252
+20250317123150 - HELPER SCRIPT: Sending SIGINT to PID: 13252
+20250317123150 - HELPER SCRIPT: Sending SIGINT to PID: 13252
+20250317123150 - Attempting to terminate existing process with PID: 4904
+20250317123150 - HELPER SCRIPT: Sending SIGINT to PID: 4904
+20250317123150 - HELPER SCRIPT: Sending SIGINT to PID: 4904
+20250317123153 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317123153 - Started process with PID: 6008 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317123153 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317123154 - Started process with PID: 21340 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317123154 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317123154 - Started process with PID: 6112 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317123154 - Device PE3SIL21060300042 is now connected
+20250317123154 - Killing all existing scrcpy processes for the first time
+20250317123154 - Attempting to terminate existing scrcpy process with PID: 16396
+20250317123154 - Successfully terminated scrcpy process with PID: 16396
+20250317123154 - Attempting to terminate existing scrcpy process with PID: 16396
+20250317123155 - Successfully terminated scrcpy process with PID: 16396
+20250317123155 - Starting scrcpy with PID: 17440 for device: PE3SIL21060300042
+20250317123155 - Sync mute state: Unmuted for PIDs: 6008, 21340, 6112
+20250317123155 - Sync Volume: 44.000 for PIDs: 6008, 21340, 6112
+20250317123157 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317123158 - Sync mute state: Unmuted for PIDs: 6008, 21340, 6112
+20250317123158 - Sync Volume: 44.000 for PIDs: 6008, 21340, 6112
+20250317123215 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 21340
+20250317123215 - HELPER SCRIPT: Sending SIGINT to PID: 21340
+20250317123218 - Processes terminated, restarting again
+20250317123218 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317123218 - Restarted process with PID: 18928 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317123841 - Script started at 20250317123841
+20250317123841 - First run of the script
+20250317123841 - Attempting to terminate existing process with PID: 6008
+20250317123841 - HELPER SCRIPT: Sending SIGINT to PID: 6008
+20250317123841 - HELPER SCRIPT: Sending SIGINT to PID: 6008
+20250317123841 - Attempting to terminate existing process with PID: 6112
+20250317123842 - HELPER SCRIPT: Sending SIGINT to PID: 6112
+20250317123842 - HELPER SCRIPT: Sending SIGINT to PID: 6112
+20250317123845 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317123845 - Started process with PID: 15232 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317123845 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317123845 - Started process with PID: 13560 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317123845 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317123845 - Started process with PID: 10924 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317123845 - Device PE3SIL21060300042 is now connected
+20250317123845 - Killing all existing scrcpy processes for the first time
+20250317123845 - Attempting to terminate existing scrcpy process with PID: 11968
+20250317123846 - Successfully terminated scrcpy process with PID: 11968
+20250317123846 - Attempting to terminate existing scrcpy process with PID: 11968
+20250317123846 - Successfully terminated scrcpy process with PID: 11968
+20250317123847 - Starting scrcpy with PID: 19944 for device: PE3SIL21060300042
+20250317123847 - Sync mute state: Unmuted for PIDs: 15232, 13560, 10924
+20250317123847 - Sync Volume: 44.000 for PIDs: 15232, 13560, 10924
+20250317123850 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317123851 - Sync mute state: Unmuted for PIDs: 15232, 13560, 10924
+20250317123851 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 13560
+20250317123851 - HELPER SCRIPT: Sending SIGINT to PID: 13560
+20250317123854 - Processes terminated, restarting again
+20250317123854 - Restarting process with param: C:\Program Files\Apollo\config\
+20250317123854 - Restarted process with PID: 12208 for param: C:\Program Files\Apollo\config\
+20250317123854 - Sync Volume: 44.000 for PIDs: 15232, 13560, 10924, 12208
+20250317124143 - Script started at 20250317124143
+20250317124143 - First run of the script
+20250317124143 - Attempting to terminate existing process with PID: 15232
+20250317124143 - HELPER SCRIPT: Sending SIGINT to PID: 15232
+20250317124144 - HELPER SCRIPT: Sending SIGINT to PID: 15232
+20250317124144 - Attempting to terminate existing process with PID: 10924
+20250317124144 - HELPER SCRIPT: Sending SIGINT to PID: 10924
+20250317124144 - HELPER SCRIPT: Sending SIGINT to PID: 10924
+20250317124144 - Attempting to terminate existing process with PID: 12208
+20250317124144 - HELPER SCRIPT: Sending SIGINT to PID: 12208
+20250317124145 - HELPER SCRIPT: Sending SIGINT to PID: 12208
+20250317124148 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317124148 - Started process with PID: 20392 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317124148 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317124148 - Started process with PID: 1832 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317124148 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317124148 - Started process with PID: 9168 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317124148 - Device PE3SIL21060300042 is now connected
+20250317124148 - Killing all existing scrcpy processes for the first time
+20250317124148 - Attempting to terminate existing scrcpy process with PID: 21608
+20250317124149 - Successfully terminated scrcpy process with PID: 21608
+20250317124149 - Attempting to terminate existing scrcpy process with PID: 21608
+20250317124149 - Successfully terminated scrcpy process with PID: 21608
+20250317124149 - Starting scrcpy with PID: 20396 for device: PE3SIL21060300042
+20250317124150 - Sync mute state: Unmuted for PIDs: 20392, 1832, 9168
+20250317124150 - Sync Volume: 44.000 for PIDs: 20392, 1832, 9168
+20250317124151 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317124152 - Sync mute state: Unmuted for PIDs: 20392, 1832, 9168
+20250317124152 - Sync Volume: 44.000 for PIDs: 20392, 1832, 9168
+20250317124158 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 1832
+20250317124158 - HELPER SCRIPT: Sending SIGINT to PID: 1832
+20250317124201 - Processes terminated, restarting again
+20250317124201 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317124201 - Restarted process with PID: 10244 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317124410 - Script started at 20250317124410
+20250317124410 - First run of the script
+20250317124411 - Attempting to terminate existing process with PID: 20392
+20250317124411 - HELPER SCRIPT: Sending SIGINT to PID: 20392
+20250317124411 - HELPER SCRIPT: Sending SIGINT to PID: 20392
+20250317124411 - Attempting to terminate existing process with PID: 9168
+20250317124411 - HELPER SCRIPT: Sending SIGINT to PID: 9168
+20250317124411 - HELPER SCRIPT: Sending SIGINT to PID: 9168
+20250317124415 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317124415 - Started process with PID: 22840 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317124415 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317124415 - Started process with PID: 12224 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317124415 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317124415 - Started process with PID: 18520 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317124415 - Device PE3SIL21060300042 is now connected
+20250317124415 - Killing all existing scrcpy processes for the first time
+20250317124415 - Attempting to terminate existing scrcpy process with PID: 9884
+20250317124415 - Successfully terminated scrcpy process with PID: 9884
+20250317124415 - Attempting to terminate existing scrcpy process with PID: 9884
+20250317124416 - Successfully terminated scrcpy process with PID: 9884
+20250317124416 - Starting scrcpy with PID: 7436 for device: PE3SIL21060300042
+20250317124416 - Sync mute state: Unmuted for PIDs: 22840, 12224, 18520
+20250317124417 - Sync Volume: 44.000 for PIDs: 22840, 12224, 18520
+20250317124418 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317124419 - Sync mute state: Unmuted for PIDs: 22840, 12224, 18520
+20250317124419 - Sync Volume: 44.000 for PIDs: 22840, 12224, 18520
+20250317124419 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317124419 - Sync mute state: Unmuted for PIDs: 22840, 12224, 18520
+20250317124419 - Sync Volume: 44.000 for PIDs: 22840, 12224, 18520
+20250317124424 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 12224
+20250317124424 - HELPER SCRIPT: Sending SIGINT to PID: 12224
+20250317124428 - Processes terminated, restarting again
+20250317124428 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317124428 - Restarted process with PID: 8268 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317124538 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 8268
+20250317124538 - HELPER SCRIPT: Sending SIGINT to PID: 8268
+20250317124541 - Processes terminated, restarting again
+20250317124541 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317124542 - Restarted process with PID: 18472 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317124637 - Device PE3SIL21060300042 is now disconnected
+20250317124638 - Device PE3SIL21060300042 is now connected
+20250317124639 - Starting scrcpy with PID: 4804 for device: PE3SIL21060300042
+20250317124917 - Script started at 20250317124917
+20250317124917 - First run of the script
+20250317124917 - Attempting to terminate existing process with PID: 22840
+20250317124917 - HELPER SCRIPT: Sending SIGINT to PID: 22840
+20250317124917 - HELPER SCRIPT: Sending SIGINT to PID: 22840
+20250317124917 - Attempting to terminate existing process with PID: 18520
+20250317124917 - HELPER SCRIPT: Sending SIGINT to PID: 18520
+20250317124918 - HELPER SCRIPT: Sending SIGINT to PID: 18520
+20250317124918 - Attempting to terminate existing process with PID: 18472
+20250317124918 - HELPER SCRIPT: Sending SIGINT to PID: 18472
+20250317124918 - HELPER SCRIPT: Sending SIGINT to PID: 18472
+20250317124918 - HELPER SCRIPT: Sending SIGINT to PID: 18472
+20250317124919 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317124919 - Started process with PID: 14340 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317124919 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317124919 - Started process with PID: 19532 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317124919 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317124919 - Started process with PID: 13832 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317124919 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317124919 - Device PE3SIL21060300042 is now connected
+20250317124919 - Killing all existing scrcpy processes for the first time
+20250317124919 - Attempting to terminate existing scrcpy process with PID: 16280
+20250317124920 - Successfully terminated scrcpy process with PID: 16280
+20250317124920 - Attempting to terminate existing scrcpy process with PID: 16280
+20250317124921 - Successfully terminated scrcpy process with PID: 16280
+20250317124922 - Starting scrcpy with PID: 8856 for device: PE3SIL21060300042
+20250317124922 - Sync mute state: Unmuted for PIDs: 14340, 19532, 13832
+20250317124922 - Sync Volume: 44.000 for PIDs: 14340, 19532, 13832
+20250317124922 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 19532
+20250317124922 - HELPER SCRIPT: Sending SIGINT to PID: 19532
+20250317124922 - Processes terminated, restarting again
+20250317124922 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317124922 - Restarted process with PID: 13404 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317125052 - Device PE3SIL21060300042 is now disconnected
+20250317125053 - Device PE3SIL21060300042 is now connected
+20250317125053 - Starting scrcpy with PID: 9536 for device: PE3SIL21060300042
+20250317125056 - Device PE3SIL21060300042 is now disconnected
+20250317125100 - Device PE3SIL21060300042 is now connected
+20250317125100 - Starting scrcpy with PID: 12444 for device: PE3SIL21060300042
+20250317125137 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 13404
+20250317125137 - HELPER SCRIPT: Sending SIGINT to PID: 13404
+20250317125138 - Processes terminated, restarting again
+20250317125138 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317125138 - Restarted process with PID: 18372 for param: C:\Program Files\Apollo\config\sunshine_2.conf

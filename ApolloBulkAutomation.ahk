@@ -19,16 +19,6 @@ Loop, Read, %configFile%
     }
 }
 
-; Function to split comma-separated values into an array
-ParseArray(str) {
-    array := []
-    Loop, Parse, str, `,
-    {
-        array.Push(A_LoopField)
-    }
-    return array
-}
-
 ; Access the configuration values
 autoExitOnDisconnect := config["autoExitOnDisconnect"]
 autoSyncVolume := config["autoSyncVolume"]
@@ -74,8 +64,9 @@ logFilePath := A_ScriptDir . "\debug_log.txt"
 apolloExePath := exeDirectory . "\sunshine.exe"
 adbExePath := platformToolsDirectory . "\adb.exe"
 scrCpyPath := platformToolsDirectory . "\scrcpy.exe"
-firstRun := true
-lastMicStatus := ""
+firstRunApollo := true
+firstRunMic := true
+
 
 LogMessage(level, message) {
     global logFilePath, debugLevel
@@ -84,6 +75,21 @@ LogMessage(level, message) {
     }
 }
 
+ParseArray(str) {
+    array := []
+    Loop, Parse, str, `,
+    {
+        array.Push(A_LoopField)
+    }
+    return array
+}
+JoinArray(arr, delimiter) {
+    result := ""
+    Loop, % arr.MaxIndex() {
+        result .= arr[A_Index] . (A_Index < arr.MaxIndex() ? delimiter : "")
+    }
+    return result
+}
 
 ; https://www.autohotkey.com/boards/viewtopic.php?style=19&t=84976
 CmdRetWithTimeout(sCmd, timeout, callBackFuncObj := "", encoding := "") {
@@ -129,13 +135,13 @@ CmdRetWithTimeout(sCmd, timeout, callBackFuncObj := "", encoding := "") {
 
 
 BulkStartApollo() {
-    global apolloExePath, exeDirectory, confDirectory, confFiles, pids, debugLevel, firstRun
+    global apolloExePath, exeDirectory, confDirectory, confFiles, pids, debugLevel, firstRunApollo
     processKilled := false, processTerminated := false
     LogMessage(2, "Starting BulkStartApollo()")
 
-    if (firstRun) {
+    if (firstRunApollo) {
         LogMessage(1, "First run of the script")
-        firstRun := false
+        firstRunApollo := false
     }
 
     pids := []
@@ -171,7 +177,7 @@ BulkStartApollo() {
         }
     }
     if (processTerminated)
-        Sleep, 1000
+        Sleep, 500
     if (processKilled)
         Sleep, 3000
 
@@ -189,8 +195,8 @@ BulkStartApollo() {
 
 WatchLogFiles() {
     global apolloExePath, logFiles, exeDirectory, confDirectory, confFiles, pids, debugLevel
-    processKilled := false
-    killedIndexes := []
+    processTerminated := false
+    TerminatedIndexes := []
     LogMessage(2, "Starting WatchLogFiles()")
 
     static lastReadPositions := {}
@@ -210,20 +216,20 @@ WatchLogFiles() {
                 if (pid) {
                     LogMessage(1, "Found 'CLIENT DISCONNECTED' in log file: " . logFile . " for PID: " . pid)
                     RunWait, % "SendSigint.ahk " . pid, , Hide
-                    processKilled := true
-                    killedIndexes.Push(A_Index)
+                    processTerminated := true
+                    TerminatedIndexes.Push(A_Index)
                 }
             }
         }
     }
-    if (processKilled) {
-        Sleep, 1000
+    if (processTerminated) {
+        Sleep, 500
         LogMessage(1, "Processes terminated, restarting again")
-        for index, killedIndex in killedIndexes {
-            param := confDirectory . "\" . confFiles[killedIndex]
+        Loop, % TerminatedIndexes.MaxIndex() {
+            param := confDirectory . "\" . confFiles[TerminatedIndexes[A_Index]]
             LogMessage(1, "Restarting process with param: " . param)
             Run, "%apolloExePath%" "%param%", %exeDirectory%, Hide, newPid
-            pids[killedIndex] := newPid
+            pids[TerminatedIndexes[A_Index]] := newPid
             LogMessage(1, "Restarted process with PID: " . newPid . " for param: " . param)
         }
     } else {
@@ -268,29 +274,42 @@ SyncVolume() {
     if (clientConnected) {
         Sleep, 500
     }
+    updatedVolumePIDs := []
+    updatedMutePIDs := []
 
-    if (clientConnected || masterVolume != lastVolume || isMuted != lastMute) {
-        LogMessage(2, "Syncing volume settings")
-
+    if (clientConnected || isMuted != lastMute) {
+        LogMessage(2, "Syncing mute settings")
         for index, PID in pids {
-            VA_SetAppVolume(PID, masterVolume)
-            LogMessage(2, "Set volume for PID: " . PID . " to " . masterVolume)
             if (isMuted)
                 VA_SetAppMute(PID, 1)
             else
                 VA_SetAppMute(PID, 0)
-            LogMessage(1, "Set mute status for PID: " . PID . " to " . isMuted)
+            updatedMutePIDs.Push(PID)
+        }
+        lastMute := isMuted
+        if (updatedMutePIDs.MaxIndex() > 0) 
+            LogMessage(1, "Sync mute state: " . (isMuted ? "Muted" : "Unmuted") . " for PIDs: " . JoinArray(updatedMutePIDs, ", "))
         }
 
+        if (clientConnected || masterVolume != lastVolume) {
+        LogMessage(2, "Syncing volume settings")
+        for index, PID in pids {
+            VA_SetAppVolume(PID, masterVolume)
+            updatedVolumePIDs.Push(PID)
+        }
         lastVolume := masterVolume
-        lastMute := isMuted
-    }
+        if (updatedVolumePIDs.MaxIndex() > 0) 
+            LogMessage(1, "Sync Volume: " . masterVolume . " for PIDs: " . JoinArray(updatedVolumePIDs, ", "))
+        }
+
+    LogMessage(2, "Volume and mute settings synced for all updated processes")
 
     LogMessage(2, "SyncVolume() completed")
 }
 
 MaintainMicConnectivity() {
-    global adbExePath, scrCpyPath, androidMicDeviceID, micOutputDevice, LogMessage, CmdRetWithTimeout, lastMicStatus
+    global adbExePath, scrCpyPath, androidMicDeviceID, micOutputDevice, LogMessage, CmdRetWithTimeout, firstRunMic
+    static lastStatus := ""
 
     command := adbExePath . " devices"
     adbOutput := CmdRetWithTimeout(command, 3000) ; 3 seconds timeout
@@ -311,18 +330,38 @@ MaintainMicConnectivity() {
         deviceStatus := "disconnected"
 
     ; Report status change
-    if (deviceStatus != lastMicStatus) {
+    if (deviceStatus != lastStatus) {
         LogMessage(1, "Device " androidMicDeviceID " is now " deviceStatus)
         if (deviceStatus = "connected") {
             ; Check if there are any existing scrcpy processes
-            Process, Exist, scrcpy.exe
-            if (ErrorLevel) {
-                ; Kill any existing scrcpy processes
-                LogMessage(2, "Killing all existing scrcpy processes for the first time")
-                Run, %comspec% /c "taskkill /F /IM scrcpy.exe",, Hide
-            } else {
-                LogMessage(2, "No existing scrcpy processes found")
+            if (firstRunMic) {
+                pids := []
+                Loop {
+                    Process, Exist, scrcpy.exe
+                    if (ErrorLevel = 0)
+                        break
+                    pids.Push(ErrorLevel)
+                    Process, Close, %ErrorLevel%
+                }
+                if (pids.MaxIndex() > 0) {
+                    LogMessage(1, "Killing all existing scrcpy processes for the first time")
+                    for index, pid in pids {
+                        LogMessage(1, "Attempting to terminate existing scrcpy process with PID: " . pid)
+                        RunWait, %comspec% /c "taskkill /F /PID " pid,, Hide
+                        Sleep, 500
+                        Process, Exist, %pid%
+                        if (ErrorLevel != 0) {
+                            LogMessage(0, "Failed to terminate scrcpy process with PID: " . pid)
+                        } else {
+                            LogMessage(1, "Successfully terminated scrcpy process with PID: " . pid)
+                        }
+                    }
+                    firstRunMic := false
+                } else {
+                    LogMessage(1, "No existing scrcpy processes found")
+                }
             }
+            Sleep, 500
             Run, %comspec% /c ""%scrCpyPath%" -s %androidMicDeviceID% --no-video --no-window --audio-source=mic --window-borderless",, Hide, scrcpyPID
             ; Set the output audio device for the scrcpy process
             LogMessage(1, "Starting scrcpy with PID: " scrcpyPID " for device: " androidMicDeviceID)
@@ -337,10 +376,10 @@ MaintainMicConnectivity() {
                 scrcpyPID := ""
             }
         }
-        ; Update lastMicStatus to the current deviceStatus
-        lastMicStatus := deviceStatus
+        lastStatus := deviceStatus
     }
 }
+
 
 LogMessage(1, "Script started at " . A_Now) 
 
