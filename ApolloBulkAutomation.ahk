@@ -64,8 +64,6 @@ logFilePath := A_ScriptDir . "\debug_log.txt"
 apolloExePath := exeDirectory . "\sunshine.exe"
 adbExePath := platformToolsDirectory . "\adb.exe"
 scrCpyPath := platformToolsDirectory . "\scrcpy.exe"
-firstRunApollo := true
-firstRunMic := true
 
 
 LogMessage(level, message) {
@@ -135,11 +133,18 @@ CmdRetWithTimeout(sCmd, timeout, callBackFuncObj := "", encoding := "") {
 
 
 BulkStartApollo() {
-    global apolloExePath, exeDirectory, confDirectory, confFiles, pids, debugLevel, firstRunApollo
-    processKilled := false, processTerminated := false
+    global apolloExePath, exeDirectory, confDirectory, logFiles, confFiles, pids, debugLevel, logFilePath
+    static firstRunApollo := true
+    processTerminated := false
     LogMessage(2, "Starting BulkStartApollo()")
 
     if (firstRunApollo) {
+        ; Clear the log file before restarting
+        logFile := confDirectory . "\" . logFiles[TerminatedIndexes[A_Index]]
+        FileDelete, %logFilePath%
+        FileAppend,, %logFilePath%  ; Create an empty log file
+        LogMessage(1, "Cleared debug_logfile: " . logFilePath . " before starting")
+        sleep, 100
         LogMessage(1, "First run of the script")
         firstRunApollo := false
     }
@@ -162,28 +167,19 @@ BulkStartApollo() {
         }
         RunWait, % "SendSigint.ahk " . pid, , Hide
         processTerminated := true
-        Sleep, 100
         Process, Exist, %pid%
-        if (ErrorLevel != 0) {
-            LogMessage(0, "Failed to terminate process with PID: " . pid . ", attempting force kill")
-            processKilled := true
-            Process, Close, %pid%
-            Sleep, 100
-            Process, Exist, %pid%
-            if (ErrorLevel != 0) {
-                LogMessage(0, "Failed to force kill process with PID: " . pid)
-                break
-            }
-        }
     }
     if (processTerminated)
-        Sleep, 500
-    if (processKilled)
         Sleep, 3000
-
     pids := []
 
     Loop, % confFiles.MaxIndex() {
+        ; Clear the log file before restarting
+        logFile := confDirectory . "\" . logFiles[TerminatedIndexes[A_Index]]
+        FileDelete, %logFile%
+        FileAppend,, %logFile%  ; Create an empty log file
+        LogMessage(1, "Cleared logfile: " . logFile . " before restarting")
+        sleep, 100
         param := confDirectory . "\" . confFiles[A_Index]
         LogMessage(1, "Starting new process with param: " . param)
         Run, "%apolloExePath%" "%param%", %exeDirectory%, Hide, newPid
@@ -226,12 +222,19 @@ WatchLogFiles() {
         Sleep, 500
         LogMessage(1, "Processes terminated, restarting again")
         Loop, % TerminatedIndexes.MaxIndex() {
+            ; Clear the log file before restarting
+            logFile := confDirectory . "\" . logFiles[TerminatedIndexes[A_Index]]
+            FileDelete, %logFile%
+            FileAppend,, %logFile%  ; Create an empty log file
+            LogMessage(1, "Cleared logfile: " . logFile . " before restarting")
+            sleep, 100
             param := confDirectory . "\" . confFiles[TerminatedIndexes[A_Index]]
             LogMessage(1, "Restarting process with param: " . param)
             Run, "%apolloExePath%" "%param%", %exeDirectory%, Hide, newPid
             pids[TerminatedIndexes[A_Index]] := newPid
             LogMessage(1, "Restarted process with PID: " . newPid . " for param: " . param)
         }
+        Sleep, 500
     } else {
         LogMessage(2, "No process sent SIGINT")
     }
@@ -265,14 +268,15 @@ SyncVolume() {
             logContent := SubStr(logContent, lastReadPositions[logFile] + 1)
             lastReadPositions[logFile] := fileSize
             LogMessage(2, "Checking log file: " . logFile)
-            if InStr(logContent, "CLIENT CONNECTED") {
-                LogMessage(1, "Found 'CLIENT CONNECTED' in log file: " . logFile . " Syncing volume level")
+            if InStr(logContent, "Opus initialized") {
+                LogMessage(1, "Found 'Opus initialized' in log file: " . logFile . " Syncing volume level")
                 clientConnected := true
             }
+            
         }
     }
     if (clientConnected) {
-        Sleep, 500
+        Sleep, 1000
     }
     updatedVolumePIDs := []
     updatedMutePIDs := []
@@ -299,7 +303,7 @@ SyncVolume() {
         }
         lastVolume := masterVolume
         if (updatedVolumePIDs.MaxIndex() > 0) 
-            LogMessage(1, "Sync Volume: " . masterVolume . " for PIDs: " . JoinArray(updatedVolumePIDs, ", "))
+            LogMessage(2, "Sync Volume: " . masterVolume . " for PIDs: " . JoinArray(updatedVolumePIDs, ", "))
         }
 
     LogMessage(2, "Volume and mute settings synced for all updated processes")
@@ -308,8 +312,8 @@ SyncVolume() {
 }
 
 MaintainMicConnectivity() {
-    global adbExePath, scrCpyPath, androidMicDeviceID, micOutputDevice, LogMessage, CmdRetWithTimeout, firstRunMic
-    static lastStatus := ""
+    global adbExePath, scrCpyPath, androidMicDeviceID, micOutputDevice, LogMessage, CmdRetWithTimeout
+    static lastStatus := "", firstRunMic := true
 
     command := adbExePath . " devices"
     adbOutput := CmdRetWithTimeout(command, 3000) ; 3 seconds timeout
@@ -348,7 +352,7 @@ MaintainMicConnectivity() {
                     for index, pid in pids {
                         LogMessage(1, "Attempting to terminate existing scrcpy process with PID: " . pid)
                         RunWait, %comspec% /c "taskkill /F /PID " pid,, Hide
-                        Sleep, 500
+                        Sleep, 100
                         Process, Exist, %pid%
                         if (ErrorLevel != 0) {
                             LogMessage(0, "Failed to terminate scrcpy process with PID: " . pid)
@@ -361,7 +365,7 @@ MaintainMicConnectivity() {
                     LogMessage(1, "No existing scrcpy processes found")
                 }
             }
-            Sleep, 500
+            Sleep, 100
             Run, %comspec% /c ""%scrCpyPath%" -s %androidMicDeviceID% --no-video --no-window --audio-source=mic --window-borderless",, Hide, scrcpyPID
             ; Set the output audio device for the scrcpy process
             LogMessage(1, "Starting scrcpy with PID: " scrcpyPID " for device: " androidMicDeviceID)
