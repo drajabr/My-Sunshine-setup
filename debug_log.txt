@@ -19,3 +19,745 @@
 20250317002918 - Set mute status for PID: 26428 to 0
 20250317002918 - Set mute status for PID: 4928 to 0
 20250317002918 - Set mute status for PID: 25988 to 0
+20250317104223 - Script started at 20250317104223
+20250317104223 - First run of the script
+20250317104223 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317104223 - Started process with PID: 9932 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317104223 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317104223 - Started process with PID: 9952 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317104223 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317104223 - Started process with PID: 9984 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317104228 - Device PE3SIL21060300042 is now disconnected
+20250317104229 - Device PE3SIL21060300042 is now connected
+20250317104229 - Set mute status for PID: 9932 to 0
+20250317104229 - Set mute status for PID: 9952 to 0
+20250317104229 - Set mute status for PID: 9984 to 0
+20250317104258 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317104259 - Set mute status for PID: 9932 to 0
+20250317104259 - Set mute status for PID: 9952 to 0
+20250317104259 - Set mute status for PID: 9984 to 0
+20250317104413 - Script started at 20250317104413
+20250317104413 - First run of the script
+20250317104413 - Attempting to terminate existing process with PID: 9932
+20250317104413 - HELPER SCRIPT: Sending SIGINT to PID: 9932
+20250317104413 - HELPER SCRIPT: Sending SIGINT to PID: 9932
+20250317104413 - HELPER SCRIPT: Sending SIGINT to PID: 9932
+20250317104413 - Attempting to terminate existing process with PID: 9952
+20250317104413 - HELPER SCRIPT: Sending SIGINT to PID: 9952
+20250317104414 - HELPER SCRIPT: Sending SIGINT to PID: 9952
+20250317104414 - HELPER SCRIPT: Sending SIGINT to PID: 9952
+20250317104414 - HELPER SCRIPT: Sending SIGINT to PID: 9952
+20250317104414 - HELPER SCRIPT: Sending SIGINT to PID: 9952
+20250317104415 - Attempting to terminate existing process with PID: 9984
+20250317104415 - HELPER SCRIPT: Sending SIGINT to PID: 9984
+20250317104415 - HELPER SCRIPT: Sending SIGINT to PID: 9984
+20250317104415 - HELPER SCRIPT: Sending SIGINT to PID: 9984
+20250317104417 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317104417 - Started process with PID: 4756 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317104417 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317104417 - Started process with PID: 21248 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317104417 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317104417 - Started process with PID: 11516 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317104417 - Device PE3SIL21060300042 is now connected
+20250317104418 - Set mute status for PID: 4756 to 0
+20250317104418 - Set mute status for PID: 21248 to 0
+20250317104418 - Set mute status for PID: 11516 to 0
+20250317104421 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317104421 - Set mute status for PID: 4756 to 0
+20250317104421 - Set mute status for PID: 21248 to 0
+20250317104421 - Set mute status for PID: 11516 to 0
+20250317104729 - Script started at 20250317104729
+20250317104730 - First run of the script
+20250317104730 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317104730 - Started process with PID: 17972 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317104730 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317104730 - Started process with PID: 17508 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317104730 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317104730 - Started process with PID: 22256 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317104736 - Device PE3SIL21060300042 is now disconnected
+20250317104736 - Set mute status for PID: 17972 to 0
+20250317104736 - Device PE3SIL21060300042 is now connected
+20250317104736 - Set mute status for PID: 17508 to 0
+20250317104736 - Set mute status for PID: 22256 to 0
+20250317104754 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317104755 - Set mute status for PID: 17972 to 0
+20250317104755 - Set mute status for PID: 17508 to 0
+20250317104755 - Set mute status for PID: 22256 to 0
+20250317104859 - Script started at 20250317104859
+20250317104859 - First run of the script
+20250317104859 - Attempting to terminate existing process with PID: 17972
+20250317104859 - HELPER SCRIPT: Sending SIGINT to PID: 17972
+20250317104859 - HELPER SCRIPT: Sending SIGINT to PID: 17972
+20250317104900 - Attempting to terminate existing process with PID: 17508
+20250317104900 - HELPER SCRIPT: Sending SIGINT to PID: 17508
+20250317104900 - HELPER SCRIPT: Sending SIGINT to PID: 17508
+20250317104900 - HELPER SCRIPT: Sending SIGINT to PID: 17508
+20250317104900 - HELPER SCRIPT: Sending SIGINT to PID: 17508
+20250317104901 - HELPER SCRIPT: Sending SIGINT to PID: 17508
+20250317104901 - HELPER SCRIPT: Sending SIGINT to PID: 17508
+20250317104901 - Attempting to terminate existing process with PID: 22256
+20250317104901 - HELPER SCRIPT: Sending SIGINT to PID: 22256
+20250317104902 - HELPER SCRIPT: Sending SIGINT to PID: 22256
+20250317104902 - HELPER SCRIPT: Sending SIGINT to PID: 22256
+20250317104903 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317104903 - Started process with PID: 2948 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317104903 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317104903 - Started process with PID: 2480 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317104903 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317104903 - Started process with PID: 17684 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317104903 - Device PE3SIL21060300042 is now connected
+20250317104904 - Set mute status for PID: 2948 to 0
+20250317104904 - Set mute status for PID: 2480 to 0
+20250317104904 - Set mute status for PID: 17684 to 0
+20250317104906 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317104907 - Set mute status for PID: 2948 to 0
+20250317104907 - Set mute status for PID: 2480 to 0
+20250317104907 - Set mute status for PID: 17684 to 0
+20250317105320 - Script started at 20250317105320
+20250317105320 - First run of the script
+20250317105320 - Attempting to terminate existing process with PID: 2948
+20250317105320 - HELPER SCRIPT: Sending SIGINT to PID: 2948
+20250317105321 - HELPER SCRIPT: Sending SIGINT to PID: 2948
+20250317105321 - Attempting to terminate existing process with PID: 2480
+20250317105321 - HELPER SCRIPT: Sending SIGINT to PID: 2480
+20250317105321 - HELPER SCRIPT: Sending SIGINT to PID: 2480
+20250317105321 - HELPER SCRIPT: Sending SIGINT to PID: 2480
+20250317105322 - HELPER SCRIPT: Sending SIGINT to PID: 2480
+20250317105322 - HELPER SCRIPT: Sending SIGINT to PID: 2480
+20250317105322 - HELPER SCRIPT: Sending SIGINT to PID: 2480
+20250317105322 - HELPER SCRIPT: Sending SIGINT to PID: 2480
+20250317105322 - Attempting to terminate existing process with PID: 17684
+20250317105323 - HELPER SCRIPT: Sending SIGINT to PID: 17684
+20250317105323 - HELPER SCRIPT: Sending SIGINT to PID: 17684
+20250317105323 - HELPER SCRIPT: Sending SIGINT to PID: 17684
+20250317105324 - HELPER SCRIPT: Sending SIGINT to PID: 17684
+20250317105325 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317105325 - Started process with PID: 15144 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317105325 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317105325 - Started process with PID: 23476 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317105325 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317105325 - Started process with PID: 23256 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317105325 - Device PE3SIL21060300042 is now connected
+20250317105325 - Set mute status for PID: 15144 to 0
+20250317105325 - Set mute status for PID: 23476 to 0
+20250317105325 - Set mute status for PID: 23256 to 0
+20250317105325 - Device connected but no scrcpy process found, starting scrcpy
+20250317105328 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250317105329 - Set mute status for PID: 15144 to 0
+20250317105329 - Set mute status for PID: 23476 to 0
+20250317105329 - Set mute status for PID: 23256 to 0
+20250317105359 - Script started at 20250317105359
+20250317105359 - First run of the script
+20250317105400 - Attempting to terminate existing process with PID: 15144
+20250317105400 - HELPER SCRIPT: Sending SIGINT to PID: 15144
+20250317105400 - HELPER SCRIPT: Sending SIGINT to PID: 15144
+20250317105400 - Attempting to terminate existing process with PID: 23476
+20250317105400 - HELPER SCRIPT: Sending SIGINT to PID: 23476
+20250317105400 - HELPER SCRIPT: Sending SIGINT to PID: 23476
+20250317105401 - HELPER SCRIPT: Sending SIGINT to PID: 23476
+20250317105401 - HELPER SCRIPT: Sending SIGINT to PID: 23476
+20250317105401 - HELPER SCRIPT: Sending SIGINT to PID: 23476
+20250317105401 - Attempting to terminate existing process with PID: 23256
+20250317105402 - HELPER SCRIPT: Sending SIGINT to PID: 23256
+20250317105402 - HELPER SCRIPT: Sending SIGINT to PID: 23256
+20250317105402 - HELPER SCRIPT: Sending SIGINT to PID: 23256
+20250317105404 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317105404 - Started process with PID: 16360 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317105404 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317105404 - Started process with PID: 22800 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317105404 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317105404 - Started process with PID: 19680 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317105404 - Device PE3SIL21060300042 is now connected
+20250317105404 - Set mute status for PID: 16360 to 0
+20250317105404 - Set mute status for PID: 22800 to 0
+20250317105404 - Set mute status for PID: 19680 to 0
+20250317105512 - Script started at 20250317105512
+20250317105512 - First run of the script
+20250317105512 - Attempting to terminate existing process with PID: 16360
+20250317105512 - HELPER SCRIPT: Sending SIGINT to PID: 16360
+20250317105512 - HELPER SCRIPT: Sending SIGINT to PID: 16360
+20250317105512 - Attempting to terminate existing process with PID: 22800
+20250317105512 - HELPER SCRIPT: Sending SIGINT to PID: 22800
+20250317105513 - HELPER SCRIPT: Sending SIGINT to PID: 22800
+20250317105513 - HELPER SCRIPT: Sending SIGINT to PID: 22800
+20250317105513 - Attempting to terminate existing process with PID: 19680
+20250317105513 - HELPER SCRIPT: Sending SIGINT to PID: 19680
+20250317105513 - HELPER SCRIPT: Sending SIGINT to PID: 19680
+20250317105514 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317105514 - Started process with PID: 8648 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317105514 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317105514 - Started process with PID: 2948 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317105514 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317105514 - Started process with PID: 17872 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317105515 - Device PE3SIL21060300042 is now connected
+20250317105515 - Set mute status for PID: 8648 to 0
+20250317105515 - Device PE3SIL21060300042 is now connected
+20250317105515 - Set mute status for PID: 2948 to 0
+20250317105515 - Set mute status for PID: 17872 to 0
+20250317105515 - Device PE3SIL21060300042 is now connected
+20250317105515 - Device PE3SIL21060300042 is now connected
+20250317105515 - Device PE3SIL21060300042 is now connected
+20250317105515 - Device PE3SIL21060300042 is now connected
+20250317105515 - Device PE3SIL21060300042 is now connected
+20250317105515 - Device PE3SIL21060300042 is now connected
+20250317105518 - Device PE3SIL21060300042 is now connected
+20250317105518 - Device PE3SIL21060300042 is now connected
+20250317105518 - Device PE3SIL21060300042 is now connected
+20250317105518 - Device PE3SIL21060300042 is now connected
+20250317105518 - Device PE3SIL21060300042 is now connected
+20250317105518 - Device PE3SIL21060300042 is now connected
+20250317105518 - Device PE3SIL21060300042 is now connected
+20250317105518 - Device PE3SIL21060300042 is now connected
+20250317105518 - Device PE3SIL21060300042 is now connected
+20250317105519 - Device PE3SIL21060300042 is now connected
+20250317105519 - Device PE3SIL21060300042 is now connected
+20250317105523 - Device PE3SIL21060300042 is now connected
+20250317105523 - Device PE3SIL21060300042 is now connected
+20250317105523 - Device PE3SIL21060300042 is now connected
+20250317105523 - Device PE3SIL21060300042 is now connected
+20250317105523 - Device PE3SIL21060300042 is now connected
+20250317105523 - Device PE3SIL21060300042 is now connected
+20250317105523 - Device PE3SIL21060300042 is now connected
+20250317105523 - Device PE3SIL21060300042 is now connected
+20250317105524 - Device PE3SIL21060300042 is now connected
+20250317105526 - Device PE3SIL21060300042 is now connected
+20250317105526 - Device PE3SIL21060300042 is now connected
+20250317105526 - Device PE3SIL21060300042 is now connected
+20250317105526 - Device PE3SIL21060300042 is now connected
+20250317105526 - Device PE3SIL21060300042 is now connected
+20250317105526 - Device PE3SIL21060300042 is now connected
+20250317105526 - Device PE3SIL21060300042 is now connected
+20250317105526 - Device PE3SIL21060300042 is now connected
+20250317105526 - Device PE3SIL21060300042 is now connected
+20250317105527 - Device PE3SIL21060300042 is now connected
+20250317105529 - Device PE3SIL21060300042 is now connected
+20250317105529 - Device PE3SIL21060300042 is now connected
+20250317105529 - Device PE3SIL21060300042 is now connected
+20250317105529 - Device PE3SIL21060300042 is now connected
+20250317105529 - Device PE3SIL21060300042 is now connected
+20250317105529 - Device PE3SIL21060300042 is now connected
+20250317105529 - Device PE3SIL21060300042 is now connected
+20250317105529 - Device PE3SIL21060300042 is now connected
+20250317105529 - Device PE3SIL21060300042 is now connected
+20250317105530 - Device PE3SIL21060300042 is now connected
+20250317105532 - Device PE3SIL21060300042 is now connected
+20250317105532 - Device PE3SIL21060300042 is now connected
+20250317105532 - Device PE3SIL21060300042 is now connected
+20250317105532 - Device PE3SIL21060300042 is now connected
+20250317105532 - Device PE3SIL21060300042 is now connected
+20250317105532 - Device PE3SIL21060300042 is now connected
+20250317105532 - Device PE3SIL21060300042 is now connected
+20250317105532 - Device PE3SIL21060300042 is now connected
+20250317105532 - Device PE3SIL21060300042 is now connected
+20250317105535 - Device PE3SIL21060300042 is now connected
+20250317105535 - Device PE3SIL21060300042 is now connected
+20250317105535 - Device PE3SIL21060300042 is now connected
+20250317105535 - Device PE3SIL21060300042 is now connected
+20250317105535 - Device PE3SIL21060300042 is now connected
+20250317105535 - Device PE3SIL21060300042 is now connected
+20250317105535 - Device PE3SIL21060300042 is now connected
+20250317105535 - Device PE3SIL21060300042 is now connected
+20250317105535 - Device PE3SIL21060300042 is now connected
+20250317105536 - Device PE3SIL21060300042 is now connected
+20250317105536 - Device PE3SIL21060300042 is now connected
+20250317105536 - Device PE3SIL21060300042 is now connected
+20250317105536 - Device PE3SIL21060300042 is now connected
+20250317105536 - Device PE3SIL21060300042 is now connected
+20250317105536 - Device PE3SIL21060300042 is now connected
+20250317105536 - Device PE3SIL21060300042 is now connected
+20250317105536 - Device PE3SIL21060300042 is now connected
+20250317105536 - Device PE3SIL21060300042 is now connected
+20250317105536 - Device PE3SIL21060300042 is now connected
+20250317105537 - Device PE3SIL21060300042 is now connected
+20250317105537 - Device PE3SIL21060300042 is now connected
+20250317105537 - Device PE3SIL21060300042 is now connected
+20250317105537 - Device PE3SIL21060300042 is now connected
+20250317105537 - Device PE3SIL21060300042 is now connected
+20250317105537 - Device PE3SIL21060300042 is now connected
+20250317105537 - Device PE3SIL21060300042 is now connected
+20250317105537 - Device PE3SIL21060300042 is now connected
+20250317105537 - Device PE3SIL21060300042 is now connected
+20250317105538 - Device PE3SIL21060300042 is now connected
+20250317105538 - Device PE3SIL21060300042 is now connected
+20250317105538 - Device PE3SIL21060300042 is now connected
+20250317105538 - Device PE3SIL21060300042 is now connected
+20250317105538 - Device PE3SIL21060300042 is now connected
+20250317105538 - Device PE3SIL21060300042 is now connected
+20250317105538 - Device PE3SIL21060300042 is now connected
+20250317105538 - Device PE3SIL21060300042 is now connected
+20250317105538 - Device PE3SIL21060300042 is now connected
+20250317105539 - Device PE3SIL21060300042 is now connected
+20250317105539 - Device PE3SIL21060300042 is now connected
+20250317105539 - Device PE3SIL21060300042 is now connected
+20250317105539 - Device PE3SIL21060300042 is now connected
+20250317105539 - Device PE3SIL21060300042 is now connected
+20250317105539 - Device PE3SIL21060300042 is now connected
+20250317105539 - Device PE3SIL21060300042 is now connected
+20250317105539 - Device PE3SIL21060300042 is now connected
+20250317105539 - Device PE3SIL21060300042 is now connected
+20250317105540 - Device PE3SIL21060300042 is now connected
+20250317105540 - Device PE3SIL21060300042 is now connected
+20250317105540 - Device PE3SIL21060300042 is now connected
+20250317105540 - Device PE3SIL21060300042 is now connected
+20250317105540 - Device PE3SIL21060300042 is now connected
+20250317105540 - Device PE3SIL21060300042 is now connected
+20250317105540 - Device PE3SIL21060300042 is now connected
+20250317105540 - Device PE3SIL21060300042 is now connected
+20250317105540 - Device PE3SIL21060300042 is now connected
+20250317105541 - Device PE3SIL21060300042 is now connected
+20250317105541 - Device PE3SIL21060300042 is now connected
+20250317105541 - Device PE3SIL21060300042 is now connected
+20250317105541 - Device PE3SIL21060300042 is now connected
+20250317105541 - Device PE3SIL21060300042 is now connected
+20250317105541 - Device PE3SIL21060300042 is now connected
+20250317105541 - Device PE3SIL21060300042 is now connected
+20250317105541 - Device PE3SIL21060300042 is now connected
+20250317105541 - Device PE3SIL21060300042 is now connected
+20250317105542 - Device PE3SIL21060300042 is now connected
+20250317105542 - Device PE3SIL21060300042 is now connected
+20250317105542 - Device PE3SIL21060300042 is now connected
+20250317105542 - Device PE3SIL21060300042 is now connected
+20250317105542 - Device PE3SIL21060300042 is now connected
+20250317105542 - Device PE3SIL21060300042 is now connected
+20250317105542 - Device PE3SIL21060300042 is now connected
+20250317105542 - Device PE3SIL21060300042 is now connected
+20250317105542 - Device PE3SIL21060300042 is now connected
+20250317105543 - Device PE3SIL21060300042 is now connected
+20250317105543 - Device PE3SIL21060300042 is now connected
+20250317105543 - Device PE3SIL21060300042 is now connected
+20250317105543 - Device PE3SIL21060300042 is now connected
+20250317105543 - Device PE3SIL21060300042 is now connected
+20250317105543 - Device PE3SIL21060300042 is now connected
+20250317105543 - Device PE3SIL21060300042 is now connected
+20250317105543 - Device PE3SIL21060300042 is now connected
+20250317105543 - Device PE3SIL21060300042 is now connected
+20250317105544 - Device PE3SIL21060300042 is now connected
+20250317105544 - Device PE3SIL21060300042 is now connected
+20250317105544 - Device PE3SIL21060300042 is now connected
+20250317105544 - Device PE3SIL21060300042 is now connected
+20250317105544 - Device PE3SIL21060300042 is now connected
+20250317105544 - Device PE3SIL21060300042 is now connected
+20250317105544 - Device PE3SIL21060300042 is now connected
+20250317105544 - Device PE3SIL21060300042 is now connected
+20250317105544 - Device PE3SIL21060300042 is now connected
+20250317105544 - Device PE3SIL21060300042 is now connected
+20250317105545 - Device PE3SIL21060300042 is now connected
+20250317105545 - Device PE3SIL21060300042 is now connected
+20250317105545 - Device PE3SIL21060300042 is now connected
+20250317105545 - Device PE3SIL21060300042 is now connected
+20250317105545 - Device PE3SIL21060300042 is now connected
+20250317105545 - Device PE3SIL21060300042 is now connected
+20250317105545 - Device PE3SIL21060300042 is now connected
+20250317105545 - Device PE3SIL21060300042 is now connected
+20250317105545 - Device PE3SIL21060300042 is now connected
+20250317105546 - Device PE3SIL21060300042 is now connected
+20250317105546 - Device PE3SIL21060300042 is now connected
+20250317105546 - Device PE3SIL21060300042 is now connected
+20250317105546 - Device PE3SIL21060300042 is now connected
+20250317105546 - Device PE3SIL21060300042 is now connected
+20250317105546 - Device PE3SIL21060300042 is now connected
+20250317105546 - Device PE3SIL21060300042 is now connected
+20250317105546 - Device PE3SIL21060300042 is now connected
+20250317105546 - Device PE3SIL21060300042 is now connected
+20250317105547 - Device PE3SIL21060300042 is now connected
+20250317105547 - Device PE3SIL21060300042 is now connected
+20250317105547 - Device PE3SIL21060300042 is now connected
+20250317105547 - Device PE3SIL21060300042 is now connected
+20250317105547 - Device PE3SIL21060300042 is now connected
+20250317105547 - Device PE3SIL21060300042 is now connected
+20250317105547 - Device PE3SIL21060300042 is now connected
+20250317105547 - Device PE3SIL21060300042 is now connected
+20250317105547 - Device PE3SIL21060300042 is now connected
+20250317105548 - Device PE3SIL21060300042 is now connected
+20250317105548 - Device PE3SIL21060300042 is now connected
+20250317105548 - Device PE3SIL21060300042 is now connected
+20250317105548 - Device PE3SIL21060300042 is now connected
+20250317105548 - Device PE3SIL21060300042 is now connected
+20250317105548 - Device PE3SIL21060300042 is now connected
+20250317105548 - Device PE3SIL21060300042 is now connected
+20250317105548 - Device PE3SIL21060300042 is now connected
+20250317105548 - Device PE3SIL21060300042 is now connected
+20250317105549 - Device PE3SIL21060300042 is now connected
+20250317105549 - Device PE3SIL21060300042 is now connected
+20250317105549 - Device PE3SIL21060300042 is now connected
+20250317105549 - Device PE3SIL21060300042 is now connected
+20250317105549 - Device PE3SIL21060300042 is now connected
+20250317105549 - Device PE3SIL21060300042 is now connected
+20250317105549 - Device PE3SIL21060300042 is now connected
+20250317105549 - Device PE3SIL21060300042 is now connected
+20250317105549 - Device PE3SIL21060300042 is now connected
+20250317105550 - Device PE3SIL21060300042 is now connected
+20250317105550 - Device PE3SIL21060300042 is now connected
+20250317105550 - Device PE3SIL21060300042 is now connected
+20250317105550 - Device PE3SIL21060300042 is now connected
+20250317105550 - Device PE3SIL21060300042 is now connected
+20250317105550 - Device PE3SIL21060300042 is now connected
+20250317105550 - Device PE3SIL21060300042 is now connected
+20250317105550 - Device PE3SIL21060300042 is now connected
+20250317105550 - Device PE3SIL21060300042 is now connected
+20250317105551 - Device PE3SIL21060300042 is now connected
+20250317105551 - Device PE3SIL21060300042 is now connected
+20250317105551 - Device PE3SIL21060300042 is now connected
+20250317105551 - Device PE3SIL21060300042 is now connected
+20250317105551 - Device PE3SIL21060300042 is now connected
+20250317105551 - Device PE3SIL21060300042 is now connected
+20250317105551 - Device PE3SIL21060300042 is now connected
+20250317105551 - Device PE3SIL21060300042 is now connected
+20250317105551 - Device PE3SIL21060300042 is now connected
+20250317105552 - Device PE3SIL21060300042 is now connected
+20250317105552 - Device PE3SIL21060300042 is now connected
+20250317105552 - Device PE3SIL21060300042 is now connected
+20250317105552 - Device PE3SIL21060300042 is now connected
+20250317105552 - Device PE3SIL21060300042 is now connected
+20250317105552 - Device PE3SIL21060300042 is now connected
+20250317105552 - Device PE3SIL21060300042 is now connected
+20250317105552 - Device PE3SIL21060300042 is now connected
+20250317105552 - Device PE3SIL21060300042 is now connected
+20250317105552 - Device PE3SIL21060300042 is now connected
+20250317105553 - Device PE3SIL21060300042 is now connected
+20250317105553 - Device PE3SIL21060300042 is now connected
+20250317105553 - Device PE3SIL21060300042 is now connected
+20250317105553 - Device PE3SIL21060300042 is now connected
+20250317105553 - Device PE3SIL21060300042 is now connected
+20250317105553 - Device PE3SIL21060300042 is now connected
+20250317105553 - Device PE3SIL21060300042 is now connected
+20250317105553 - Device PE3SIL21060300042 is now connected
+20250317105553 - Device PE3SIL21060300042 is now connected
+20250317105554 - Device PE3SIL21060300042 is now connected
+20250317105554 - Device PE3SIL21060300042 is now connected
+20250317105554 - Device PE3SIL21060300042 is now connected
+20250317105554 - Device PE3SIL21060300042 is now connected
+20250317105554 - Device PE3SIL21060300042 is now connected
+20250317105554 - Device PE3SIL21060300042 is now connected
+20250317105554 - Device PE3SIL21060300042 is now connected
+20250317105554 - Device PE3SIL21060300042 is now connected
+20250317105554 - Device PE3SIL21060300042 is now connected
+20250317105555 - Device PE3SIL21060300042 is now connected
+20250317105555 - Device PE3SIL21060300042 is now connected
+20250317105555 - Device PE3SIL21060300042 is now connected
+20250317105555 - Device PE3SIL21060300042 is now connected
+20250317105555 - Device PE3SIL21060300042 is now connected
+20250317105555 - Device PE3SIL21060300042 is now connected
+20250317105555 - Device PE3SIL21060300042 is now connected
+20250317105555 - Device PE3SIL21060300042 is now connected
+20250317105555 - Device PE3SIL21060300042 is now connected
+20250317105556 - Device PE3SIL21060300042 is now connected
+20250317105556 - Device PE3SIL21060300042 is now connected
+20250317105556 - Device PE3SIL21060300042 is now connected
+20250317105556 - Device PE3SIL21060300042 is now connected
+20250317105556 - Device PE3SIL21060300042 is now connected
+20250317105556 - Device PE3SIL21060300042 is now connected
+20250317105556 - Device PE3SIL21060300042 is now connected
+20250317105556 - Device PE3SIL21060300042 is now connected
+20250317105556 - Device PE3SIL21060300042 is now connected
+20250317105557 - Device PE3SIL21060300042 is now connected
+20250317105557 - Device PE3SIL21060300042 is now connected
+20250317105557 - Device PE3SIL21060300042 is now connected
+20250317105557 - Device PE3SIL21060300042 is now connected
+20250317105557 - Device PE3SIL21060300042 is now connected
+20250317105557 - Device PE3SIL21060300042 is now connected
+20250317105557 - Device PE3SIL21060300042 is now connected
+20250317105557 - Device PE3SIL21060300042 is now connected
+20250317105557 - Device PE3SIL21060300042 is now connected
+20250317105558 - Device PE3SIL21060300042 is now connected
+20250317105558 - Device PE3SIL21060300042 is now connected
+20250317105558 - Device PE3SIL21060300042 is now connected
+20250317105558 - Device PE3SIL21060300042 is now connected
+20250317105558 - Device PE3SIL21060300042 is now connected
+20250317105558 - Device PE3SIL21060300042 is now connected
+20250317105558 - Device PE3SIL21060300042 is now connected
+20250317105558 - Device PE3SIL21060300042 is now connected
+20250317105558 - Device PE3SIL21060300042 is now connected
+20250317105559 - Device PE3SIL21060300042 is now connected
+20250317105559 - Device PE3SIL21060300042 is now connected
+20250317105559 - Device PE3SIL21060300042 is now connected
+20250317105559 - Device PE3SIL21060300042 is now connected
+20250317105559 - Device PE3SIL21060300042 is now connected
+20250317105559 - Device PE3SIL21060300042 is now connected
+20250317105559 - Device PE3SIL21060300042 is now connected
+20250317105559 - Device PE3SIL21060300042 is now connected
+20250317105559 - Device PE3SIL21060300042 is now connected
+20250317105559 - Device PE3SIL21060300042 is now connected
+20250317105600 - Device PE3SIL21060300042 is now connected
+20250317105600 - Device PE3SIL21060300042 is now connected
+20250317105600 - Device PE3SIL21060300042 is now connected
+20250317105600 - Device PE3SIL21060300042 is now connected
+20250317105600 - Device PE3SIL21060300042 is now connected
+20250317105600 - Device PE3SIL21060300042 is now connected
+20250317105600 - Device PE3SIL21060300042 is now connected
+20250317105600 - Device PE3SIL21060300042 is now connected
+20250317105600 - Device PE3SIL21060300042 is now connected
+20250317105601 - Device PE3SIL21060300042 is now connected
+20250317105601 - Device PE3SIL21060300042 is now connected
+20250317105601 - Device PE3SIL21060300042 is now connected
+20250317105601 - Device PE3SIL21060300042 is now connected
+20250317105601 - Device PE3SIL21060300042 is now connected
+20250317105601 - Device PE3SIL21060300042 is now connected
+20250317105601 - Device PE3SIL21060300042 is now connected
+20250317105601 - Device PE3SIL21060300042 is now connected
+20250317105601 - Device PE3SIL21060300042 is now connected
+20250317105602 - Device PE3SIL21060300042 is now connected
+20250317105602 - Device PE3SIL21060300042 is now connected
+20250317105602 - Device PE3SIL21060300042 is now connected
+20250317105602 - Device PE3SIL21060300042 is now connected
+20250317105602 - Device PE3SIL21060300042 is now connected
+20250317105602 - Device PE3SIL21060300042 is now connected
+20250317105602 - Device PE3SIL21060300042 is now connected
+20250317105602 - Device PE3SIL21060300042 is now connected
+20250317105602 - Device PE3SIL21060300042 is now connected
+20250317105603 - Device PE3SIL21060300042 is now connected
+20250317105603 - Device PE3SIL21060300042 is now connected
+20250317105603 - Device PE3SIL21060300042 is now connected
+20250317105603 - Device PE3SIL21060300042 is now connected
+20250317105603 - Device PE3SIL21060300042 is now connected
+20250317105603 - Device PE3SIL21060300042 is now connected
+20250317105603 - Device PE3SIL21060300042 is now connected
+20250317105603 - Device PE3SIL21060300042 is now connected
+20250317105603 - Device PE3SIL21060300042 is now connected
+20250317105604 - Device PE3SIL21060300042 is now connected
+20250317105604 - Device PE3SIL21060300042 is now connected
+20250317105604 - Device PE3SIL21060300042 is now connected
+20250317105604 - Device PE3SIL21060300042 is now connected
+20250317105604 - Device PE3SIL21060300042 is now connected
+20250317105604 - Device PE3SIL21060300042 is now connected
+20250317105604 - Device PE3SIL21060300042 is now connected
+20250317105604 - Device PE3SIL21060300042 is now connected
+20250317105604 - Device PE3SIL21060300042 is now connected
+20250317105605 - Device PE3SIL21060300042 is now connected
+20250317105605 - Device PE3SIL21060300042 is now connected
+20250317105605 - Device PE3SIL21060300042 is now connected
+20250317105605 - Device PE3SIL21060300042 is now connected
+20250317105605 - Device PE3SIL21060300042 is now connected
+20250317105605 - Device PE3SIL21060300042 is now connected
+20250317105605 - Device PE3SIL21060300042 is now connected
+20250317105605 - Device PE3SIL21060300042 is now connected
+20250317105605 - Device PE3SIL21060300042 is now connected
+20250317105606 - Device PE3SIL21060300042 is now connected
+20250317105606 - Device PE3SIL21060300042 is now connected
+20250317105606 - Device PE3SIL21060300042 is now connected
+20250317105606 - Device PE3SIL21060300042 is now connected
+20250317105606 - Device PE3SIL21060300042 is now connected
+20250317105606 - Device PE3SIL21060300042 is now connected
+20250317105606 - Device PE3SIL21060300042 is now connected
+20250317105606 - Device PE3SIL21060300042 is now connected
+20250317105606 - Device PE3SIL21060300042 is now connected
+20250317105607 - Device PE3SIL21060300042 is now connected
+20250317105607 - Device PE3SIL21060300042 is now connected
+20250317105607 - Device PE3SIL21060300042 is now connected
+20250317105607 - Device PE3SIL21060300042 is now connected
+20250317105607 - Device PE3SIL21060300042 is now connected
+20250317105607 - Device PE3SIL21060300042 is now connected
+20250317105607 - Device PE3SIL21060300042 is now connected
+20250317105607 - Device PE3SIL21060300042 is now connected
+20250317105607 - Device PE3SIL21060300042 is now connected
+20250317105608 - Device PE3SIL21060300042 is now connected
+20250317105608 - Device PE3SIL21060300042 is now connected
+20250317105608 - Device PE3SIL21060300042 is now connected
+20250317105608 - Device PE3SIL21060300042 is now connected
+20250317105608 - Device PE3SIL21060300042 is now connected
+20250317105608 - Device PE3SIL21060300042 is now connected
+20250317105608 - Device PE3SIL21060300042 is now connected
+20250317105608 - Device PE3SIL21060300042 is now connected
+20250317105608 - Device PE3SIL21060300042 is now connected
+20250317105609 - Device PE3SIL21060300042 is now connected
+20250317105609 - Device PE3SIL21060300042 is now connected
+20250317105609 - Device PE3SIL21060300042 is now connected
+20250317105609 - Device PE3SIL21060300042 is now connected
+20250317105609 - Device PE3SIL21060300042 is now connected
+20250317105609 - Device PE3SIL21060300042 is now connected
+20250317105609 - Device PE3SIL21060300042 is now connected
+20250317105609 - Device PE3SIL21060300042 is now connected
+20250317105609 - Device PE3SIL21060300042 is now connected
+20250317105609 - Device PE3SIL21060300042 is now connected
+20250317105610 - Device PE3SIL21060300042 is now connected
+20250317105610 - Device PE3SIL21060300042 is now connected
+20250317105610 - Device PE3SIL21060300042 is now connected
+20250317105610 - Device PE3SIL21060300042 is now connected
+20250317105610 - Device PE3SIL21060300042 is now connected
+20250317105610 - Device PE3SIL21060300042 is now connected
+20250317105610 - Device PE3SIL21060300042 is now connected
+20250317105610 - Device PE3SIL21060300042 is now connected
+20250317105610 - Device PE3SIL21060300042 is now connected
+20250317105611 - Device PE3SIL21060300042 is now connected
+20250317105611 - Device PE3SIL21060300042 is now connected
+20250317105611 - Device PE3SIL21060300042 is now connected
+20250317105611 - Device PE3SIL21060300042 is now connected
+20250317105611 - Device PE3SIL21060300042 is now connected
+20250317105611 - Device PE3SIL21060300042 is now connected
+20250317105611 - Device PE3SIL21060300042 is now connected
+20250317105611 - Device PE3SIL21060300042 is now connected
+20250317105611 - Device PE3SIL21060300042 is now connected
+20250317105612 - Device PE3SIL21060300042 is now connected
+20250317105612 - Device PE3SIL21060300042 is now connected
+20250317105612 - Device PE3SIL21060300042 is now connected
+20250317105612 - Device PE3SIL21060300042 is now connected
+20250317105612 - Device PE3SIL21060300042 is now connected
+20250317105612 - Device PE3SIL21060300042 is now connected
+20250317105612 - Device PE3SIL21060300042 is now connected
+20250317105613 - Device PE3SIL21060300042 is now connected
+20250317105613 - Device PE3SIL21060300042 is now connected
+20250317105613 - Device PE3SIL21060300042 is now connected
+20250317105613 - Device PE3SIL21060300042 is now connected
+20250317105613 - Device PE3SIL21060300042 is now connected
+20250317105613 - Device PE3SIL21060300042 is now connected
+20250317105613 - Device PE3SIL21060300042 is now connected
+20250317105615 - Device PE3SIL21060300042 is now connected
+20250317105615 - Device PE3SIL21060300042 is now connected
+20250317105615 - Device PE3SIL21060300042 is now connected
+20250317105616 - Device PE3SIL21060300042 is now connected
+20250317105616 - Device PE3SIL21060300042 is now connected
+20250317105616 - Device PE3SIL21060300042 is now connected
+20250317105616 - Device PE3SIL21060300042 is now connected
+20250317105616 - Device PE3SIL21060300042 is now connected
+20250317105616 - Device PE3SIL21060300042 is now connected
+20250317105618 - Device PE3SIL21060300042 is now connected
+20250317105618 - Device PE3SIL21060300042 is now connected
+20250317105618 - Device PE3SIL21060300042 is now connected
+20250317105618 - Device PE3SIL21060300042 is now connected
+20250317105619 - Device PE3SIL21060300042 is now connected
+20250317105619 - Device PE3SIL21060300042 is now connected
+20250317105619 - Device PE3SIL21060300042 is now connected
+20250317105619 - Device PE3SIL21060300042 is now connected
+20250317105619 - Device PE3SIL21060300042 is now connected
+20250317105619 - Device PE3SIL21060300042 is now connected
+20250317105623 - Device PE3SIL21060300042 is now connected
+20250317105623 - Device PE3SIL21060300042 is now connected
+20250317105623 - Device PE3SIL21060300042 is now connected
+20250317105623 - Device PE3SIL21060300042 is now connected
+20250317105624 - Device PE3SIL21060300042 is now connected
+20250317105624 - Device PE3SIL21060300042 is now connected
+20250317105624 - Device PE3SIL21060300042 is now connected
+20250317105624 - Device PE3SIL21060300042 is now connected
+20250317105624 - Device PE3SIL21060300042 is now connected
+20250317105624 - Device PE3SIL21060300042 is now connected
+20250317105626 - Device PE3SIL21060300042 is now connected
+20250317105626 - Device PE3SIL21060300042 is now connected
+20250317105626 - Device PE3SIL21060300042 is now connected
+20250317105626 - Device PE3SIL21060300042 is now connected
+20250317105627 - Device PE3SIL21060300042 is now connected
+20250317105627 - Device PE3SIL21060300042 is now connected
+20250317105627 - Device PE3SIL21060300042 is now connected
+20250317105627 - Device PE3SIL21060300042 is now connected
+20250317105627 - Device PE3SIL21060300042 is now connected
+20250317105627 - Device PE3SIL21060300042 is now connected
+20250317105631 - Device PE3SIL21060300042 is now connected
+20250317105631 - Device PE3SIL21060300042 is now connected
+20250317105631 - Device PE3SIL21060300042 is now connected
+20250317105631 - Device PE3SIL21060300042 is now connected
+20250317105632 - Device PE3SIL21060300042 is now connected
+20250317105632 - Device PE3SIL21060300042 is now connected
+20250317105632 - Device PE3SIL21060300042 is now connected
+20250317105632 - Device PE3SIL21060300042 is now connected
+20250317105632 - Device PE3SIL21060300042 is now connected
+20250317105632 - Device PE3SIL21060300042 is now connected
+20250317105634 - Device PE3SIL21060300042 is now connected
+20250317105634 - Device PE3SIL21060300042 is now connected
+20250317105634 - Device PE3SIL21060300042 is now connected
+20250317105634 - Device PE3SIL21060300042 is now connected
+20250317105634 - Device PE3SIL21060300042 is now connected
+20250317105635 - Device PE3SIL21060300042 is now connected
+20250317105635 - Device PE3SIL21060300042 is now connected
+20250317105635 - Device PE3SIL21060300042 is now connected
+20250317105635 - Device PE3SIL21060300042 is now connected
+20250317105635 - Device PE3SIL21060300042 is now connected
+20250317105637 - Device PE3SIL21060300042 is now connected
+20250317105637 - Device PE3SIL21060300042 is now connected
+20250317105637 - Device PE3SIL21060300042 is now connected
+20250317105637 - Device PE3SIL21060300042 is now connected
+20250317105637 - Device PE3SIL21060300042 is now connected
+20250317105638 - Device PE3SIL21060300042 is now connected
+20250317105638 - Device PE3SIL21060300042 is now connected
+20250317105638 - Device PE3SIL21060300042 is now connected
+20250317105638 - Device PE3SIL21060300042 is now connected
+20250317105638 - Device PE3SIL21060300042 is now connected
+20250317105642 - Device PE3SIL21060300042 is now connected
+20250317105642 - Device PE3SIL21060300042 is now connected
+20250317105642 - Device PE3SIL21060300042 is now connected
+20250317105642 - Device PE3SIL21060300042 is now connected
+20250317105642 - Device PE3SIL21060300042 is now connected
+20250317105643 - Device PE3SIL21060300042 is now connected
+20250317105643 - Device PE3SIL21060300042 is now connected
+20250317105643 - Device PE3SIL21060300042 is now connected
+20250317105643 - Device PE3SIL21060300042 is now connected
+20250317105643 - Device PE3SIL21060300042 is now connected
+20250317105647 - Device PE3SIL21060300042 is now connected
+20250317105647 - Device PE3SIL21060300042 is now connected
+20250317105647 - Device PE3SIL21060300042 is now connected
+20250317105647 - Device PE3SIL21060300042 is now connected
+20250317105647 - Device PE3SIL21060300042 is now connected
+20250317105647 - Device PE3SIL21060300042 is now connected
+20250317105648 - Device PE3SIL21060300042 is now connected
+20250317105648 - Device PE3SIL21060300042 is now connected
+20250317105648 - Device PE3SIL21060300042 is now connected
+20250317105648 - Device PE3SIL21060300042 is now connected
+20250317105650 - Device PE3SIL21060300042 is now connected
+20250317105650 - Device PE3SIL21060300042 is now connected
+20250317105650 - Device PE3SIL21060300042 is now connected
+20250317105650 - Device PE3SIL21060300042 is now connected
+20250317105650 - Device PE3SIL21060300042 is now connected
+20250317105650 - Device PE3SIL21060300042 is now connected
+20250317105651 - Device PE3SIL21060300042 is now connected
+20250317105651 - Device PE3SIL21060300042 is now connected
+20250317105651 - Device PE3SIL21060300042 is now connected
+20250317105653 - Device PE3SIL21060300042 is now connected
+20250317105653 - Device PE3SIL21060300042 is now connected
+20250317105653 - Device PE3SIL21060300042 is now connected
+20250317105653 - Device PE3SIL21060300042 is now connected
+20250317105653 - Device PE3SIL21060300042 is now connected
+20250317105653 - Device PE3SIL21060300042 is now connected
+20250317105653 - Device PE3SIL21060300042 is now connected
+20250317105654 - Device PE3SIL21060300042 is now connected
+20250317105654 - Device PE3SIL21060300042 is now connected
+20250317105656 - Device PE3SIL21060300042 is now connected
+20250317105656 - Device PE3SIL21060300042 is now connected
+20250317105656 - Device PE3SIL21060300042 is now connected
+20250317105656 - Device PE3SIL21060300042 is now connected
+20250317105656 - Device PE3SIL21060300042 is now connected
+20250317105656 - Device PE3SIL21060300042 is now connected
+20250317105656 - Device PE3SIL21060300042 is now connected
+20250317105656 - Device PE3SIL21060300042 is now connected
+20250317105657 - Device PE3SIL21060300042 is now connected
+20250317105657 - Device PE3SIL21060300042 is now connected
+20250317105701 - Device PE3SIL21060300042 is now connected
+20250317105701 - Device PE3SIL21060300042 is now connected
+20250317105701 - Device PE3SIL21060300042 is now connected
+20250317105701 - Device PE3SIL21060300042 is now connected
+20250317105701 - Device PE3SIL21060300042 is now connected
+20250317105701 - Device PE3SIL21060300042 is now connected
+20250317105701 - Device PE3SIL21060300042 is now connected
+20250317105701 - Device PE3SIL21060300042 is now connected
+20250317105702 - Device PE3SIL21060300042 is now connected
+20250317105702 - Device PE3SIL21060300042 is now connected
+20250317105706 - Device PE3SIL21060300042 is now connected
+20250317105706 - Device PE3SIL21060300042 is now connected
+20250317105706 - Device PE3SIL21060300042 is now connected
+20250317105706 - Device PE3SIL21060300042 is now connected
+20250317105706 - Device PE3SIL21060300042 is now connected
+20250317105706 - Device PE3SIL21060300042 is now connected
+20250317105706 - Device PE3SIL21060300042 is now connected
+20250317105706 - Device PE3SIL21060300042 is now connected
+20250317105707 - Device PE3SIL21060300042 is now connected
+20250317105707 - Device PE3SIL21060300042 is now connected
+20250317105709 - Script started at 20250317105709
+20250317105709 - First run of the script
+20250317105709 - Attempting to terminate existing process with PID: 8648
+20250317105709 - HELPER SCRIPT: Sending SIGINT to PID: 8648
+20250317105709 - HELPER SCRIPT: Sending SIGINT to PID: 8648
+20250317105709 - Attempting to terminate existing process with PID: 2948
+20250317105710 - HELPER SCRIPT: Sending SIGINT to PID: 2948
+20250317105710 - HELPER SCRIPT: Sending SIGINT to PID: 2948
+20250317105710 - HELPER SCRIPT: Sending SIGINT to PID: 2948
+20250317105710 - Attempting to terminate existing process with PID: 17872
+20250317105710 - HELPER SCRIPT: Sending SIGINT to PID: 17872
+20250317105711 - HELPER SCRIPT: Sending SIGINT to PID: 17872
+20250317105711 - HELPER SCRIPT: Sending SIGINT to PID: 17872
+20250317105712 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317105712 - Started process with PID: 11748 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250317105712 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317105712 - Started process with PID: 11876 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250317105712 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317105712 - Started process with PID: 14496 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250317105712 - Device PE3SIL21060300042 is now connected
+20250317105712 - Set mute status for PID: 11748 to 0
+20250317105712 - Set mute status for PID: 11876 to 0
+20250317105712 - Set mute status for PID: 14496 to 0

@@ -75,7 +75,7 @@ apolloExePath := exeDirectory . "\sunshine.exe"
 adbExePath := platformToolsDirectory . "\adb.exe"
 scrCpyPath := platformToolsDirectory . "\scrcpy.exe"
 firstRun := true
-
+lastMicStatus := ""
 
 LogMessage(level, message) {
     global logFilePath, debugLevel
@@ -290,8 +290,7 @@ SyncVolume() {
 }
 
 MaintainMicConnectivity() {
-    global adbExePath, scrCpyPath, androidMicDeviceID, micOutputDevice, LogMessage, CmdRetWithTimeout
-    static lastStatus := ""
+    global adbExePath, scrCpyPath, androidMicDeviceID, micOutputDevice, LogMessage, CmdRetWithTimeout, lastMicStatus
 
     command := adbExePath . " devices"
     adbOutput := CmdRetWithTimeout(command, 3000) ; 3 seconds timeout
@@ -312,28 +311,34 @@ MaintainMicConnectivity() {
         deviceStatus := "disconnected"
 
     ; Report status change
-    if (deviceStatus != lastStatus) {
+    if (deviceStatus != lastMicStatus) {
         LogMessage(1, "Device " androidMicDeviceID " is now " deviceStatus)
         if (deviceStatus = "connected") {
-            ; Kill any existing scrcpy processes
-            LogMessage(2, "Killing all existing scrcpy processes for the first time")
-            Run, %comspec% /c "taskkill /F /IM scrcpy.exe",, Hide
-            Sleep, 500 ; Wait a moment for processes to be killed
+            ; Check if there are any existing scrcpy processes
+            Process, Exist, scrcpy.exe
+            if (ErrorLevel) {
+                ; Kill any existing scrcpy processes
+                LogMessage(2, "Killing all existing scrcpy processes for the first time")
+                Run, %comspec% /c "taskkill /F /IM scrcpy.exe",, Hide
+            } else {
+                LogMessage(2, "No existing scrcpy processes found")
+            }
             Run, %comspec% /c ""%scrCpyPath%" -s %androidMicDeviceID% --no-video --no-window --audio-source=mic --window-borderless",, Hide, scrcpyPID
             ; Set the output audio device for the scrcpy process
-            LogMessage(2, "Starting scrcpy with PID: " scrcpyPID)
+            LogMessage(1, "Starting scrcpy with PID: " scrcpyPID " for device: " androidMicDeviceID)
             ;Sleep, 2000 ; Wait a moment for processes to be killed
             ;VA_SetAppVolume(scrcpyPID, micOutputDevice)
             ;LogMessage(2, "SetAppVolume called for PID: " scrcpyPID " with device: " micOutputDevice)
         } else {
             ; Kill the scrcpy process by PID if the device is disconnected
             if (scrcpyPID) {
-                LogMessage(2, "Device disconnected, killing scrcpy process with PID: " scrcpyPID)
+                LogMessage(1, "Device " androidMicDeviceID " disconnected, killing scrcpy process with PID: " scrcpyPID)
                 Run, %comspec% /c "taskkill /F /PID " scrcpyPID,, Hide
                 scrcpyPID := ""
             }
         }
-        lastStatus := deviceStatus
+        ; Update lastMicStatus to the current deviceStatus
+        lastMicStatus := deviceStatus
     }
 }
 
