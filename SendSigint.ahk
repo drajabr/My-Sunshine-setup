@@ -1,8 +1,24 @@
 ; SendSigint.ahk
 #NoTrayIcon
 SetWorkingDir %A_ScriptDir%
-logFilePath := A_ScriptDir . "\debug_log.txt"
-debugLevel := 1
+
+
+configFile := A_ScriptDir . "\vars.cfg"
+config := {}
+
+Loop, Read, %configFile%
+{
+    StringSplit, keyValue, A_LoopReadLine, =
+    if (keyValue0 = 2)
+    {
+        config[keyValue1] := keyValue2
+    }
+}
+
+debugLevel := config["debugLevel"]
+
+if !debugLevel
+    debugLevel := 1
 
 ; Get the PID and log file path from the command line arguments
 pid := A_Args[1]

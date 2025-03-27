@@ -1,54 +1,28 @@
-20250317141031 - Cleared debug_logfile: C:\Users\Ahmed\Documents\git\My-Sunshine-setup\debug_log.txt before starting
-20250317141031 - First run of the script
-20250317141031 - Attempting to terminate existing process with PID: 23192
-20250317141032 - HELPER SCRIPT: Sending SIGINT to PID: 23192
-20250317141032 - HELPER SCRIPT: Sending SIGINT to PID: 23192
-20250317141032 - Attempting to terminate existing process with PID: 22732
-20250317141032 - HELPER SCRIPT: Sending SIGINT to PID: 22732
-20250317141032 - HELPER SCRIPT: Sending SIGINT to PID: 22732
-20250317141032 - HELPER SCRIPT: Sending SIGINT to PID: 22732
-20250317141032 - HELPER SCRIPT: Sending SIGINT to PID: 22732
-20250317141033 - HELPER SCRIPT: Sending SIGINT to PID: 22732
-20250317141033 - Attempting to terminate existing process with PID: 19408
-20250317141033 - HELPER SCRIPT: Sending SIGINT to PID: 19408
-20250317141033 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
-20250317141034 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317141034 - Started process with PID: 2380 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250317141034 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
-20250317141034 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317141034 - Started process with PID: 15408 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317141034 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
-20250317141034 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317141034 - Started process with PID: 23436 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250317141034 - Device PE3SIL21060300042 is now connected
-20250317141034 - Killing all existing scrcpy processes for the first time
-20250317141034 - Attempting to terminate existing scrcpy process with PID: 13996
-20250317141035 - Successfully terminated scrcpy process with PID: 13996
-20250317141035 - Attempting to terminate existing scrcpy process with PID: 13996
-20250317141035 - Successfully terminated scrcpy process with PID: 13996
-20250317141035 - Starting scrcpy with PID: 22852 for device: PE3SIL21060300042
-20250317141035 - Sync mute state: Unmuted for PIDs: 2380, 15408, 23436
-20250317141038 - Found 'Opus initialized' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
-20250317141039 - Sync mute state: Unmuted for PIDs: 2380, 15408, 23436
-20250317141118 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 15408
-20250317141118 - HELPER SCRIPT: Sending SIGINT to PID: 15408
-20250317141119 - Processes terminated, restarting again
-20250317141119 - Cleared logfile: C:\Program Files\Apollo\config\sunshine_2.log before restarting
-20250317141119 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317141119 - Restarted process with PID: 5812 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317141138 - Found 'Opus initialized' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
-20250317141139 - Sync mute state: Unmuted for PIDs: 2380, 5812, 23436
-20250317141216 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 5812
-20250317141216 - HELPER SCRIPT: Sending SIGINT to PID: 5812
-20250317141217 - Processes terminated, restarting again
-20250317141217 - Cleared logfile: C:\Program Files\Apollo\config\sunshine_2.log before restarting
-20250317141217 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317141217 - Restarted process with PID: 5532 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317141233 - Found 'Opus initialized' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
-20250317141235 - Sync mute state: Unmuted for PIDs: 2380, 5532, 23436
-20250317141237 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 5532
-20250317141237 - HELPER SCRIPT: Sending SIGINT to PID: 5532
-20250317141237 - Processes terminated, restarting again
-20250317141237 - Cleared logfile: C:\Program Files\Apollo\config\sunshine_2.log before restarting
-20250317141237 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250317141237 - Restarted process with PID: 23280 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250327160059 - Cleared debug_logfile: C:\Users\Ahmed\Documents\git\My-Sunshine-setup\debug_log.txt before starting
+20250327160059 - First run of the script
+20250327160059 - Attempting to terminate existing process with PID: 30396
+20250327160059 - Attempting to terminate existing process with PID: 12528
+20250327160100 - Attempting to terminate existing process with PID: 37508
+20250327160104 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
+20250327160104 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250327160104 - Started process with PID: 35872 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250327160104 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
+20250327160104 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250327160104 - Started process with PID: 11912 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250327160104 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
+20250327160104 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250327160104 - Started process with PID: 41640 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250327160105 - No existing scrcpy processes found for the first run
+20250327160105 - Device is connected, Starting scrcpy process
+20250327160105 - Starting scrcpy with PID: 12084 for device: PE3SIL21060300042
+20250327160105 - Sync mute state: Unmuted for PIDs: 35872, 11912, 41640
+20250327160109 - Found 'Opus initialized' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250327160110 - Sync mute state: Unmuted for PIDs: 35872, 11912, 41640
+20250327160110 - Found 'Opus initialized' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250327160111 - Sync mute state: Unmuted for PIDs: 35872, 11912, 41640
+20250327160118 - scrcpy proccess PID: 12084 is no longer running! reviving next run
+20250327160118 - Device is connected, Starting scrcpy process
+20250327160118 - Starting scrcpy with PID: 24220 for device: PE3SIL21060300042
+20250327160123 - scrcpy proccess PID: 24220 is no longer running! reviving next run
+20250327160123 - Device is connected, Starting scrcpy process
+20250327160123 - Starting scrcpy with PID: 25920 for device: PE3SIL21060300042

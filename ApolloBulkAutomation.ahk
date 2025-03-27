@@ -132,6 +132,8 @@ CmdRetWithTimeout(sCmd, timeout, callBackFuncObj := "", encoding := "") {
 }
 
 
+; todo, single function to watch log files writing to global vars accessed by functions needing it, currently this causes issues or delays..
+
 BulkStartApollo() {
     global apolloExePath, exeDirectory, confDirectory, logFiles, confFiles, pids, debugLevel, logFilePath
     static firstRunApollo := true
@@ -193,6 +195,11 @@ WatchLogFiles() {
     global apolloExePath, logFiles, exeDirectory, confDirectory, confFiles, pids, debugLevel
     processTerminated := false
     TerminatedIndexes := []
+    static running := False
+    
+    if (running)
+        return 
+    running := True
     LogMessage(2, "Starting WatchLogFiles()")
 
     static lastReadPositions := {}
@@ -239,18 +246,22 @@ WatchLogFiles() {
         LogMessage(2, "No process sent SIGINT")
     }
     LogMessage(2, "WatchLogFiles() completed")
+    running := False
 }
 
 SyncVolume() {
     global pids, logFiles, confDirectory, debugLevel
-    LogMessage(2, "Starting SyncVolume()")
-
-    if (!pids || pids.MaxIndex() = 0)
-        return
-
     static lastVolume := -1
     static lastMute := -1
     static lastReadPositions := {}
+
+    static running := False
+    if (running)
+        return
+    if (!pids || pids.MaxIndex() = 0)
+        return
+    LogMessage(2, "Starting SyncVolume()")
+    running := True
 
     masterVolume := VA_GetMasterVolume()
     isMuted := VA_GetMasterMute()
@@ -309,11 +320,12 @@ SyncVolume() {
     LogMessage(2, "Volume and mute settings synced for all updated processes")
 
     LogMessage(2, "SyncVolume() completed")
+    running := False
 }
 
 MaintainMicConnectivity() {
     global adbExePath, scrCpyPath, androidMicDeviceID, micOutputDevice, LogMessage, CmdRetWithTimeout
-    static lastStatus := "", firstRunMic := true
+    static lastStatus := "", firstRunMic := true, scrcpyPID := ""
 
     command := adbExePath . " devices"
     adbOutput := CmdRetWithTimeout(command, 3000) ; 3 seconds timeout
@@ -322,7 +334,7 @@ MaintainMicConnectivity() {
     LogMessage(3, "ADB Command: " command "`nADB Devices Output:`n" adbOutput)
 
     ; Check the device status
-    deviceStatus := ""
+    deviceStatus := "disconnected"
     Loop, Parse, adbOutput, `n, `r
     {
         if (RegExMatch(A_LoopField, "^\s*" androidMicDeviceID "\s+device")) {
@@ -330,57 +342,67 @@ MaintainMicConnectivity() {
             break
         }
     }
-    if (deviceStatus = "")
-        deviceStatus := "disconnected"
-
-    ; Report status change
     if (deviceStatus != lastStatus) {
-        LogMessage(1, "Device " androidMicDeviceID " is now " deviceStatus)
-        if (deviceStatus = "connected") {
-            ; Check if there are any existing scrcpy processes
-            if (firstRunMic) {
-                pids := []
-                Loop {
-                    Process, Exist, scrcpy.exe
-                    if (ErrorLevel = 0)
-                        break
-                    pids.Push(ErrorLevel)
-                    Process, Close, %ErrorLevel%
-                }
-                if (pids.MaxIndex() > 0) {
-                    LogMessage(1, "Killing all existing scrcpy processes for the first time")
-                    for index, pid in pids {
-                        LogMessage(1, "Attempting to terminate existing scrcpy process with PID: " . pid)
-                        RunWait, %comspec% /c "taskkill /F /PID " pid,, Hide
-                        Sleep, 100
-                        Process, Exist, %pid%
-                        if (ErrorLevel != 0) {
-                            LogMessage(0, "Failed to terminate scrcpy process with PID: " . pid)
-                        } else {
-                            LogMessage(1, "Successfully terminated scrcpy process with PID: " . pid)
-                        }
-                    }
-                    firstRunMic := false
-                } else {
-                    LogMessage(1, "No existing scrcpy processes found")
-                }
-            }
-            Sleep, 100
-            Run, %comspec% /c ""%scrCpyPath%" -s %androidMicDeviceID% --no-video --no-window --audio-source=mic --window-borderless",, Hide, scrcpyPID
-            ; Set the output audio device for the scrcpy process
-            LogMessage(1, "Starting scrcpy with PID: " scrcpyPID " for device: " androidMicDeviceID)
-            ;Sleep, 2000 ; Wait a moment for processes to be killed
-            ;VA_SetAppVolume(scrcpyPID, micOutputDevice)
-            ;LogMessage(2, "SetAppVolume called for PID: " scrcpyPID " with device: " micOutputDevice)
-        } else {
-            ; Kill the scrcpy process by PID if the device is disconnected
-            if (scrcpyPID) {
-                LogMessage(1, "Device " androidMicDeviceID " disconnected, killing scrcpy process with PID: " scrcpyPID)
-                Run, %comspec% /c "taskkill /F /PID " scrcpyPID,, Hide
-                scrcpyPID := ""
-            }
+        pids := []
+        Loop {
+            Process, Exist, scrcpy.exe
+            if (ErrorLevel = 0)
+                break
+            pids.Push(ErrorLevel)
+            Process, Close, %ErrorLevel%
         }
         lastStatus := deviceStatus
+    }
+    if (deviceStatus = "connected") {
+        ; Check if there are any existing scrcpy processes
+        if (firstRunMic){
+            if (pids.MaxIndex()>0){
+                LogMessage(1, "Killing all existing scrcpy processes for the first run")
+                for index, pid in pids {
+                    LogMessage(1, "Attempting to terminate existing scrcpy process with PID: " . pid)
+                    RunWait, %comspec% /c "taskkill /F /PID " pid,, Hide
+                    Sleep, 100
+                    Process, Exist, %pid%
+                    if (ErrorLevel != 0)
+                        LogMessage(0, "Failed to terminate scrcpy process with PID: " . pid)
+                    else 
+                        LogMessage(1, "Successfully terminated scrcpy process with PID: " . pid)
+                }
+            }
+            else {
+                LogMessage(1, "No existing scrcpy processes found for the first run")
+            }
+            firstRunMic := false
+        }
+        else { 
+            if (!scrcpyPID){
+                LogMessage(1, "Device is connected, Starting scrcpy process")
+                Run, %comspec% /c ""%scrCpyPath%" -s %androidMicDeviceID% --no-video --no-window --audio-source=mic --window-borderless",, Hide, scrcpyPID
+                ; Set the output audio device for the scrcpy process
+                LogMessage(1, "Starting scrcpy with PID: " scrcpyPID " for device: " androidMicDeviceID)
+                ;Sleep, 2000 ; Wait a moment for processes to be killed
+                ;VA_SetAppVolume(scrcpyPID, micOutputDevice)
+                ;LogMessage(2, "SetAppVolume called for PID: " scrcpyPID " with device: " micOutputDevice)
+            }
+            else {
+                Process, Exist, scrcpy.exe
+                if (ErrorLevel = 0){
+                    LogMessage(1, "scrcpy proccess PID: " scrcpyPID " is no longer running! reviving next run" )
+                    scrcpyPID := ""
+                }
+                else {
+                    LogMessage(2, "scrcpy proccess already running with PID: " scrcpyPID)
+                }
+            }
+        }
+    } 
+    else {
+        If (scrcpyPID) {
+            ; Kill the scrcpy process by PID if the device is disconnected
+            LogMessage(1, "Device " androidMicDeviceID " disconnected, killing scrcpy process with PID: " scrcpyPID)
+            Run, %comspec% /c "taskkill /F /PID " scrcpyPID,, Hide
+            scrcpyPID := ""
+        }
     }
 }
 
@@ -390,10 +412,10 @@ LogMessage(1, "Script started at " . A_Now)
 BulkStartApollo()
 
 if (autoExitOnDisconnect) 
-    SetTimer, WatchLogFiles, 100
+    SetTimer, WatchLogFiles, 50
 
 if (autoSyncVolume) 
-    SetTimer, SyncVolume, 100
+    SetTimer, SyncVolume, 50
 
 if (autoCaptureAndroidMic) 
-    SetTimer, MaintainMicConnectivity, 100
+    SetTimer, MaintainMicConnectivity, 50
