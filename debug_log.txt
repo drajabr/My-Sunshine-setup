@@ -1,28 +1,208 @@
-20250327160059 - Cleared debug_logfile: C:\Users\Ahmed\Documents\git\My-Sunshine-setup\debug_log.txt before starting
-20250327160059 - First run of the script
-20250327160059 - Attempting to terminate existing process with PID: 30396
-20250327160059 - Attempting to terminate existing process with PID: 12528
-20250327160100 - Attempting to terminate existing process with PID: 37508
-20250327160104 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
-20250327160104 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250327160104 - Started process with PID: 35872 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250327160104 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
-20250327160104 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250327160104 - Started process with PID: 11912 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250327160104 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
-20250327160104 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250327160104 - Started process with PID: 41640 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250327160105 - No existing scrcpy processes found for the first run
-20250327160105 - Device is connected, Starting scrcpy process
-20250327160105 - Starting scrcpy with PID: 12084 for device: PE3SIL21060300042
-20250327160105 - Sync mute state: Unmuted for PIDs: 35872, 11912, 41640
-20250327160109 - Found 'Opus initialized' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
-20250327160110 - Sync mute state: Unmuted for PIDs: 35872, 11912, 41640
-20250327160110 - Found 'Opus initialized' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
-20250327160111 - Sync mute state: Unmuted for PIDs: 35872, 11912, 41640
-20250327160118 - scrcpy proccess PID: 12084 is no longer running! reviving next run
-20250327160118 - Device is connected, Starting scrcpy process
-20250327160118 - Starting scrcpy with PID: 24220 for device: PE3SIL21060300042
-20250327160123 - scrcpy proccess PID: 24220 is no longer running! reviving next run
-20250327160123 - Device is connected, Starting scrcpy process
-20250327160123 - Starting scrcpy with PID: 25920 for device: PE3SIL21060300042
+20250415153331 - Cleared debug_logfile: C:\Users\Ahmed\Documents\git\My-Sunshine-setup\debug_log.txt before starting
+20250415153331 - First run of the script
+20250415153331 - Attempting to terminate existing process with PID: 9788
+20250415153331 - Attempting to terminate existing process with PID: 15564
+20250415153332 - Attempting to terminate existing process with PID: 17952
+20250415153335 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
+20250415153335 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250415153335 - Started process with PID: 4676 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250415153335 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
+20250415153335 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250415153335 - Started process with PID: 15560 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250415153336 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
+20250415153336 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250415153336 - Started process with PID: 18336 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250415153336 - Killing all existing scrcpy processes for the first run
+20250415153336 - Attempting to terminate existing scrcpy process with PID: 16792
+20250415153336 - Successfully terminated scrcpy process with PID: 16792
+20250415153336 - Attempting to terminate existing scrcpy process with PID: 16792
+20250415153336 - Successfully terminated scrcpy process with PID: 16792
+20250415153336 - Sync mute state: Unmuted for PIDs: 4676, 15560, 18336
+20250415153336 - Sync Volume: 6.000 for PIDs: 4676, 15560, 18336
+20250415153336 - Device is connected, Starting scrcpy process
+20250415153336 - Starting scrcpy with PID: 6908 for device: PE3SIL21060300042
+20250415153339 - Found 'Opus initialized' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250415153339 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153339 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153339 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153339 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153339 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153339 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153339 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153339 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153339 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153340 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153341 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153342 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153343 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153344 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153345 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153346 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153347 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153348 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153349 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153349 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153349 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153349 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153349 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153349 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153349 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153349 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153349 - Retrying to set volume/mute for PID: 4676 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153349 - Retrying to set volume/mute for PID: 15560 (Current Volume: 6.000000, Expected: 6.000, Current Mute: 0, Expected: 0)
+20250415153349 - Retrying to set volume/mute for PID: 18336 (Current Volume: , Expected: 6.000, Current Mute: , Expected: 0)
+20250415153349 - Synced Volume: 6.000 for PIDs: 4676, 15560, 18336
+20250415153349 - Synced mute state: Unmuted for PIDs: 4676, 15560, 18336
+20250415153349 - Sync mute state: Unmuted for PIDs: 4676, 15560, 18336
+20250415153349 - Sync Volume: 6.000 for PIDs: 4676, 15560, 18336

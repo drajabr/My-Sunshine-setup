@@ -286,39 +286,51 @@ SyncVolume() {
             
         }
     }
-    if (clientConnected) {
-        Sleep, 1000
-    }
+
     updatedVolumePIDs := []
     updatedMutePIDs := []
-
-    if (clientConnected || isMuted != lastMute) {
+    if (clientConnected) {
+        Loop, 60 {
+            for index, PID in pids {
+            VA_SetAppVolume(PID, masterVolume)
+            if (isMuted != lastMute) 
+                VA_SetAppMute(PID, isMuted ? 1 : 0)
+            LogMessage(3, "Retrying to set volume/mute for PID: " . PID . " (Current Volume: " . currentVolume . ", Expected: " . masterVolume . ", Current Mute: " . currentMute . ", Expected: " . isMuted . ")")
+            }
+            Sleep, 100
+        }
+        for index, PID in pids {
+            updatedVolumePIDs.Push(PID)
+            updatedMutePIDs.Push(PID)
+        }
+        lastVolume := masterVolume
+        lastMute := isMuted
+        LogMessage(1, "Synced Volume: " . masterVolume . " for PIDs: " . JoinArray(updatedVolumePIDs, ", "))
+        LogMessage(1, "Synced mute state: " . (isMuted ? "Muted" : "Unmuted") . " for PIDs: " . JoinArray(updatedMutePIDs, ", "))
+    }
+    else if ( isMuted != lastMute) {
         LogMessage(2, "Syncing mute settings")
         for index, PID in pids {
-            if (isMuted)
-                VA_SetAppMute(PID, 1)
-            else
-                VA_SetAppMute(PID, 0)
+            if (isMuted != lastMute) 
+                VA_SetAppMute(PID, isMuted ? 1 : 0)
             updatedMutePIDs.Push(PID)
         }
         lastMute := isMuted
-        if (updatedMutePIDs.MaxIndex() > 0) 
-            LogMessage(1, "Sync mute state: " . (isMuted ? "Muted" : "Unmuted") . " for PIDs: " . JoinArray(updatedMutePIDs, ", "))
-        }
-
-        if (clientConnected || masterVolume != lastVolume) {
+    }
+    else if ( masterVolume != lastVolume) {
         LogMessage(2, "Syncing volume settings")
         for index, PID in pids {
             VA_SetAppVolume(PID, masterVolume)
             updatedVolumePIDs.Push(PID)
         }
         lastVolume := masterVolume
-        if (updatedVolumePIDs.MaxIndex() > 0) 
-            LogMessage(2, "Sync Volume: " . masterVolume . " for PIDs: " . JoinArray(updatedVolumePIDs, ", "))
-        }
+    }
 
+    if (updatedMutePIDs.MaxIndex() > 0) 
+        LogMessage(1, "Sync mute state: " . (isMuted ? "Muted" : "Unmuted") . " for PIDs: " . JoinArray(updatedMutePIDs, ", "))
+    if (updatedVolumePIDs.MaxIndex() > 0) 
+        LogMessage(1, "Sync Volume: " . masterVolume . " for PIDs: " . JoinArray(updatedVolumePIDs, ", "))
     LogMessage(2, "Volume and mute settings synced for all updated processes")
-
     LogMessage(2, "SyncVolume() completed")
     running := False
 }
