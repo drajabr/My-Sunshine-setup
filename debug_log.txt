@@ -1,26 +1,32 @@
-20250415160427 - Cleared debug_logfile: C:\Users\Ahmed\Documents\git\My-Sunshine-setup\debug_log.txt before starting
-20250415160427 - First run of the script
-20250415160427 - Attempting to terminate existing process with PID: 12880
-20250415160428 - Attempting to terminate existing process with PID: 15812
-20250415160428 - Attempting to terminate existing process with PID: 14276
-20250415160432 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
-20250415160432 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250415160432 - Started process with PID: 17376 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250415160432 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
-20250415160432 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250415160432 - Started process with PID: 6900 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250415160432 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
-20250415160432 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250415160432 - Started process with PID: 488 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250415160432 - Killing all existing scrcpy processes for the first run
-20250415160432 - Attempting to terminate existing scrcpy process with PID: 4476
-20250415160432 - Successfully terminated scrcpy process with PID: 4476
-20250415160432 - Attempting to terminate existing scrcpy process with PID: 4476
-20250415160433 - Successfully terminated scrcpy process with PID: 4476
-20250415160433 - Synced mute state: Unmuted for PIDs: 17376, 6900, 488
-20250415160433 - Synced Volume: 10.000 for PIDs: 17376, 6900, 488
-20250415160433 - Device is connected, Starting scrcpy process
-20250415160433 - Starting scrcpy with PID: 9168 for device: PE3SIL21060300042
-20250415160437 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
-20250415160444 - Synced mute state: Unmuted for PIDs: 17376, 6900, 488
-20250415160444 - Synced Volume: 24.000 for PIDs: 17376, 6900, 488
+20250415164103 - Cleared debug_logfile: C:\Users\Ahmed\Documents\git\My-Sunshine-setup\debug_log.txt before starting
+20250415164103 - First run of the script
+20250415164103 - Attempting to terminate existing process with PID: 6068
+20250415164103 - Attempting to terminate existing process with PID: 16572
+20250415164104 - Attempting to terminate existing process with PID: 2700
+20250415164107 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250415164107 - Started process with PID: 18328 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250415164107 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250415164107 - Started process with PID: 10408 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250415164107 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250415164107 - Started process with PID: 8096 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250415164107 - Killing all existing scrcpy processes for the first run
+20250415164107 - Attempting to terminate existing scrcpy process with PID: 17944
+20250415164108 - Successfully terminated scrcpy process with PID: 17944
+20250415164108 - Attempting to terminate existing scrcpy process with PID: 17944
+20250415164108 - Successfully terminated scrcpy process with PID: 17944
+20250415164108 - Device is connected, Starting scrcpy process
+20250415164108 - Starting scrcpy with PID: 4812 for device: PE3SIL21060300042
+20250415164108 - Synced mute state: Unmuted for PIDs: 18328, 10408, 8096
+20250415164108 - Synced Volume: 23.000 for PIDs: 18328, 10408, 8096
+20250415164112 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250415164117 - Device PE3SIL21060300042 disconnected, killing scrcpy process with PID: 4812
+20250415164119 - Synced mute state: Unmuted for PIDs: 18328, 10408, 8096
+20250415164119 - Synced Volume: 23.000 for PIDs: 18328, 10408, 8096
+20250415164123 - Found 'CLIENT DISCONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log for PID: 10408
+20250415164123 - Processes terminated, restarting again
+20250415164123 - Cleared logfile: C:\Program Files\Apollo\config\sunshine_2.log before restarting
+20250415164123 - Restarting process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250415164123 - Restarted process with PID: 6392 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250415164128 - Device is connected, Starting scrcpy process
+20250415164128 - Starting scrcpy with PID: 16564 for device: PE3SIL21060300042
+20250415164200 - Synced Volume: 22.000 for PIDs: 18328, 6392, 8096

@@ -176,12 +176,11 @@ BulkStartApollo() {
     pids := []
 
     Loop, % confFiles.MaxIndex() {
-        ; Clear the log file before restarting
-        logFile := confDirectory . "\" . logFiles[TerminatedIndexes[A_Index]]
-        FileDelete, %logFile%
-        FileAppend,, %logFile%  ; Create an empty log file
-        LogMessage(1, "Cleared logfile: " . logFile . " before restarting")
-        sleep, 100
+        ;logFile := confDirectory . "\" . logFiles[TerminatedIndexes[A_Index]]
+        ;FileDelete, %logFile%
+        ;FileAppend,, %logFile%  ; Create an empty log file
+        ;LogMessage(1, "Cleared logfile: " . logFile . " before restarting")
+        ;sleep, 100
         param := confDirectory . "\" . confFiles[A_Index]
         LogMessage(1, "Starting new process with param: " . param)
         Run, "%apolloExePath%" "%param%", %exeDirectory%, Hide, newPid
@@ -253,7 +252,6 @@ SyncVolume() {
     global pids, logFiles, confDirectory, debugLevel
     static lastVolume := -1
     static lastMute := -1
-    static lastReadPositions := {}
 
     static running := False
     if (running)
@@ -267,7 +265,8 @@ SyncVolume() {
     isMuted := VA_GetMasterMute()
 
     clientConnected := false
-
+    
+    static lastReadPositions := {}
     Loop, % logFiles.MaxIndex() {
         logFile := confDirectory . "\" . logFiles[A_Index]
         if (!lastReadPositions.HasKey(logFile)) {
