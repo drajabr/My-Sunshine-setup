@@ -1,141 +1,26 @@
-20250415154659 - Cleared debug_logfile: C:\Users\Ahmed\Documents\git\My-Sunshine-setup\debug_log.txt before starting
-20250415154659 - First run of the script
-20250415154659 - Attempting to terminate existing process with PID: 4676
-20250415154659 - Attempting to terminate existing process with PID: 15560
-20250415154700 - Attempting to terminate existing process with PID: 18336
-20250415154703 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
-20250415154703 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250415154703 - Started process with PID: 17728 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250415154703 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
-20250415154703 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250415154703 - Started process with PID: 11916 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250415154703 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
-20250415154703 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250415154703 - Started process with PID: 15016 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250415154704 - Killing all existing scrcpy processes for the first run
-20250415154704 - Attempting to terminate existing scrcpy process with PID: 7820
-20250415154704 - Successfully terminated scrcpy process with PID: 7820
-20250415154704 - Device is connected, Starting scrcpy process
-20250415154704 - Starting scrcpy with PID: 5928 for device: PE3SIL21060300042
-20250415154704 - Sync mute state: Unmuted for PIDs: 17728, 11916, 15016
-20250415154704 - Sync Volume: 6.000 for PIDs: 17728, 11916, 15016
-20250415154707 - Found 'Opus initialized' in log file: C:\Program Files\Apollo\config\sunshine_1.log Syncing volume level
-20250415154715 - Synced Volume: 6.000 for PIDs: 17728, 11916, 15016
-20250415154715 - Synced mute state: Unmuted for PIDs: 17728, 11916, 15016
-20250415154715 - Sync mute state: Unmuted for PIDs: 17728, 11916, 15016
-20250415154715 - Sync Volume: 6.000 for PIDs: 17728, 11916, 15016
-20250415154715 - Found 'Opus initialized' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
-20250415154723 - Synced Volume: 87.000 for PIDs: 17728, 11916, 15016
-20250415154723 - Synced mute state: Unmuted for PIDs: 17728, 11916, 15016
-20250415154723 - Sync mute state: Unmuted for PIDs: 17728, 11916, 15016
-20250415154723 - Sync Volume: 87.000 for PIDs: 17728, 11916, 15016
-20250415154723 - Sync Volume: 28.000 for PIDs: 17728, 11916, 15016
-20250415154724 - Sync Volume: 27.000 for PIDs: 17728, 11916, 15016
-20250415154724 - Sync Volume: 9.000 for PIDs: 17728, 11916, 15016
-20250415154724 - Sync Volume: 3.000 for PIDs: 17728, 11916, 15016
-20250415154724 - Sync Volume: 10.000 for PIDs: 17728, 11916, 15016
-20250415154724 - Sync Volume: 31.000 for PIDs: 17728, 11916, 15016
-20250415154724 - Sync Volume: 58.000 for PIDs: 17728, 11916, 15016
-20250415154724 - Sync Volume: 74.000 for PIDs: 17728, 11916, 15016
-20250415154725 - Sync Volume: 75.000 for PIDs: 17728, 11916, 15016
-20250415154725 - Sync Volume: 78.000 for PIDs: 17728, 11916, 15016
-20250415154725 - Sync Volume: 81.000 for PIDs: 17728, 11916, 15016
-20250415154725 - Sync Volume: 85.000 for PIDs: 17728, 11916, 15016
-20250415154725 - Sync Volume: 86.000 for PIDs: 17728, 11916, 15016
-20250415154725 - Sync Volume: 87.000 for PIDs: 17728, 11916, 15016
-20250415154725 - Sync Volume: 94.000 for PIDs: 17728, 11916, 15016
-20250415154725 - Sync Volume: 100.000 for PIDs: 17728, 11916, 15016
-20250415154725 - Sync Volume: 86.000 for PIDs: 17728, 11916, 15016
-20250415154726 - Sync Volume: 73.000 for PIDs: 17728, 11916, 15016
-20250415154726 - Sync Volume: 64.000 for PIDs: 17728, 11916, 15016
-20250415154726 - Sync Volume: 51.000 for PIDs: 17728, 11916, 15016
-20250415154726 - Sync Volume: 46.000 for PIDs: 17728, 11916, 15016
-20250415154726 - Sync Volume: 44.000 for PIDs: 17728, 11916, 15016
-20250415154726 - Sync Volume: 34.000 for PIDs: 17728, 11916, 15016
-20250415154726 - Sync Volume: 28.000 for PIDs: 17728, 11916, 15016
-20250415154726 - Sync Volume: 24.000 for PIDs: 17728, 11916, 15016
-20250415154727 - Sync Volume: 41.000 for PIDs: 17728, 11916, 15016
-20250415154727 - Sync Volume: 63.000 for PIDs: 17728, 11916, 15016
-20250415154727 - Sync Volume: 69.000 for PIDs: 17728, 11916, 15016
-20250415154727 - Sync Volume: 73.000 for PIDs: 17728, 11916, 15016
-20250415154727 - Sync Volume: 75.000 for PIDs: 17728, 11916, 15016
-20250415154727 - Sync Volume: 76.000 for PIDs: 17728, 11916, 15016
-20250415154727 - Sync Volume: 65.000 for PIDs: 17728, 11916, 15016
-20250415154727 - Sync Volume: 17.000 for PIDs: 17728, 11916, 15016
-20250415154727 - Sync Volume: 13.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 17.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 90.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 92.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 44.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 16.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 24.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 88.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 92.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 18.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 14.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 79.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 84.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 35.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 38.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 61.000 for PIDs: 17728, 11916, 15016
-20250415154728 - Sync Volume: 58.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 49.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 56.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 54.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 45.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 53.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 61.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 54.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 34.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 41.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 51.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 59.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 65.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 71.000 for PIDs: 17728, 11916, 15016
-20250415154729 - Sync Volume: 79.000 for PIDs: 17728, 11916, 15016
-20250415154730 - Sync Volume: 82.000 for PIDs: 17728, 11916, 15016
-20250415154730 - Sync Volume: 89.000 for PIDs: 17728, 11916, 15016
-20250415154730 - Sync Volume: 100.000 for PIDs: 17728, 11916, 15016
-20250415154730 - Sync Volume: 99.000 for PIDs: 17728, 11916, 15016
-20250415154730 - Sync Volume: 92.000 for PIDs: 17728, 11916, 15016
-20250415154730 - Sync Volume: 82.000 for PIDs: 17728, 11916, 15016
-20250415154730 - Sync Volume: 76.000 for PIDs: 17728, 11916, 15016
-20250415154730 - Sync Volume: 70.000 for PIDs: 17728, 11916, 15016
-20250415154730 - Sync Volume: 62.000 for PIDs: 17728, 11916, 15016
-20250415154730 - Sync Volume: 57.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 53.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 50.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 46.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 42.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 40.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 36.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 34.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 31.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 30.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 26.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 23.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 21.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 18.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 15.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 13.000 for PIDs: 17728, 11916, 15016
-20250415154731 - Sync Volume: 11.000 for PIDs: 17728, 11916, 15016
-20250415154732 - Sync Volume: 8.000 for PIDs: 17728, 11916, 15016
-20250415154732 - Sync Volume: 7.000 for PIDs: 17728, 11916, 15016
-20250415154732 - Sync Volume: 5.000 for PIDs: 17728, 11916, 15016
-20250415154732 - Sync Volume: 3.000 for PIDs: 17728, 11916, 15016
-20250415154732 - Sync Volume: 1.000 for PIDs: 17728, 11916, 15016
-20250415154732 - Sync mute state: Muted for PIDs: 17728, 11916, 15016
-20250415154732 - Sync Volume: 0.000 for PIDs: 17728, 11916, 15016
-20250415154732 - Sync mute state: Unmuted for PIDs: 17728, 11916, 15016
-20250415154732 - Sync Volume: 23.000 for PIDs: 17728, 11916, 15016
-20250415154732 - Sync Volume: 39.000 for PIDs: 17728, 11916, 15016
-20250415154732 - Sync Volume: 44.000 for PIDs: 17728, 11916, 15016
-20250415154733 - Sync Volume: 50.000 for PIDs: 17728, 11916, 15016
-20250415154733 - Sync Volume: 59.000 for PIDs: 17728, 11916, 15016
-20250415154733 - Sync Volume: 67.000 for PIDs: 17728, 11916, 15016
-20250415154733 - Sync Volume: 71.000 for PIDs: 17728, 11916, 15016
-20250415154733 - Sync Volume: 72.000 for PIDs: 17728, 11916, 15016
-20250415154733 - Sync Volume: 80.000 for PIDs: 17728, 11916, 15016
-20250415154733 - Sync Volume: 87.000 for PIDs: 17728, 11916, 15016
-20250415154733 - Sync Volume: 88.000 for PIDs: 17728, 11916, 15016
-20250415154733 - Sync Volume: 93.000 for PIDs: 17728, 11916, 15016
+20250415160427 - Cleared debug_logfile: C:\Users\Ahmed\Documents\git\My-Sunshine-setup\debug_log.txt before starting
+20250415160427 - First run of the script
+20250415160427 - Attempting to terminate existing process with PID: 12880
+20250415160428 - Attempting to terminate existing process with PID: 15812
+20250415160428 - Attempting to terminate existing process with PID: 14276
+20250415160432 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
+20250415160432 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250415160432 - Started process with PID: 17376 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250415160432 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
+20250415160432 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250415160432 - Started process with PID: 6900 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250415160432 - Cleared logfile: C:\Program Files\Apollo\config\ before restarting
+20250415160432 - Starting new process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250415160432 - Started process with PID: 488 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250415160432 - Killing all existing scrcpy processes for the first run
+20250415160432 - Attempting to terminate existing scrcpy process with PID: 4476
+20250415160432 - Successfully terminated scrcpy process with PID: 4476
+20250415160432 - Attempting to terminate existing scrcpy process with PID: 4476
+20250415160433 - Successfully terminated scrcpy process with PID: 4476
+20250415160433 - Synced mute state: Unmuted for PIDs: 17376, 6900, 488
+20250415160433 - Synced Volume: 10.000 for PIDs: 17376, 6900, 488
+20250415160433 - Device is connected, Starting scrcpy process
+20250415160433 - Starting scrcpy with PID: 9168 for device: PE3SIL21060300042
+20250415160437 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_2.log Syncing volume level
+20250415160444 - Synced mute state: Unmuted for PIDs: 17376, 6900, 488
+20250415160444 - Synced Volume: 24.000 for PIDs: 17376, 6900, 488

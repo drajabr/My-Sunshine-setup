@@ -283,14 +283,16 @@ SyncVolume() {
                 LogMessage(1, "Found 'CLIENT CONNECTED' in log file: " . logFile . " Syncing volume level")
                 clientConnected := true
             }
-            
         }
     }
 
     updatedVolumePIDs := []
     updatedMutePIDs := []
+
     if (clientConnected) {
-        Loop, 60 {
+        Loop, 100 {
+            masterVolume := VA_GetMasterVolume()
+            isMuted := VA_GetMasterMute()        
             for index, PID in pids {
             VA_SetAppVolume(PID, masterVolume)
             if (isMuted != lastMute) 
@@ -305,8 +307,6 @@ SyncVolume() {
         }
         lastVolume := masterVolume
         lastMute := isMuted
-        LogMessage(1, "Synced Volume: " . masterVolume . " for PIDs: " . JoinArray(updatedVolumePIDs, ", "))
-        LogMessage(1, "Synced mute state: " . (isMuted ? "Muted" : "Unmuted") . " for PIDs: " . JoinArray(updatedMutePIDs, ", "))
     }
     else if ( isMuted != lastMute) {
         LogMessage(2, "Syncing mute settings")
@@ -327,11 +327,13 @@ SyncVolume() {
     }
 
     if (updatedMutePIDs.MaxIndex() > 0) 
-        LogMessage(1, "Sync mute state: " . (isMuted ? "Muted" : "Unmuted") . " for PIDs: " . JoinArray(updatedMutePIDs, ", "))
+        LogMessage(1, "Synced mute state: " . (isMuted ? "Muted" : "Unmuted") . " for PIDs: " . JoinArray(updatedMutePIDs, ", "))
     if (updatedVolumePIDs.MaxIndex() > 0) 
-        LogMessage(1, "Sync Volume: " . masterVolume . " for PIDs: " . JoinArray(updatedVolumePIDs, ", "))
+        LogMessage(1, "Synced Volume: " . masterVolume . " for PIDs: " . JoinArray(updatedVolumePIDs, ", "))
+
     LogMessage(2, "Volume and mute settings synced for all updated processes")
     LogMessage(2, "SyncVolume() completed")
+
     running := False
 }
 
@@ -424,10 +426,10 @@ LogMessage(1, "Script started at " . A_Now)
 BulkStartApollo()
 
 if (autoExitOnDisconnect) 
-    SetTimer, WatchLogFiles, 50
+    SetTimer, WatchLogFiles, 100
 
 if (autoSyncVolume) 
-    SetTimer, SyncVolume, 50
+    SetTimer, SyncVolume, 100
 
 if (autoCaptureAndroidMic) 
-    SetTimer, MaintainMicConnectivity, 50
+    SetTimer, MaintainMicConnectivity, 100
