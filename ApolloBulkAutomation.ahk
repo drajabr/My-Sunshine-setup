@@ -279,8 +279,8 @@ SyncVolume() {
             logContent := SubStr(logContent, lastReadPositions[logFile] + 1)
             lastReadPositions[logFile] := fileSize
             LogMessage(2, "Checking log file: " . logFile)
-            if InStr(logContent, "Opus initialized") {
-                LogMessage(1, "Found 'Opus initialized' in log file: " . logFile . " Syncing volume level")
+            if InStr(logContent, "CLIENT CONNECTED") {
+                LogMessage(1, "Found 'CLIENT CONNECTED' in log file: " . logFile . " Syncing volume level")
                 clientConnected := true
             }
             
@@ -297,7 +297,7 @@ SyncVolume() {
                 VA_SetAppMute(PID, isMuted ? 1 : 0)
             LogMessage(3, "Retrying to set volume/mute for PID: " . PID . " (Current Volume: " . currentVolume . ", Expected: " . masterVolume . ", Current Mute: " . currentMute . ", Expected: " . isMuted . ")")
             }
-            Sleep, 100
+            Sleep, 50
         }
         for index, PID in pids {
             updatedVolumePIDs.Push(PID)
