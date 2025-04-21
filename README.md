@@ -1,7 +1,7 @@
 # My-Sunshine-setup
 Config and AutoHotKey script used in my multi monitor Apollo "fork of Sunshine" setup.
 
-If you're looking for easier totrial you better see user @YouDoMeIDoYou compiled in his comment https://github.com/ClassicOldSong/Apollo/discussions/325#discussioncomment-12891543
+If you're looking for easier tutorial you better see user @YouDoMeIDoYou compiled in his comment https://github.com/ClassicOldSong/Apollo/discussions/325#discussioncomment-12891543
 
 ## What it is
 Mainly the AutoHotKey script has 3 features:
