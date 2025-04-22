@@ -26,6 +26,7 @@ autoCaptureAndroidMic := config["autoCaptureAndroidMic"]
 androidMicDeviceID := config["androidMicDeviceID"]
 autoStartAndroidCamera := config["autoStartAndroidCamera"]
 androidCamDeviceID := config["androidCamDeviceID"]
+autoReverseTethering := config["autoReverseTethering"]
 exeDirectory := config["exeDirectory"]
 confDirectory := config["confDirectory"]
 platformToolsDirectory := config["platformToolsDirectory"]
@@ -48,9 +49,11 @@ if !autoCaptureAndroidMic
 if !androidMicDeviceID
     androidMicDeviceID := ""
 if !autoStartAndroidCamera
-    autoStartAndroidCamera := true
+    autoStartAndroidCamera := false
 if !androidCamDeviceID
     androidCamDeviceID := ""
+if !autoReverseTethering
+    autoReverseTethering := false
 if !exeDirectory
     exeDirectory := "C:\Program Files\Apollo"
 if !confDirectory
@@ -64,6 +67,7 @@ logFilePath := A_ScriptDir . "\debug_log.txt"
 apolloExePath := exeDirectory . "\sunshine.exe"
 adbExePath := platformToolsDirectory . "\adb.exe"
 scrCpyPath := platformToolsDirectory . "\scrcpy.exe"
+gnirehtetExecPath := platformToolsDirectory . "\gnirehtet.exe"
 
 
 LogMessage(level, message) {
@@ -90,45 +94,39 @@ JoinArray(arr, delimiter) {
 }
 
 ; https://www.autohotkey.com/boards/viewtopic.php?style=19&t=84976
-CmdRetWithTimeout(sCmd, timeout, callBackFuncObj := "", encoding := "") {
-    static HANDLE_FLAG_INHERIT := 0x00000001, flags := HANDLE_FLAG_INHERIT
+CmdRetWithTimeout(sCmd, callBackFuncObj := "", encoding := ""){
+   static HANDLE_FLAG_INHERIT := 0x00000001, flags := HANDLE_FLAG_INHERIT
         , STARTF_USESTDHANDLES := 0x100, CREATE_NO_WINDOW := 0x08000000
+        
+   (encoding = "" && encoding := "cp" . DllCall("GetOEMCP", "UInt"))
+   DllCall("CreatePipe", "PtrP", hPipeRead, "PtrP", hPipeWrite, "Ptr", 0, "UInt", 0)
+   DllCall("SetHandleInformation", "Ptr", hPipeWrite, "UInt", flags, "UInt", HANDLE_FLAG_INHERIT)
+   
+   VarSetCapacity(STARTUPINFO , siSize :=    A_PtrSize*4 + 4*8 + A_PtrSize*5, 0)
+   NumPut(siSize              , STARTUPINFO)
+   NumPut(STARTF_USESTDHANDLES, STARTUPINFO, A_PtrSize*4 + 4*7)
+   NumPut(hPipeWrite          , STARTUPINFO, A_PtrSize*4 + 4*8 + A_PtrSize*3)
+   NumPut(hPipeWrite          , STARTUPINFO, A_PtrSize*4 + 4*8 + A_PtrSize*4)
+   
+   VarSetCapacity(PROCESS_INFORMATION, A_PtrSize*2 + 4*2, 0)
 
-    (encoding = "" && encoding := "cp" . DllCall("GetOEMCP", "UInt"))
-    DllCall("CreatePipe", "PtrP", hPipeRead, "PtrP", hPipeWrite, "Ptr", 0, "UInt", 0)
-    DllCall("SetHandleInformation", "Ptr", hPipeWrite, "UInt", flags, "UInt", HANDLE_FLAG_INHERIT)
-
-    VarSetCapacity(STARTUPINFO , siSize :=    A_PtrSize*4 + 4*8 + A_PtrSize*5, 0)
-    NumPut(siSize              , STARTUPINFO)
-    NumPut(STARTF_USESTDHANDLES, STARTUPINFO, A_PtrSize*4 + 4*7)
-    NumPut(hPipeWrite          , STARTUPINFO, A_PtrSize*4 + 4*8 + A_PtrSize*3)
-    NumPut(hPipeWrite          , STARTUPINFO, A_PtrSize*4 + 4*8 + A_PtrSize*4)
-
-    VarSetCapacity(PROCESS_INFORMATION, A_PtrSize*2 + 4*2, 0)
-
-    if !DllCall("CreateProcess", "Ptr", 0, "Str", sCmd, "Ptr", 0, "Ptr", 0, "UInt", true, "UInt", CREATE_NO_WINDOW
+   if !DllCall("CreateProcess", "Ptr", 0, "Str", sCmd, "Ptr", 0, "Ptr", 0, "UInt", true, "UInt", CREATE_NO_WINDOW
                               , "Ptr", 0, "Ptr", 0, "Ptr", &STARTUPINFO, "Ptr", &PROCESS_INFORMATION)
-    {
-        DllCall("CloseHandle", "Ptr", hPipeRead)
-        DllCall("CloseHandle", "Ptr", hPipeWrite)
-        throw "CreateProcess failed"
-    }
-    DllCall("CloseHandle", "Ptr", hPipeWrite)
-
-    VarSetCapacity(sTemp, 4096), nSize := 0, sOutput := ""
-    startTime := A_TickCount
-    while (A_TickCount - startTime < timeout) {
-        if DllCall("ReadFile", "Ptr", hPipeRead, "Ptr", &sTemp, "UInt", 4096, "UIntP", nSize, "UInt", 0) {
-            sOutput .= stdOut := StrGet(&sTemp, nSize, encoding)
-            ( callBackFuncObj && callBackFuncObj.Call(stdOut) )
-        } else {
-            break
-        }
-    }
-    DllCall("CloseHandle", "Ptr", NumGet(PROCESS_INFORMATION))
-    DllCall("CloseHandle", "Ptr", NumGet(PROCESS_INFORMATION, A_PtrSize))
-    DllCall("CloseHandle", "Ptr", hPipeRead)
-    return sOutput
+   {
+      DllCall("CloseHandle", "Ptr", hPipeRead)
+      DllCall("CloseHandle", "Ptr", hPipeWrite)
+      throw "CreateProcess is failed"
+   }
+   DllCall("CloseHandle", "Ptr", hPipeWrite)
+   VarSetCapacity(sTemp, 4096), nSize := 0
+   while DllCall("ReadFile", "Ptr", hPipeRead, "Ptr", &sTemp, "UInt", 4096, "UIntP", nSize, "UInt", 0) {
+      sOutput .= stdOut := StrGet(&sTemp, nSize, encoding)
+      ( callBackFuncObj && callBackFuncObj.Call(stdOut) )
+   }
+   DllCall("CloseHandle", "Ptr", NumGet(PROCESS_INFORMATION))
+   DllCall("CloseHandle", "Ptr", NumGet(PROCESS_INFORMATION, A_PtrSize))
+   DllCall("CloseHandle", "Ptr", hPipeRead)
+   Return sOutput
 }
 
 
@@ -138,7 +136,7 @@ BulkStartApollo() {
     global apolloExePath, exeDirectory, confDirectory, logFiles, confFiles, pids, debugLevel, logFilePath
     static firstRunApollo := true
     processTerminated := false
-    LogMessage(2, "Starting BulkStartApollo()")
+    LogMessage(3, "Starting BulkStartApollo()")
 
     if (firstRunApollo) {
         ; Clear the log file before restarting
@@ -167,7 +165,7 @@ BulkStartApollo() {
             LogMessage(1, "Attempting to terminate existing process with PID: " . pid)
             loggedPIDs[pid] := true
         }
-        RunWait, % "SendSigint.ahk " . pid, , Hide
+        RunWait, %comspec% /c "tskill " pid,, Hide
         processTerminated := true
         Process, Exist, %pid%
     }
@@ -187,7 +185,7 @@ BulkStartApollo() {
         pids[A_Index] := newPid
         LogMessage(1, "Started process with PID: " . newPid . " for param: " . param)
     }
-    LogMessage(2, "BulkStartApollo() completed")
+    LogMessage(3, "BulkStartApollo() completed")
 }
 
 WatchLogFiles() {
@@ -199,7 +197,7 @@ WatchLogFiles() {
     if (running)
         return 
     running := True
-    LogMessage(2, "Starting WatchLogFiles()")
+    LogMessage(3, "Starting WatchLogFiles()")
 
     static lastReadPositions := {}
     Loop, % logFiles.MaxIndex() {
@@ -217,7 +215,7 @@ WatchLogFiles() {
                 pid := pids[A_Index]
                 if (pid) {
                     LogMessage(1, "Found 'CLIENT DISCONNECTED' in log file: " . logFile . " for PID: " . pid)
-                    RunWait, % "SendSigint.ahk " . pid, , Hide
+                    RunWait, %comspec% /c "tskill " pid,, Hide
                     processTerminated := true
                     TerminatedIndexes.Push(A_Index)
                 }
@@ -242,9 +240,9 @@ WatchLogFiles() {
         }
         Sleep, 500
     } else {
-        LogMessage(2, "No process sent SIGINT")
+        LogMessage(3, "No process terminated")
     }
-    LogMessage(2, "WatchLogFiles() completed")
+    LogMessage(3, "WatchLogFiles() completed")
     running := False
 }
 
@@ -258,7 +256,7 @@ SyncVolume() {
         return
     if (!pids || pids.MaxIndex() = 0)
         return
-    LogMessage(2, "Starting SyncVolume()")
+    LogMessage(3, "Starting SyncVolume()")
     running := True
 
     masterVolume := VA_GetMasterVolume()
@@ -289,7 +287,7 @@ SyncVolume() {
     updatedMutePIDs := []
 
     if (clientConnected) {
-        Loop, 100 {
+        Loop, 150 {
             masterVolume := VA_GetMasterVolume()
             isMuted := VA_GetMasterMute()        
             for index, PID in pids {
@@ -330,99 +328,150 @@ SyncVolume() {
     if (updatedVolumePIDs.MaxIndex() > 0) 
         LogMessage(1, "Synced Volume: " . masterVolume . " for PIDs: " . JoinArray(updatedVolumePIDs, ", "))
 
-    LogMessage(2, "Volume and mute settings synced for all updated processes")
-    LogMessage(2, "SyncVolume() completed")
-
+    LogMessage(3, "Volume and mute settings synced for all updated processes")
     running := False
 }
 
-MaintainMicConnectivity() {
-    global adbExePath, scrCpyPath, androidMicDeviceID, micOutputDevice, LogMessage, CmdRetWithTimeout
-    static lastStatus := "", firstRunMic := true, scrcpyPID := ""
-
+watchAndroidADBDevices(){
+    global adbExePath, LogMessage, CmdRetWithTimeout, CurrentlyConnectedIDs
+    static firstRun := true
+    ;if (firstRun) {
+        ;LogMessage(1, "First run of ADB watchdog killing previous ADB server")
+        ;RunWait, %comspec% /c """" . adbExePath . """ kill-server",, Hide
+        ;firstRun := false
+;}
     command := adbExePath . " devices"
-    adbOutput := CmdRetWithTimeout(command, 3000) ; 3 seconds timeout
+    adbOutput := CmdRetWithTimeout(command, 5000) ; 5 seconds timeout
+    static lastConnectedIDs := {}
 
-    ; Log the output
-    LogMessage(3, "ADB Command: " command "`nADB Devices Output:`n" adbOutput)
+    CurrentlyConnectedIDs := {}
 
-    ; Check the device status
-    deviceStatus := "disconnected"
     Loop, Parse, adbOutput, `n, `r
     {
-        if (RegExMatch(A_LoopField, "^\s*" androidMicDeviceID "\s+device")) {
-            deviceStatus := "connected"
-            break
+        if (RegExMatch(A_LoopField, "^\s*(\S+)\s+device", match)) {
+            CurrentlyConnectedIDs[match1] := true
         }
     }
-    if (deviceStatus != lastStatus) {
-        pids := []
-        Loop {
+
+    ; Compare with the last connected IDs and log changes
+    for deviceID in CurrentlyConnectedIDs {
+        if (!lastConnectedIDs.HasKey(deviceID)) {
+            LogMessage(1, "New device connected: " . deviceID)
+        }
+    }
+
+    for deviceID in lastConnectedIDs {
+        if (!CurrentlyConnectedIDs.HasKey(deviceID)) {
+            LogMessage(1, "Device disconnected: " . deviceID)
+        }
+    }
+
+    ; Update the last connected IDs
+    lastConnectedIDs := CurrentlyConnectedIDs.Clone()
+}
+
+
+MaintainMicConnectivity() {
+    global adbExePath, LogMessage, CurrentlyConnectedIDs, androidMicDeviceID, scrCpyPath
+    static lastStatus := "", ShouldRunMic := true, scrcpyPID := "", consolePID := "", firstRun := true
+     
+    ; Kill any existing scrcpy.exe process on the first run
+    if (firstRun) {
+        Loop 10 {
             Process, Exist, scrcpy.exe
             if (ErrorLevel = 0)
                 break
-            pids.Push(ErrorLevel)
-            Process, Close, %ErrorLevel%
+            LogMessage(2, "Terminating scrcpy process with PID: " . ErrorLevel)
+            RunWait, %comspec% /c "tskill " ErrorLevel,, Hide
+            Sleep, 50
         }
+        firstRun := false
+    }
+
+    ; Determine device status
+    deviceStatus := CurrentlyConnectedIDs.HasKey(androidMicDeviceID) ? "connected" : "disconnected"
+
+    if (deviceStatus != lastStatus) {
+        LogMessage(1, "Mic Device " androidMicDeviceID " status changed to: " deviceStatus)
         lastStatus := deviceStatus
     }
+
     if (deviceStatus = "connected") {
-        ; Check if there are any existing scrcpy processes
-        if (firstRunMic){
-            if (pids.MaxIndex()>0){
-                LogMessage(1, "Killing all existing scrcpy processes for the first run")
-                for index, pid in pids {
-                    LogMessage(1, "Attempting to terminate existing scrcpy process with PID: " . pid)
-                    RunWait, %comspec% /c "taskkill /F /PID " pid,, Hide
-                    Sleep, 100
-                    Process, Exist, %pid%
-                    if (ErrorLevel != 0)
-                        LogMessage(0, "Failed to terminate scrcpy process with PID: " . pid)
-                    else 
-                        LogMessage(1, "Successfully terminated scrcpy process with PID: " . pid)
-                }
-            }
-            else {
-                LogMessage(1, "No existing scrcpy processes found for the first run")
-            }
-            firstRunMic := false
-        }
-        else { 
-            if (!scrcpyPID){
-                LogMessage(1, "Device is connected, Starting scrcpy process")
-                Run, %comspec% /c ""%scrCpyPath%" -s %androidMicDeviceID% --no-video --no-window --audio-source=mic --window-borderless",, Hide, scrcpyPID
-                ; Set the output audio device for the scrcpy process
-                LogMessage(1, "Starting scrcpy with PID: " scrcpyPID " for device: " androidMicDeviceID)
-                ;Sleep, 2000 ; Wait a moment for processes to be killed
-                ;VA_SetAppVolume(scrcpyPID, micOutputDevice)
-                ;LogMessage(2, "SetAppVolume called for PID: " scrcpyPID " with device: " micOutputDevice)
-            }
-            else {
+        if (ShouldRunMic) {
+            RunWait, %comspec% /c ""%adbExePath%" -s %androidMicDeviceID% shell input keyevent KEYCODE_WAKEUP",, Hide
+            Sleep, 50
+            Run, %comspec% /c ""%scrCpyPath%" -s %androidMicDeviceID% --no-video --no-window --audio-source=mic --window-borderless",, Hide, consolePID
+            Loop, 100 {
+                Sleep, 100
                 Process, Exist, scrcpy.exe
-                if (ErrorLevel = 0){
-                    LogMessage(1, "scrcpy proccess PID: " scrcpyPID " is no longer running! reviving next run" )
-                    scrcpyPID := ""
-                }
-                else {
-                    LogMessage(2, "scrcpy proccess already running with PID: " scrcpyPID)
+                if (ErrorLevel != 0) {
+                    scrcpyPID := ErrorLevel
+                    LogMessage(1, "Started scrcpy with PID: " scrcpyPID " for device: " androidMicDeviceID)
+                    break
                 }
             }
+            if (!scrcpyPID) {
+                LogMessage(0, "Failed to start scrcpy for device: " androidMicDeviceID)
+                RunWait, %comspec% /c "tskill " consolePID,, Hide
+            }
+            ShouldRunMic := false
+        } else {
+            Process, Exist, %scrcpyPID%
+            if (ErrorLevel = 0) {
+                LogMessage(1, "scrcpy process " . scrcpyPID . " is not running, restarting.")
+                ShouldRunMic := true
+                scrcpyPID := ""
+            }
         }
-    } 
-    else {
-        If (scrcpyPID) {
-            ; Kill the scrcpy process by PID if the device is disconnected
-            LogMessage(1, "Device " androidMicDeviceID " disconnected, killing scrcpy process with PID: " scrcpyPID)
-            Run, %comspec% /c "taskkill /F /PID " scrcpyPID,, Hide
-            scrcpyPID := ""
+    } else if (scrcpyPID) {
+        ; Terminate scrcpy process if the device is disconnected
+        LogMessage(1, "Device " androidMicDeviceID " disconnected, terminating scrcpy process with PID: " scrcpyPID)
+        RunWait, %comspec% /c "tskill " scrcpyPID,, Hide
+        scrcpyPID := ""
+        if (consolePID) {
+            LogMessage(1, "Terminating residual console process with PID: " . consolePID)
+            RunWait, %comspec% /c "tskill " consolePID,, Hide
+            consolePID := ""
         }
     }
 }
+MaintainReverseTethering() {
+    global gnirehtetExecPath, LogMessage, platformToolsDirectory
+    static gnirehtetRelayPID := "", consolePID := "", lastStatus := ""
+
+    SetWorkingDir, %platformToolsDirectory%
+    Process, Exist, gnirehtet.exe
+    gnirehtetRunning := (ErrorLevel != 0)
+
+    if (gnirehtetRunning) {
+        if (gnirehtetRelayPID != ErrorLevel) {
+            gnirehtetRelayPID := ErrorLevel
+            LogMessage(1, "gnirehtet relay process is already running with PID: " . gnirehtetRelayPID)
+        }
+    } else {
+        LogMessage(1, "Starting gnirehtet relay process in autorun mode")
+        Run, %comspec% /c ""%gnirehtetExecPath%" autorun",, Hide, consolePID
+        Sleep, 500
+        Process, Exist, gnirehtet.exe
+        if (ErrorLevel != 0) {
+            gnirehtetRelayPID := ErrorLevel
+            LogMessage(1, "Started gnirehtet relay process with PID: " . gnirehtetRelayPID)
+        } else {
+            LogMessage(0, "Failed to start gnirehtet relay process")
+            RunWait, %comspec% /c "tskill " consolePID,, Hide
+        }
+    }
+}
+
 
 
 LogMessage(1, "Script started at " . A_Now) 
 
 BulkStartApollo()
+
+
+;if (autoExitOnDisconnect || autoSyncVolume)
+;    SetTimer, watchApolloLogfiles, 100
 
 if (autoExitOnDisconnect) 
     SetTimer, WatchLogFiles, 100
@@ -430,5 +479,12 @@ if (autoExitOnDisconnect)
 if (autoSyncVolume) 
     SetTimer, SyncVolume, 100
 
+if (autoReverseTethering || autoCaptureAndroidMic)
+    SetTimer, watchAndroidADBDevices, 100
+
 if (autoCaptureAndroidMic) 
     SetTimer, MaintainMicConnectivity, 100
+
+if (autoReverseTethering) 
+    SetTimer, MaintainReverseTethering, 100
+
