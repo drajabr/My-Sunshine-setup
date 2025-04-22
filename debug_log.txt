@@ -30,3 +30,7 @@
 20250415164128 - Device is connected, Starting scrcpy process
 20250415164128 - Starting scrcpy with PID: 16564 for device: PE3SIL21060300042
 20250415164200 - Synced Volume: 22.000 for PIDs: 18328, 6392, 8096
+20250423000754 - Mic Device PE3SIL21060300042 status changed to: disconnected
+20250423000754 - Device PE3SIL21060300042 disconnected, terminating scrcpy process with PID: 12520
+20250423000754 - Terminating residual console process with PID: 7148
+20250423000755 - Mic Device PE3SIL21060300042 status changed to: connected
