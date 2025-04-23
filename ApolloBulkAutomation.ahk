@@ -341,9 +341,7 @@ watchAndroidADBDevices(){
             if (ErrorLevel = 0)
                 break
             LogMessage(1, "Terminating ADB process with PID: " . ErrorLevel)
-            RunWait, %comspec% /c tskill %ErrorLevel%,, Hide, consolePID
             Process, Close, %ErrorLevel%
-            Process, Close, %consolePID%
             Sleep, 50
         }
         firstRun := false
@@ -397,9 +395,7 @@ MaintainMicConnectivity() {
             if (ErrorLevel = 0)
                 break
             LogMessage(1, "Terminating scrcpy process with PID: " . ErrorLevel)
-            RunWait, %comspec% /c tskill %ErrorLevel%,, Hide, consolePID
             Process, Close, %ErrorLevel%
-            Process, Close, %consolePID%
             Sleep, 50
         }
         firstRun := false
@@ -421,9 +417,9 @@ MaintainMicConnectivity() {
                 LogMessage(1, "scrcpy process " . scrcpyPID . " is already running, skipping restart.")
                 ShouldRunMic := false
             } else {
-                RunWait, %comspec% /c ""%adbExePath%" -s %androidMicDeviceID% shell input keyevent KEYCODE_WAKEUP",, Hide
+                Run, "%adbExePath%" -s %androidMicDeviceID% shell input keyevent KEYCODE_WAKEUP,, Hide
                 Sleep, 50
-                Run, %comspec% /c ""%scrCpyPath%" -s %androidMicDeviceID% --no-video --no-window --audio-source=mic --window-borderless",, Hide, consolePID
+                Run, "%scrCpyPath%" -s %androidMicDeviceID% --no-video --no-window --audio-source=mic --window-borderless,, Hide, consolePID
                 Loop, 100 {
                     Sleep, 100
                     Process, Exist, scrcpy.exe
@@ -474,7 +470,7 @@ MaintainReverseTethering() {
         }
     } else {
         LogMessage(1, "Starting gnirehtet relay process in autorun mode")
-        Run, %comspec% /c ""%gnirehtetExecPath%" autorun",, Hide, consolePID
+        Run, "%gnirehtetExecPath%" autorun,, Hide, consolePID
         Sleep, 500
         Process, Exist, gnirehtet.exe
         if (ErrorLevel != 0) {
