@@ -165,7 +165,7 @@ BulkStartApollo() {
             LogMessage(1, "Attempting to terminate existing process with PID: " . pid)
             loggedPIDs[pid] := true
         }
-        RunWait, %comspec% /c "tskill " pid,, Hide
+        Process, Close, %pid%
         processTerminated := true
         Process, Exist, %pid%
     }
@@ -215,7 +215,7 @@ WatchLogFiles() {
                 pid := pids[A_Index]
                 if (pid) {
                     LogMessage(1, "Found 'CLIENT DISCONNECTED' in log file: " . logFile . " for PID: " . pid)
-                    RunWait, %comspec% /c "tskill " pid,, Hide
+                    Process, Close, %pid%
                     processTerminated := true
                     TerminatedIndexes.Push(A_Index)
                 }
@@ -334,14 +334,29 @@ SyncVolume() {
 
 watchAndroidADBDevices(){
     global adbExePath, LogMessage, CmdRetWithTimeout, CurrentlyConnectedIDs
-    static firstRun := true
-    ;if (firstRun) {
-        ;LogMessage(1, "First run of ADB watchdog killing previous ADB server")
-        ;RunWait, %comspec% /c """" . adbExePath . """ kill-server",, Hide
-        ;firstRun := false
-;}
+    static firstRun := true, running:= false
+    if (firstRun) {
+        Loop {
+            Process, Exist, adb.exe
+            if (ErrorLevel = 0)
+                break
+            LogMessage(1, "Terminating ADB process with PID: " . ErrorLevel)
+            RunWait, %comspec% /c tskill %ErrorLevel%,, Hide, consolePID
+            Process, Close, %ErrorLevel%
+            Process, Close, %consolePID%
+            Sleep, 50
+        }
+        firstRun := false
+    }
+    if (running) {
+        sleep, 500
+        LogMessage(2, "Already running ADB device watcher, skipping this run")
+        return
+    }
     command := adbExePath . " devices"
+    running := true
     adbOutput := CmdRetWithTimeout(command, 5000) ; 5 seconds timeout
+    running := false
     static lastConnectedIDs := {}
 
     CurrentlyConnectedIDs := {}
@@ -377,12 +392,14 @@ MaintainMicConnectivity() {
      
     ; Kill any existing scrcpy.exe process on the first run
     if (firstRun) {
-        Loop 10 {
+        Loop {
             Process, Exist, scrcpy.exe
             if (ErrorLevel = 0)
                 break
-            LogMessage(2, "Terminating scrcpy process with PID: " . ErrorLevel)
-            RunWait, %comspec% /c "tskill " ErrorLevel,, Hide
+            LogMessage(1, "Terminating scrcpy process with PID: " . ErrorLevel)
+            RunWait, %comspec% /c tskill %ErrorLevel%,, Hide, consolePID
+            Process, Close, %ErrorLevel%
+            Process, Close, %consolePID%
             Sleep, 50
         }
         firstRun := false
@@ -419,7 +436,7 @@ MaintainMicConnectivity() {
                 }
                 if (!scrcpyPID) {
                     LogMessage(0, "Failed to start scrcpy for device: " androidMicDeviceID)
-                    RunWait, %comspec% /c "tskill " consolePID,, Hide
+                    Process, Close, %consolePID%
                 }
             }
         } else {
@@ -433,11 +450,11 @@ MaintainMicConnectivity() {
     } else if (scrcpyPID) {
         ; Terminate scrcpy process if the device is disconnected
         LogMessage(1, "Device " androidMicDeviceID " disconnected, terminating scrcpy process with PID: " scrcpyPID)
-        RunWait, %comspec% /c "tskill " scrcpyPID,, Hide
+        Process, Close, %scrcpyPID%
         scrcpyPID := ""
         if (consolePID) {
             LogMessage(1, "Terminating residual console process with PID: " . consolePID)
-            RunWait, %comspec% /c "tskill " consolePID,, Hide
+            Process, Close, %consolePID%
             consolePID := ""
         }
     }
@@ -465,7 +482,7 @@ MaintainReverseTethering() {
             LogMessage(1, "Started gnirehtet relay process with PID: " . gnirehtetRelayPID)
         } else {
             LogMessage(0, "Failed to start gnirehtet relay process")
-            RunWait, %comspec% /c "tskill " consolePID,, Hide
+            Process, Close, %consolePID%
         }
     }
 }
