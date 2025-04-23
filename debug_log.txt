@@ -34,3 +34,8 @@
 20250423000754 - Device PE3SIL21060300042 disconnected, terminating scrcpy process with PID: 12520
 20250423000754 - Terminating residual console process with PID: 7148
 20250423000755 - Mic Device PE3SIL21060300042 status changed to: connected
+20250423140615 - Mic Device PE3SIL21060300042 status changed to: disconnected
+20250423140615 - Device PE3SIL21060300042 disconnected, terminating scrcpy process with PID: 25324
+20250423140615 - Terminating residual console process with PID: 17996
+20250423140615 - Mic Device PE3SIL21060300042 status changed to: connected
+20250423140616 - Started scrcpy with PID: 25324 for device: PE3SIL21060300042

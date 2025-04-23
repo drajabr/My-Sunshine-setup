@@ -393,28 +393,35 @@ MaintainMicConnectivity() {
 
     if (deviceStatus != lastStatus) {
         LogMessage(1, "Mic Device " androidMicDeviceID " status changed to: " deviceStatus)
+        ShouldRunMic := true
         lastStatus := deviceStatus
     }
 
     if (deviceStatus = "connected") {
         if (ShouldRunMic) {
-            RunWait, %comspec% /c ""%adbExePath%" -s %androidMicDeviceID% shell input keyevent KEYCODE_WAKEUP",, Hide
-            Sleep, 50
-            Run, %comspec% /c ""%scrCpyPath%" -s %androidMicDeviceID% --no-video --no-window --audio-source=mic --window-borderless",, Hide, consolePID
-            Loop, 100 {
-                Sleep, 100
-                Process, Exist, scrcpy.exe
-                if (ErrorLevel != 0) {
-                    scrcpyPID := ErrorLevel
-                    LogMessage(1, "Started scrcpy with PID: " scrcpyPID " for device: " androidMicDeviceID)
-                    break
+            Process, Exist, scrcpyPID
+            if (ErrorLevel != 0) {
+                LogMessage(1, "scrcpy process " . scrcpyPID . " is already running, skipping restart.")
+                ShouldRunMic := false
+            } else {
+                RunWait, %comspec% /c ""%adbExePath%" -s %androidMicDeviceID% shell input keyevent KEYCODE_WAKEUP",, Hide
+                Sleep, 50
+                Run, %comspec% /c ""%scrCpyPath%" -s %androidMicDeviceID% --no-video --no-window --audio-source=mic --window-borderless",, Hide, consolePID
+                Loop, 100 {
+                    Sleep, 100
+                    Process, Exist, scrcpy.exe
+                    if (ErrorLevel != 0) {
+                        scrcpyPID := ErrorLevel
+                        LogMessage(1, "Started scrcpy with PID: " scrcpyPID " for device: " androidMicDeviceID)
+                        ShouldRunMic := false
+                        break
+                    }
+                }
+                if (!scrcpyPID) {
+                    LogMessage(0, "Failed to start scrcpy for device: " androidMicDeviceID)
+                    RunWait, %comspec% /c "tskill " consolePID,, Hide
                 }
             }
-            if (!scrcpyPID) {
-                LogMessage(0, "Failed to start scrcpy for device: " androidMicDeviceID)
-                RunWait, %comspec% /c "tskill " consolePID,, Hide
-            }
-            ShouldRunMic := false
         } else {
             Process, Exist, %scrcpyPID%
             if (ErrorLevel = 0) {
@@ -462,7 +469,9 @@ MaintainReverseTethering() {
         }
     }
 }
-
+MaintainCamConnectivity(){
+    
+}
 
 
 LogMessage(1, "Script started at " . A_Now) 
