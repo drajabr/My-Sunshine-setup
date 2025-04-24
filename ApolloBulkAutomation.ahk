@@ -133,12 +133,14 @@ CmdRetWithTimeout(sCmd, callBackFuncObj := "", encoding := ""){
 ; todo, single function to watch log files writing to global vars accessed by functions needing it, currently this causes issues or delays..
 
 BulkStartApollo() {
-    global apolloExePath, exeDirectory, confDirectory, logFiles, confFiles, pids := [] , debugLevel, logFilePath
-    static firstRunApollo := true
-    processTerminated := false
+    global apolloExePath, exeDirectory, confDirectory, logFiles, confFiles, debugLevel, logFilePath, static pids := [], static firstRunApollo := true
+    static running := false
+    if (running)
+        return
+    running := true
     LogMessage(3, "Starting BulkStartApollo()")
-
     if (firstRunApollo) {
+        processTerminated := false, processKilled := false
         ; Clear the log file before restarting
         logFile := confDirectory . "\" . logFiles[TerminatedIndexes[A_Index]]
         FileDelete, %logFilePath%
@@ -146,31 +148,38 @@ BulkStartApollo() {
         LogMessage(1, "Cleared debug_logfile: " . logFilePath . " before starting")
         sleep, 100
         LogMessage(1, "First run of the script")
-        firstRunApollo := false
-    }
-
-    processTerminated := false
-    Loop {
-        Process, Exist, sunshine.exe
-        if (ErrorLevel = 0){
-            LogMessage(1, "No more residual apollo process found")
-            break
+        Loop {
+            Process, Exist, sunshine.exe
+            if (ErrorLevel = 0){
+                LogMessage(1, "No more residual apollo process found")
+                break
+            }
+            pid := ErrorLevel
+            LogMessage(1, "Trying to terminate existing apollo proccess PID: " . pid)
+            Process, Close, %pid%
+            Sleep, 100
+            Process, Exist, %pid%
+            if (ErrorLevel != 0) {
+                LogMessage(1, "Failed to terminate existing process with PID: " . pid . " trying force kill")
+                RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
+                Sleep, 100
+                Process, Exist, %pid%
+                if (ErrorLevel != 0) {
+                    LogMessage(1, "Failed to force kill existing process with PID: " . pid)
+                } else {
+                    LogMessage(1, "Force killed existing apollo process with PID: " . pid)
+                    processKilled := true
+                }
+            } else {
+                LogMessage(1, "Terminated existing process with PID: " . pid)
+                processTerminated := true
+            }
         }
-        pid := ErrorLevel
-        LogMessage(1, "Trying to terminate existing apollo proccess PID: " . pid)
-        RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
-        Process, Exist, %pid%
-        if (ErrorLevel = 0) {
-            LogMessage(1, "Terminated existing apollo process with PID: " . pid)
-            processTerminated := true
-        } else {
-            LogMessage(1, "Failed to terminate existing process with PID: " . pid)
-            break
-        }
+        if (processKilled)
+            Sleep, 3000
+        else if (processTerminated)
+            Sleep, 500
     }
-    if (processTerminated)
-        Sleep, 3000
-
     Loop, % confFiles.MaxIndex() {
         ;logFile := confDirectory . "\" . logFiles[TerminatedIndexes[A_Index]]
         ;FileDelete, %logFile%
@@ -178,17 +187,47 @@ BulkStartApollo() {
         ;LogMessage(1, "Cleared logfile: " . logFile . " before restarting")
         ;sleep, 100
         param := confDirectory . "\" . confFiles[A_Index]
-        LogMessage(1, "Starting new process with param: " . param)
-        Run, "%apolloExePath%" "%param%", %exeDirectory%, Hide, newPid
-        pids[A_Index] := newPid
-        LogMessage(1, "Started process with PID: " . newPid . " for param: " . param)
+        if (firstRunApollo){
+            LogMessage(1, "Starting Apollo instance: " . A_Index . " process with param: " . param)
+            Run, "%apolloExePath%" "%param%", %exeDirectory%, Hide, newPid
+            Sleep , 100
+            Process, Exist, %newPid%
+            if (ErrorLevel = 0) {
+                LogMessage(1, "Failed to start Apollo instance: " . A_Index . " process with param: " . param)
+            } else {
+                pids[A_Index] := ErrorLevel
+                LogMessage(1, "Started Apollo instance: " . A_Index . " process with PID: " . ErrorLevel . " for param: " . param)
+
+            }
+        } else {
+            pid := pids[A_Index]
+            Process, Exist, %pid%
+            if (ErrorLevel = 0) {
+                LogMessage(1, "Apollo instance: " . A_Index . " process with PID: " . pid . " is not running, restarting")
+                LogMessage(1, "Starting Apollo instance: " . A_Index . " process with param: " . param)
+                Run, "%apolloExePath%" "%param%", %exeDirectory%, Hide, newPid
+                Sleep , 100
+                Process, Exist, %newPid%
+                if (ErrorLevel = 0) {
+                    LogMessage(1, "Failed to restart Apollo instance: " . A_Index . " process with param: " . param)
+                } else {
+                    LogMessage(1, "Restarted Apollo instance: " . A_Index . " successfully with new PID: " . newPid . " for param: " . param)
+                    pids[A_Index] := newPid
+                }
+            }
+            else {
+                LogMessage(3, "Checked Apollo instance: " . A_Index . " process with PID: " . pid . " is running okay")
+            }
+        }
     }
-    LogMessage(3, "BulkStartApollo() completed")
+    if (firstRunApollo) 
+        firstRunApollo := false
+    running := false
 }
 
 WatchLogFiles() {
     global apolloExePath, logFiles, exeDirectory, confDirectory, confFiles, pids, debugLevel
-    processTerminated := false
+    processTerminated := false, proccessKilled := false
     TerminatedIndexes := []
     static running := False
     
@@ -212,17 +251,39 @@ WatchLogFiles() {
             if InStr(logContent, "CLIENT DISCONNECTED") {
                 pid := pids[A_Index]
                 if (pid) {
-                    LogMessage(1, "Found 'CLIENT DISCONNECTED' in log file: " . logFile . " for PID: " . pid)
+                    LogMessage(1, "Found 'CLIENT DISCONNECTED' in log file: " . logFile . " for Apollo instance with PID: " . pid)
+                    Sleep, 100
+                    LogMessage(1, "Trying to Terminate Apollo process with PID: " . pid)
                     Process, Close, %pid%
-                    processTerminated := true
-                    TerminatedIndexes.Push(A_Index)
+                    Sleep, 100
+                    Process, Exist, %pid%
+                    if (ErrorLevel != 0) {
+                        LogMessage(1, "Failed to terminate Apollo process with PID: " . pid . " trying force kill")
+                        RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
+                        Sleep, 100
+                        Process, Exist, %pid%
+                        if (ErrorLevel != 0) {
+                            LogMessage(1, "Failed to force kill Apollo process with PID: " . pid)
+                        } else {
+                            LogMessage(1, "Force killed Apollo with PID: " . pid)
+                            proccessKilled := true
+                            TerminatedIndexes.Push(A_Index)
+                        }
+                    } else {
+                        LogMessage(1, "Terminated Apollo process with PID: " . pid)
+                        processTerminated := true
+                        TerminatedIndexes.Push(A_Index)
+                    }
                 }
             }
         }
     }
-    if (processTerminated) {
-        Sleep, 500
-        LogMessage(1, "Processes terminated, restarting again")
+    if (processTerminated || proccessKilled) {
+        if (processKilled)
+            Sleep, 3000
+        else 
+            Sleep, 500
+        LogMessage(1, "Apollo processes number: " . JoinArray(TerminatedIndexes, ", ") . " terminated")
         Loop, % TerminatedIndexes.MaxIndex() {
             ; Clear the log file before restarting
             logFile := confDirectory . "\" . logFiles[TerminatedIndexes[A_Index]]
@@ -342,14 +403,21 @@ watchAndroidADBDevices(){
                 break
             }
             pid := ErrorLevel
-            LogMessage(1, "Trying to terminate residual ADB process with PID: " . pid)
-            RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
+            Process, Close, %pid%
+            Sleep, 100
             Process, Exist, adb.exe
-            If (ErrorLevel = 0) {
-                LogMessage(1, "Terminated residual ADB process with PID: " . pid)
+            if (ErrorLevel != 0) {
+                LogMessage(1, "Failed to terminate existing ADB process with PID: " . pid . " trying force kill")
+                RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
+                Sleep, 100
+                Process, Exist, adb.exe
+                if (ErrorLevel != 0) {
+                    LogMessage(1, "Failed to force kill existing ADB process with PID: " . pid)
+                } else {
+                    LogMessage(1, "Force killed existing ADB process with PID: " . pid)
+                }
             } else {
-                LogMessage(1, "Failed to terminate residual ADB process with PID: " . pid)
-                break
+                LogMessage(1, "Terminated existing ADB process with PID: " . pid)
             }
         }
     }
@@ -376,7 +444,7 @@ watchAndroidADBDevices(){
     ; Compare with the last connected IDs and log changes
     for deviceID in CurrentlyConnectedIDs {
         if (!lastConnectedIDs.HasKey(deviceID)) {
-            LogMessage(1, "New ADB devices connected: " . deviceID)
+            LogMessage(1, "New ADB device connected: " . deviceID)
         }
     }
 
@@ -405,13 +473,22 @@ MaintainMicConnectivity() {
                 break
             }
             pid := ErrorLevel
-            LogMessage(1, "Trying to terminate residual scrcpy process with PID: " . pid)
-            RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
+            Process, Close, %pid%
+            Sleep, 100
             Process, Exist, scrcpy.exe
-            If (ErrorLevel = 0) {
-                LogMessage(1, "Terminated residual scrcpy process with PID: " . pid)
+            if (ErrorLevel != 0) {
+                LogMessage(1, "Failed to terminate existing scrcpy process with PID: " . pid . " trying force kill")
+                RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
+                Sleep, 100
+                Process, Exist, scrcpy.exe
+                if (ErrorLevel != 0) {
+                    LogMessage(1, "Failed to force kill existing scrcpy process with PID: " . pid)
+                } else {
+                    LogMessage(1, "Force killed existing scrcpy process with PID: " . pid)
+                    break
+                }
             } else {
-                LogMessage(1, "Failed to terminate residual scrcpy process with PID: " . pid)
+                LogMessage(1, "Terminated existing scrcpy process with PID: " . pid)
                 break
             }
         }
@@ -484,15 +561,24 @@ MaintainReverseTethering() {
                 break
             }
             pid := ErrorLevel
-            LogMessage(2, "Trying to terminate residual gnirehtet process with PID: " . pid)
-            RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
+            Process, Close, %pid%
+            Sleep, 100
             Process, Exist, gnirehtet.exe
-            If (ErrorLevel = 0) {
-                LogMessage(1, "Terminated residual gnirehtet process with PID: " . pid)
-                gnirehtetRunning := false
+            if (ErrorLevel != 0) {
+                LogMessage(1, "Failed to terminate existing gnirehtet process with PID: " . pid . " trying force kill")
+                RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
+                Sleep, 100
+                Process, Exist, gnirehtet.exe
+                if (ErrorLevel != 0) {
+                    LogMessage(1, "Failed to force kill existing gnirehtet process with PID: " . pid)
+                } else {
+                    LogMessage(1, "Force killed existing gnirehtet process with PID: " . pid)
+                    gnirehtetRunning := false
+                    break
+                }
             } else {
-                LogMessage(1, "Failed to terminate residual gnirehtet process with PID: " . pid)
-                gnirehtetRunning := true
+                LogMessage(1, "Terminated existing gnirehtet process with PID: " . pid)
+                gnirehtetRunning := false
                 break
             }
         }
@@ -502,7 +588,7 @@ MaintainReverseTethering() {
     if (connectedDevices != lastConnectedDevices){
         if ( connectedDevices > 0) {
             if (gnirehtetRunning) {
-                    LogMessage(1, "Gnirehtet already running with PID: " . gnirehtetRelayPID . " for currently connected " . connectedDevices . " device" . (connectedDevices > 1 ? " s" : ""))
+                    LogMessage(1, "Gnirehtet already running with PID: " . gnirehtetRelayPID . " for currently connected " . connectedDevices . " device" . (connectedDevices > 1 ? "s" : ""))
             } else {
                 LogMessage(1, "Starting gnirehtet relay process in autorun mode")
                 Run, "%gnirehtetExecPath%" autorun, %platformToolsDirectory%, Hide, gnirehtetRelayPID
@@ -510,7 +596,7 @@ MaintainReverseTethering() {
                 Process, Exist, gnirehtet.exe
                 if (ErrorLevel != 0) {
                     gnirehtetRelayPID := ErrorLevel
-                    LogMessage(1, "Started gnirehtet relay process with PID: " . gnirehtetRelayPID . " for currently connected " . connectedDevices . " device" . (connectedDevices > 1 ? " s" : ""))
+                    LogMessage(1, "Started gnirehtet relay process with PID: " . gnirehtetRelayPID . " for currently connected " . connectedDevices . " device" . (connectedDevices > 1 ? "s" : ""))
                 } else {
                     LogMessage(0, "Failed to start gnirehtet relay process")
                     Process, Close, %gnirehtetRelayPID%
@@ -537,10 +623,21 @@ MaintainCamConnectivity(){
 }
 
 
+
+
+
 LogMessage(1, "Script started at " . A_Now) 
 
-BulkStartApollo()
+SetTimer, BulkStartApollo, 1000
 
+; Wait for BulkStartApollo to finish
+Loop {
+    Sleep, 100
+    if (!firstrunApollo) {
+        LogMessage(1, "Initializing Apollo has finished, procceding to auxilairy scripts.")
+        break
+    }
+}
 
 ;if (autoExitOnDisconnect || autoSyncVolume)
 ;    SetTimer, watchApolloLogfiles, 100
