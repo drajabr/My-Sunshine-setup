@@ -5,9 +5,9 @@
 SetWorkingDir %A_ScriptDir%
 SetBatchLines, -1
 
-#Include %A_ScriptDir%/VA.ahk
+#Include %A_ScriptDir%\lib\VA.ahk ; Volume Automation library
 
-configFile := A_ScriptDir . "\vars.cfg"
+configFile := A_ScriptDir . "\automation.config"
 config := {}
 
 Loop, Read, %configFile%
@@ -133,7 +133,7 @@ CmdRetWithTimeout(sCmd, callBackFuncObj := "", encoding := ""){
 ; todo, single function to watch log files writing to global vars accessed by functions needing it, currently this causes issues or delays..
 
 BulkStartApollo() {
-    global apolloExePath, exeDirectory, confDirectory, logFiles, confFiles, pids, debugLevel, logFilePath
+    global apolloExePath, exeDirectory, confDirectory, logFiles, confFiles, pids := [] , debugLevel, logFilePath
     static firstRunApollo := true
     processTerminated := false
     LogMessage(3, "Starting BulkStartApollo()")
@@ -149,29 +149,27 @@ BulkStartApollo() {
         firstRunApollo := false
     }
 
-    pids := []
+    processTerminated := false
     Loop {
         Process, Exist, sunshine.exe
-        if (ErrorLevel = 0)
+        if (ErrorLevel = 0){
+            LogMessage(1, "No more residual apollo process found")
             break
-        pids.Push(ErrorLevel)
-        Process, Close, %ErrorLevel%
-    }
-
-    loggedPIDs := {}
-
-    for index, pid in pids {
-        if (!loggedPIDs.HasKey(pid)) {
-            LogMessage(1, "Attempting to terminate existing process with PID: " . pid)
-            loggedPIDs[pid] := true
         }
-        Process, Close, %pid%
-        processTerminated := true
+        pid := ErrorLevel
+        LogMessage(1, "Trying to terminate existing apollo proccess PID: " . pid)
+        RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
         Process, Exist, %pid%
+        if (ErrorLevel = 0) {
+            LogMessage(1, "Terminated existing apollo process with PID: " . pid)
+            processTerminated := true
+        } else {
+            LogMessage(1, "Failed to terminate existing process with PID: " . pid)
+            break
+        }
     }
     if (processTerminated)
         Sleep, 3000
-    pids := []
 
     Loop, % confFiles.MaxIndex() {
         ;logFile := confDirectory . "\" . logFiles[TerminatedIndexes[A_Index]]
@@ -336,17 +334,26 @@ watchAndroidADBDevices(){
     global adbExePath, LogMessage, CmdRetWithTimeout, CurrentlyConnectedIDs
     static firstRun := true, running:= false
     if (firstRun) {
+        firstRun := false
         Loop {
             Process, Exist, adb.exe
-            if (ErrorLevel = 0)
+            if (ErrorLevel = 0){
+                LogMessage(1, "No more residual ADB process found")
                 break
-            LogMessage(1, "Terminating ADB process with PID: " . ErrorLevel)
-            Process, Close, %ErrorLevel%
-            Sleep, 50
+            }
+            pid := ErrorLevel
+            LogMessage(1, "Trying to terminate residual ADB process with PID: " . pid)
+            RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
+            Process, Exist, adb.exe
+            If (ErrorLevel = 0) {
+                LogMessage(1, "Terminated residual ADB process with PID: " . pid)
+            } else {
+                LogMessage(1, "Failed to terminate residual ADB process with PID: " . pid)
+                break
+            }
         }
-        firstRun := false
     }
-    if (running) {
+    else if (running) {
         sleep, 500
         LogMessage(2, "Already running ADB device watcher, skipping this run")
         return
@@ -369,13 +376,13 @@ watchAndroidADBDevices(){
     ; Compare with the last connected IDs and log changes
     for deviceID in CurrentlyConnectedIDs {
         if (!lastConnectedIDs.HasKey(deviceID)) {
-            LogMessage(1, "New device connected: " . deviceID)
+            LogMessage(1, "New ADB devices connected: " . deviceID)
         }
     }
 
     for deviceID in lastConnectedIDs {
         if (!CurrentlyConnectedIDs.HasKey(deviceID)) {
-            LogMessage(1, "Device disconnected: " . deviceID)
+            LogMessage(1, "ADB Device disconnected: " . deviceID)
         }
     }
 
@@ -390,15 +397,24 @@ MaintainMicConnectivity() {
      
     ; Kill any existing scrcpy.exe process on the first run
     if (firstRun) {
+        firstRun := false
         Loop {
             Process, Exist, scrcpy.exe
-            if (ErrorLevel = 0)
+            if (ErrorLevel = 0){
+                LogMessage(1, "No more residual scrcpy process found")
                 break
-            LogMessage(1, "Terminating scrcpy process with PID: " . ErrorLevel)
-            Process, Close, %ErrorLevel%
-            Sleep, 50
+            }
+            pid := ErrorLevel
+            LogMessage(1, "Trying to terminate residual scrcpy process with PID: " . pid)
+            RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
+            Process, Exist, scrcpy.exe
+            If (ErrorLevel = 0) {
+                LogMessage(1, "Terminated residual scrcpy process with PID: " . pid)
+            } else {
+                LogMessage(1, "Failed to terminate residual scrcpy process with PID: " . pid)
+                break
+            }
         }
-        firstRun := false
     }
 
     ; Determine device status
@@ -456,31 +472,65 @@ MaintainMicConnectivity() {
     }
 }
 MaintainReverseTethering() {
-    global gnirehtetExecPath, LogMessage, platformToolsDirectory
-    static gnirehtetRelayPID := "", consolePID := "", lastStatus := ""
-
-    SetWorkingDir, %platformToolsDirectory%
-    Process, Exist, gnirehtet.exe
-    gnirehtetRunning := (ErrorLevel != 0)
-
-    if (gnirehtetRunning) {
-        if (gnirehtetRelayPID != ErrorLevel) {
-            gnirehtetRelayPID := ErrorLevel
-            LogMessage(1, "gnirehtet relay process is already running with PID: " . gnirehtetRelayPID)
-        }
-    } else {
-        LogMessage(1, "Starting gnirehtet relay process in autorun mode")
-        Run, "%gnirehtetExecPath%" autorun,, Hide, consolePID
-        Sleep, 500
-        Process, Exist, gnirehtet.exe
-        if (ErrorLevel != 0) {
-            gnirehtetRelayPID := ErrorLevel
-            LogMessage(1, "Started gnirehtet relay process with PID: " . gnirehtetRelayPID)
-        } else {
-            LogMessage(0, "Failed to start gnirehtet relay process")
-            Process, Close, %consolePID%
+    global gnirehtetExecPath, LogMessage, platformToolsDirectory, CurrentlyConnectedIDs
+    static gnirehtetRelayPID := "", gnirehtetRunning, lastConnectedDevices := 0 , firstRun := true
+    if (firstRun) {
+        firstRun := false
+        Loop {
+            Process, Exist, gnirehtet.exe
+            if (ErrorLevel = 0){
+                LogMessage(1, "No more residual gnirehtet process found")
+                gnirehtetRunning := false
+                break
+            }
+            pid := ErrorLevel
+            LogMessage(2, "Trying to terminate residual gnirehtet process with PID: " . pid)
+            RunWait, %ComSpec% /c taskkill /F /PID %pid%,, Hide
+            Process, Exist, gnirehtet.exe
+            If (ErrorLevel = 0) {
+                LogMessage(1, "Terminated residual gnirehtet process with PID: " . pid)
+                gnirehtetRunning := false
+            } else {
+                LogMessage(1, "Failed to terminate residual gnirehtet process with PID: " . pid)
+                gnirehtetRunning := true
+                break
+            }
         }
     }
+    connectedDevices := CurrentlyConnectedIDs.Count()
+    LogMessage(3, "Number of currently connected devices: " . connectedDevices)
+    if (connectedDevices != lastConnectedDevices){
+        if ( connectedDevices > 0) {
+            if (gnirehtetRunning) {
+                    LogMessage(1, "Gnirehtet already running with PID: " . gnirehtetRelayPID . " for currently connected " . connectedDevices . " device" . (connectedDevices > 1 ? " s" : ""))
+            } else {
+                LogMessage(1, "Starting gnirehtet relay process in autorun mode")
+                Run, "%gnirehtetExecPath%" autorun, %platformToolsDirectory%, Hide, gnirehtetRelayPID
+                Sleep, 1000
+                Process, Exist, gnirehtet.exe
+                if (ErrorLevel != 0) {
+                    gnirehtetRelayPID := ErrorLevel
+                    LogMessage(1, "Started gnirehtet relay process with PID: " . gnirehtetRelayPID . " for currently connected " . connectedDevices . " device" . (connectedDevices > 1 ? " s" : ""))
+                } else {
+                    LogMessage(0, "Failed to start gnirehtet relay process")
+                    Process, Close, %gnirehtetRelayPID%
+                }
+            }
+        }
+        else {
+            if (gnirehtetRunning) {
+                LogMessage(1, "All ADB devices disconnected, terminating gnirehtet with PID: " . gnirehtetRelayPID)
+                Process, Close, %gnirehtetRelayPID%
+                gnirehtetRelayPID := ""
+            } else 
+                LogMessage(1, "No devices connected and gnirehtet relay process is not running")
+        }
+    }
+    lastConnectedDevices := connectedDevices
+    
+    Process, Exist, gnirehtet.exe
+    gnirehtetRelayPID := ErrorLevel
+    gnirehtetRunning := (ErrorLevel != 0)
 }
 MaintainCamConnectivity(){
     
