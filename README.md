@@ -6,8 +6,12 @@ If you're looking for easier tutorial you better see user @YouDoMeIDoYou compile
 ## What it is
 Mainly the AutoHotKey script has 3 features:
 1. Launch as many apollo instances as configured "has conf file inside apollo folder, and entry inside the script"
-2. If client disconnect, kill the instance so windows deattach the display, and restart it.
+2. If client disconnect, kill the instance so windows deattaches the display, and restart it.
 3. Sync master volume level (and mute status) from windows to all apollo instances currently running.
+4. Start scrcpy to capture mic from specfied android device.
+5. Start gnirehtet proccess so any adb connected android device can get connection vi reverse tethering.
+
+Final result? Fully plug and play android tablet(s) as external monitror using (mostly)foss solutions.
 
 ### Motivation
 Many thanks to [ClassicOldSong](https://github.com/ClassicOldSong) for the great work making this easily possible out of the box.
