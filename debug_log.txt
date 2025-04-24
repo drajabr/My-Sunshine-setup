@@ -1,19 +1,39 @@
-20250424131135 - Cleared debug_logfile: C:\Users\Ahmed\Documents\git\My-Sunshine-setup\debug_log.txt before starting
-20250424131135 - First run of the script
-20250424131135 - Trying to terminate existing apollo proccess PID: 36940
-20250424131135 - Terminated existing process with PID: 36940
-20250424131135 - Trying to terminate existing apollo proccess PID: 29104
-20250424131135 - Terminated existing process with PID: 29104
-20250424131135 - Trying to terminate existing apollo proccess PID: 39324
-20250424131136 - Terminated existing process with PID: 39324
-20250424131136 - No more residual apollo process found
-20250424131136 - Starting Apollo instance: 1 process with param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250424131136 - Started Apollo instance: 1 process with PID: 27060 for param: C:\Program Files\Apollo\config\sunshine_1.conf
-20250424131136 - Starting Apollo instance: 2 process with param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250424131136 - Started Apollo instance: 2 process with PID: 32736 for param: C:\Program Files\Apollo\config\sunshine_2.conf
-20250424131136 - Starting Apollo instance: 3 process with param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250424131136 - Started Apollo instance: 3 process with PID: 35244 for param: C:\Program Files\Apollo\config\sunshine_3.conf
-20250424131138 - New ADB device connected: 4200c2c9e4ef8449
-20250424131138 - New ADB device connected: A80039832ETH024855
-20250424131138 - Starting gnirehtet relay process in autorun mode
-20250424131139 - Started gnirehtet relay process with PID: 33248 for currently connected 2 devices
+20250424153352 - Cleared debug_logfile: C:\Users\Ahmed\Documents\git\My-Sunshine-setup\debug_log.txt before starting
+20250424153352 - Failed to terminate residual process with PID: 44076 trying force kill
+20250424153353 - Force killed residual apollo process with PID: 44076
+20250424153353 - Failed to terminate residual process with PID: 26304 trying force kill
+20250424153353 - Force killed residual apollo process with PID: 26304
+20250424153353 - Failed to terminate residual process with PID: 37324 trying force kill
+20250424153353 - Force killed residual apollo process with PID: 37324
+20250424153353 - Failed to terminate residual process with PID: 9052 trying force kill
+20250424153353 - Force killed residual apollo process with PID: 9052
+20250424153356 - Starting Apollo instance: 1 process with param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250424153356 - Started Apollo instance: 1 process with PID: 29756 for param: C:\Program Files\Apollo\config\sunshine_1.conf
+20250424153356 - Starting Apollo instance: 2 process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250424153357 - Started Apollo instance: 2 process with PID: 31568 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250424153357 - Starting Apollo instance: 3 process with param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250424153357 - Started Apollo instance: 3 process with PID: 28860 for param: C:\Program Files\Apollo\config\sunshine_3.conf
+20250424153357 - Initializing Apollo has finished, procceding to auxilairy scripts.
+20250424153357 - No more residual scrcpy process found
+20250424153357 - Mic Device PE3SIL21060300042 status changed to: disconnected
+20250424153357 - Failed to terminate existing gnirehtet process with PID: 40948 trying force kill
+20250424153357 - Force killed existing gnirehtet process with PID: 40948
+20250424153357 - No devices connected and gnirehtet relay process is not running
+20250424153357 - Failed to terminate existing ADB process with PID: 25268 trying force kill
+20250424153357 - Force killed existing ADB process with PID: 25268
+20250424153357 - No more residual ADB process found
+20250424153403 - New ADB device connected: 4200c2c9e4ef8449
+20250424153403 - New ADB device connected: A80039832ETH024855
+20250424153403 - Synced mute state: Unmuted for PIDs: 29756, 31568, 28860
+20250424153403 - Starting gnirehtet relay process in autorun mode
+20250424153403 - Started gnirehtet relay process with PID: 46424 for currently connected 2 devices
+20250424153403 - Synced Volume: 35.000 for PIDs: 29756, 31568, 28860
+20250424153404 - Apollo PID: 31568 instance: 2 terminated by script for disconnection
+20250424153404 - Starting Apollo instance: 2 process with param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250424153404 - Restarted Apollo instance: 2 successfully with new PID: 22300 for param: C:\Program Files\Apollo\config\sunshine_2.conf
+20250424153405 - Current PIDs: 29756, 28860, 47236, 22300
+20250424153405 - Configured PIDs: 29756, 22300, 28860
+20250424153405 - Orphan Apollo process PID: 47236 is not started by script, trying to terminate it..
+20250424153405 - Failed to terminate orphan Apollo process PID: 47236 trying force kill
+20250424153405 - Force killed orphan Apollo process PID: 47236
+20250424153411 - Found 'CLIENT CONNECTED' in log file: C:\Program Files\Apollo\config\sunshine_1.log Syncing volume level
