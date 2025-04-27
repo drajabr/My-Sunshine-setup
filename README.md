@@ -1,3 +1,14 @@
+
+> [!Note]
+> I'm abandoning this repo in favour of an ambitious project I started working on [@Apollo-Fleet-Launcher](https://github.com/drajabr/Apollo-Fleet-Launcher)
+>
+> After it gets ready "no promises" It will be super easy tools to get multi instance Apollo configuration (alongside some other nice featuers)
+>
+> Whoever can contribute is more than welcome to do so, even a takeover is welcomed too ;)
+
+
+
+
 # My-Sunshine-setup
 Config and AutoHotKey script used in my multi monitor Apollo "fork of Sunshine" setup.
 
