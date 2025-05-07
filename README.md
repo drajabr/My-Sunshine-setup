@@ -1,12 +1,7 @@
+# Check out the new GUI tool [ApollopFleet-Launcher](https://github.com/drajabr/Apollo-Fleet-Launcher)
 
-> [!Note]
-> I'm abandoning this repo in favour of an ambitious project I started working on [@Apollo-Fleet-Launcher](https://github.com/drajabr/Apollo-Fleet-Launcher)
->
-> After it gets ready "no promises" It will be super easy tools to get multi instance Apollo configuration (alongside some other nice featuers)
->
-> Whoever can contribute is more than welcome to do so, even a takeover is welcomed too ;)
-
-
+> [!CAUTION]
+> Script is not working anymore, and the [ApollopFleet-Launcher](https://github.com/drajabr/Apollo-Fleet-Launcher) renders it useless anyway, so won't try to fix it anyway.
 
 
 # My-Sunshine-setup
